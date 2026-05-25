@@ -121,19 +121,24 @@ def run_simulate(n_simulations: int, model_kind: str) -> None:
     _print_top(res["team_stage"])
 
 
-def run_backtest(model_kind: str = DEFAULT_MODEL) -> None:
+def run_backtest(model_kind: str = DEFAULT_MODEL,
+                 years: tuple[int, ...] | None = None) -> None:
     """Backtest the primary model against the logistic baseline.
 
-    Runs both per-World-Cup backtests and the expanding-window walk-forward
-    cross-validation over the entire match history.
+    Runs per-World-Cup backtests (default 2006/2010/2014/2018/2022) and the
+    expanding-window walk-forward cross-validation over the entire match
+    history. ``years`` overrides which World Cups are tested.
     """
     if model_kind == "best":
         model_kind = _resolve_model(model_kind)
     models = ["logistic"]
     if model_kind in _TREE_BACKENDS and model_kind not in models:
         models.append(model_kind)
+    kwargs = {"model_kinds": tuple(models), "walk_forward": True}
+    if years:
+        kwargs["years"] = tuple(years)
     print(f"[backtest] Comparing {models}: World Cups + walk-forward CV...")
-    summary = bt.run_backtests(model_kinds=tuple(models), walk_forward=True)
+    summary = bt.run_backtests(**kwargs)
     if not summary.empty:
         out = config.TABLES_DIR / "backtest_summary.csv"
         config.ensure_dirs()
@@ -224,6 +229,9 @@ def main() -> None:
         "--mode", required=True,
         choices=["train", "simulate", "full", "backtest", "tune", "select"])
     parser.add_argument("--n_simulations", type=int, default=config.QUICK_SIMULATIONS)
+    parser.add_argument("--backtest_years", type=int, nargs="+", default=None,
+                        help="World Cup years to backtest (default "
+                             "2006 2010 2014 2018 2022).")
     parser.add_argument(
         "--model",
         choices=["best", "xgboost", "lightgbm", "catboost", "logistic", "elo"],
@@ -239,7 +247,7 @@ def main() -> None:
     elif args.mode == "simulate":
         run_simulate(args.n_simulations, args.model)
     elif args.mode == "backtest":
-        run_backtest(args.model)
+        run_backtest(args.model, years=args.backtest_years)
     elif args.mode == "tune":
         run_tune(args.model)
     elif args.mode == "select":

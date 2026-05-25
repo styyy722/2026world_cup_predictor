@@ -356,7 +356,7 @@ def tune_and_select(model_kinds: tuple[str, ...] = BOOSTING_MODELS,
     }
 
 
-def run_backtests(years: tuple[int, ...] = (2014, 2018, 2022),
+def run_backtests(years: tuple[int, ...] = (2006, 2010, 2014, 2018, 2022),
                   model_kinds: tuple[str, ...] = ("logistic", "xgboost"),
                   walk_forward: bool = True, n_splits: int = 6
                   ) -> pd.DataFrame:
