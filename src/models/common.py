@@ -10,6 +10,7 @@ Result class encoding (team_a perspective):
 """
 from __future__ import annotations
 
+import json
 import pickle
 from pathlib import Path
 
@@ -17,6 +18,7 @@ import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
 
+from .. import config
 from ..features import build_features as bf
 
 # Canonical class order used everywhere.
@@ -72,3 +74,47 @@ def load_pickle(path: str | Path, hint: str = ""):
         )
     with open(path, "rb") as fh:
         return pickle.load(fh)
+
+
+def _params_path(name: str) -> Path:
+    return config.MODELS_DIR / f"{name}_best_params.json"
+
+
+def save_best_params(name: str, params: dict) -> Path:
+    """Persist tuned hyperparameters for a model so training can reuse them."""
+    path = _params_path(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w") as fh:
+        json.dump(params, fh, indent=2)
+    return path
+
+
+def load_best_params(name: str) -> dict:
+    """Load tuned hyperparameters for a model, or ``{}`` if none saved."""
+    path = _params_path(name)
+    if not path.exists():
+        return {}
+    with open(path) as fh:
+        return json.load(fh)
+
+
+def _selection_path() -> Path:
+    return config.MODELS_DIR / "selected_model.json"
+
+
+def save_selection(selection: dict) -> Path:
+    """Persist which model was selected as best (and its tuned params)."""
+    path = _selection_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w") as fh:
+        json.dump(selection, fh, indent=2)
+    return path
+
+
+def load_selection() -> dict:
+    """Load the selected-best-model record, or ``{}`` if none saved."""
+    path = _selection_path()
+    if not path.exists():
+        return {}
+    with open(path) as fh:
+        return json.load(fh)

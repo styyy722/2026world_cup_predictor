@@ -1,0 +1,10 @@
+{
+  "model": "catboost",
+  "params": {
+    "iterations": 200,
+    "depth": 3,
+    "learning_rate": 0.03
+  },
+  "walk_forward_log_loss": 0.9539366300097417,
+  "walk_forward_accuracy": 0.5616666666666666
+}

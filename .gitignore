@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# Ignore pickled models but keep small JSON config (tuned params + selection).
+models_store/*
+!models_store/*_best_params.json
+!models_store/selected_model.json
+.DS_Store
+.ipynb_checkpoints/
+# CatBoost writes per-run training logs here.
+catboost_info/
