@@ -185,6 +185,8 @@ In `outputs/charts/`:
 * `champion_probabilities.png`
 * `expected_group_points.png`
 * `stage_progression_probabilities.png`
+* `quarter_final_bracket.png` — poster-style projected knockout bracket built
+  from the stage probabilities (most likely QF teams, finalists, and champion)
 
 ---
 
