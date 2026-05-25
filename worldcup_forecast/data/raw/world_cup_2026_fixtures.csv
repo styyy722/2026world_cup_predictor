@@ -1,0 +1,73 @@
+match_id,stage,group,date,team_a,team_b,venue,neutral
+1,group,A,2026-06-11,Mexico,Canada,Stadium A1,True
+2,group,A,2026-06-13,Morocco,Japan,Stadium A2,True
+3,group,A,2026-06-15,Mexico,Morocco,Stadium A3,True
+4,group,A,2026-06-17,Canada,Japan,Stadium A4,True
+5,group,A,2026-06-19,Mexico,Japan,Stadium A5,True
+6,group,A,2026-06-21,Canada,Morocco,Stadium A6,True
+7,group,B,2026-06-12,USA,Wales,Stadium B1,True
+8,group,B,2026-06-14,Senegal,South Korea,Stadium B2,True
+9,group,B,2026-06-16,USA,Senegal,Stadium B3,True
+10,group,B,2026-06-18,Wales,South Korea,Stadium B4,True
+11,group,B,2026-06-20,USA,South Korea,Stadium B5,True
+12,group,B,2026-06-22,Wales,Senegal,Stadium B6,True
+13,group,C,2026-06-13,Argentina,Australia,Stadium C1,True
+14,group,C,2026-06-15,Poland,Ecuador,Stadium C2,True
+15,group,C,2026-06-17,Argentina,Poland,Stadium C3,True
+16,group,C,2026-06-19,Australia,Ecuador,Stadium C4,True
+17,group,C,2026-06-21,Argentina,Ecuador,Stadium C5,True
+18,group,C,2026-06-23,Australia,Poland,Stadium C6,True
+19,group,D,2026-06-14,France,Denmark,Stadium D1,True
+20,group,D,2026-06-16,Tunisia,Peru,Stadium D2,True
+21,group,D,2026-06-18,France,Tunisia,Stadium D3,True
+22,group,D,2026-06-20,Denmark,Peru,Stadium D4,True
+23,group,D,2026-06-22,France,Peru,Stadium D5,True
+24,group,D,2026-06-24,Denmark,Tunisia,Stadium D6,True
+25,group,E,2026-06-15,Spain,Costa Rica,Stadium E1,True
+26,group,E,2026-06-17,Germany,Serbia,Stadium E2,True
+27,group,E,2026-06-19,Spain,Germany,Stadium E3,True
+28,group,E,2026-06-21,Costa Rica,Serbia,Stadium E4,True
+29,group,E,2026-06-23,Spain,Serbia,Stadium E5,True
+30,group,E,2026-06-25,Costa Rica,Germany,Stadium E6,True
+31,group,F,2026-06-16,Belgium,Croatia,Stadium F1,True
+32,group,F,2026-06-18,Saudi Arabia,Nigeria,Stadium F2,True
+33,group,F,2026-06-20,Belgium,Saudi Arabia,Stadium F3,True
+34,group,F,2026-06-22,Croatia,Nigeria,Stadium F4,True
+35,group,F,2026-06-24,Belgium,Nigeria,Stadium F5,True
+36,group,F,2026-06-26,Croatia,Saudi Arabia,Stadium F6,True
+37,group,G,2026-06-11,Brazil,Switzerland,Stadium G1,True
+38,group,G,2026-06-13,Cameroon,Sweden,Stadium G2,True
+39,group,G,2026-06-15,Brazil,Cameroon,Stadium G3,True
+40,group,G,2026-06-17,Switzerland,Sweden,Stadium G4,True
+41,group,G,2026-06-19,Brazil,Sweden,Stadium G5,True
+42,group,G,2026-06-21,Switzerland,Cameroon,Stadium G6,True
+43,group,H,2026-06-12,Portugal,Ghana,Stadium H1,True
+44,group,H,2026-06-14,Uruguay,Iran,Stadium H2,True
+45,group,H,2026-06-16,Portugal,Uruguay,Stadium H3,True
+46,group,H,2026-06-18,Ghana,Iran,Stadium H4,True
+47,group,H,2026-06-20,Portugal,Iran,Stadium H5,True
+48,group,H,2026-06-22,Ghana,Uruguay,Stadium H6,True
+49,group,I,2026-06-13,Netherlands,Qatar,Stadium I1,True
+50,group,I,2026-06-15,Egypt,Chile,Stadium I2,True
+51,group,I,2026-06-17,Netherlands,Egypt,Stadium I3,True
+52,group,I,2026-06-19,Qatar,Chile,Stadium I4,True
+53,group,I,2026-06-21,Netherlands,Chile,Stadium I5,True
+54,group,I,2026-06-23,Qatar,Egypt,Stadium I6,True
+55,group,J,2026-06-14,England,Ukraine,Stadium J1,True
+56,group,J,2026-06-16,Algeria,Colombia,Stadium J2,True
+57,group,J,2026-06-18,England,Algeria,Stadium J3,True
+58,group,J,2026-06-20,Ukraine,Colombia,Stadium J4,True
+59,group,J,2026-06-22,England,Colombia,Stadium J5,True
+60,group,J,2026-06-24,Ukraine,Algeria,Stadium J6,True
+61,group,K,2026-06-15,Italy,Norway,Stadium K1,True
+62,group,K,2026-06-17,Ivory Coast,Panama,Stadium K2,True
+63,group,K,2026-06-19,Italy,Ivory Coast,Stadium K3,True
+64,group,K,2026-06-21,Norway,Panama,Stadium K4,True
+65,group,K,2026-06-23,Italy,Panama,Stadium K5,True
+66,group,K,2026-06-25,Norway,Ivory Coast,Stadium K6,True
+67,group,L,2026-06-16,Uruguay B,Turkey,Stadium L1,True
+68,group,L,2026-06-18,Austria,Scotland,Stadium L2,True
+69,group,L,2026-06-20,Uruguay B,Austria,Stadium L3,True
+70,group,L,2026-06-22,Turkey,Scotland,Stadium L4,True
+71,group,L,2026-06-24,Uruguay B,Scotland,Stadium L5,True
+72,group,L,2026-06-26,Turkey,Austria,Stadium L6,True
