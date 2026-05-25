@@ -1,0 +1,1 @@
+# 2026world_cup_predictor
