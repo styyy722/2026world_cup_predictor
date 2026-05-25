@@ -16,9 +16,20 @@ from sklearn.metrics import accuracy_score, log_loss
 
 from ..features import build_features as bf
 from ..models import baseline_logistic as logit
+from ..models import common
+from ..models import tree_model as tree
 
 # Class order used everywhere: 0 loss, 1 draw, 2 win (team_a perspective).
 _CLASSES = [0, 1, 2]
+
+
+def _train_for_kind(model_kind: str, train_df: pd.DataFrame):
+    """Train a model of the requested kind on the training slice."""
+    if model_kind == "logistic":
+        return logit.train_model(train_df)
+    if model_kind in tree.SUPPORTED_BACKENDS:
+        return tree.train_model(train_df, backend=model_kind)
+    raise ValueError(f"Unsupported backtest model '{model_kind}'.")
 
 
 def _is_world_cup_match(tournament: str) -> bool:
@@ -29,11 +40,15 @@ def _is_world_cup_match(tournament: str) -> bool:
 def _proba_matrix(model, X: pd.DataFrame) -> np.ndarray:
     """Return an (n, 3) probability matrix aligned to classes [0,1,2]."""
     proba = model.predict_proba(X)
-    classes = list(model.named_steps["clf"].classes_)
+    classes = list(common.model_classes(model))
     out = np.zeros((len(X), 3))
     for j, c in enumerate(classes):
         out[:, _CLASSES.index(int(c))] = proba[:, j]
-    return out
+    # If a class was absent from the training slice its column is all zeros;
+    # renormalise so each row is a valid probability distribution over [0,1,2].
+    row_sums = out.sum(axis=1, keepdims=True)
+    row_sums[row_sums == 0] = 1.0
+    return out / row_sums
 
 
 def multiclass_brier(y_true: np.ndarray, proba: np.ndarray) -> float:
@@ -70,12 +85,13 @@ def calibration_table(y_true: np.ndarray, proba: np.ndarray,
 
 
 def backtest_world_cup(features: pd.DataFrame, results: pd.DataFrame,
-                       year: int) -> dict | None:
+                       year: int, model_kind: str = "logistic") -> dict | None:
     """Train on pre-``year`` data, test on that year's World Cup matches.
 
     ``features`` is the full training feature table (aligned row-for-row with
-    ``results``, which carries ``date`` and ``tournament``). Returns a metrics
-    dict, or ``None`` if there are no World Cup matches for that year.
+    ``results``, which carries ``date`` and ``tournament``). ``model_kind``
+    selects the model ("logistic" or any tree backend). Returns a metrics dict,
+    or ``None`` if there are no World Cup matches for that year.
     """
     feats = features.reset_index(drop=True).copy()
     meta = results.reset_index(drop=True)
@@ -91,7 +107,7 @@ def backtest_world_cup(features: pd.DataFrame, results: pd.DataFrame,
     if test.empty or train.empty:
         return None
 
-    model = logit.train_model(train)
+    model = _train_for_kind(model_kind, train)
     X_test = bf.features_to_matrix(test)
     y_test = test["result"].astype(int).values
 
@@ -99,6 +115,7 @@ def backtest_world_cup(features: pd.DataFrame, results: pd.DataFrame,
     preds = proba.argmax(axis=1)  # index in [0,1,2] == class label
 
     return {
+        "model": model_kind,
         "year": year,
         "n_matches": int(len(test)),
         "accuracy": float(accuracy_score(y_test, preds)),
@@ -108,20 +125,24 @@ def backtest_world_cup(features: pd.DataFrame, results: pd.DataFrame,
     }
 
 
-def run_backtests(years: tuple[int, ...] = (2014, 2018, 2022)) -> pd.DataFrame:
-    """Run the standard set of World Cup backtests and return a summary."""
+def run_backtests(years: tuple[int, ...] = (2014, 2018, 2022),
+                  model_kinds: tuple[str, ...] = ("logistic", "xgboost")
+                  ) -> pd.DataFrame:
+    """Backtest each model kind across the target World Cups and summarise."""
     from ..data import loaders
     results = loaders.load_results()
     features = bf.build_training_features(results)
 
     rows = []
-    for y in years:
-        res = backtest_world_cup(features, results, y)
-        if res is None:
-            print(f"[backtest] No World Cup matches found for {y}; skipping.")
-            continue
-        rows.append({k: res[k] for k in ("year", "n_matches", "accuracy",
-                                         "log_loss", "brier")})
-        print(f"[backtest] {y}: n={res['n_matches']} acc={res['accuracy']:.3f} "
-              f"logloss={res['log_loss']:.3f} brier={res['brier']:.3f}")
+    for model_kind in model_kinds:
+        for y in years:
+            res = backtest_world_cup(features, results, y, model_kind=model_kind)
+            if res is None:
+                print(f"[backtest] No World Cup matches for {y}; skipping.")
+                continue
+            rows.append({k: res[k] for k in ("model", "year", "n_matches",
+                                             "accuracy", "log_loss", "brier")})
+            print(f"[backtest] {model_kind:>8} {y}: n={res['n_matches']} "
+                  f"acc={res['accuracy']:.3f} logloss={res['log_loss']:.3f} "
+                  f"brier={res['brier']:.3f}")
     return pd.DataFrame(rows)

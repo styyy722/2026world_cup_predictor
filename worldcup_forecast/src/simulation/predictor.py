@@ -14,12 +14,20 @@ import pandas as pd
 
 from .. import config
 from ..features import build_features as bf
-from ..models import baseline_logistic as logit
+from ..models import common
 from ..models.elo_model import EloModel
+
+# Model kinds that are sklearn-compatible classifiers driven by features.
+_CLASSIFIER_KINDS = ("logistic", "xgboost", "lightgbm", "catboost", "tree")
 
 
 class MatchPredictor:
-    """Predict WDL probabilities for any team pairing."""
+    """Predict WDL probabilities for any team pairing.
+
+    Works with the Elo baseline or any feature-driven classifier (the logistic
+    baseline or a gradient-boosted tree backend), since all classifiers share
+    the ``models.common`` probability interface.
+    """
 
     def __init__(self, model_kind: str, model=None,
                  ratings: pd.DataFrame | None = None,
@@ -45,6 +53,12 @@ class MatchPredictor:
         return cls("logistic", model=model, ratings=ratings, form=form)
 
     @classmethod
+    def from_classifier(cls, model_kind: str, model, ratings: pd.DataFrame,
+                        form: dict[str, dict]) -> "MatchPredictor":
+        """Build a predictor for any feature-driven classifier backend."""
+        return cls(model_kind, model=model, ratings=ratings, form=form)
+
+    @classmethod
     def from_elo(cls, ratings: pd.DataFrame) -> "MatchPredictor":
         return cls("elo", ratings=ratings)
 
@@ -66,7 +80,7 @@ class MatchPredictor:
                 team_a, team_b, neutral, self.ratings, self.form,
                 is_world_cup=1, is_major_tournament=1,
             )
-            p = logit.predict_match_proba(self.model, row)
+            p = common.predict_proba_dicts(self.model, row)
             result = (p["team_a_win"], p["draw"], p["team_b_win"])
 
         self._cache[key] = result
