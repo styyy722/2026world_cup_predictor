@@ -15,8 +15,11 @@ top 2 of each group plus the **8 best third-placed teams** advancing to a
 * Predict per-match outcome probabilities from team strength + recent form.
 * Run a Monte Carlo simulation of the whole tournament (default 10,000 runs).
 * Output each team's group-placement, stage-progression, and title odds.
-* Provide a clean baseline (Elo + logistic regression) that you can extend with
-  richer data (player-level stats, injuries, betting odds, xG, market value).
+* Use gradient-boosted **tree models** (XGBoost / LightGBM / CatBoost) as the
+  primary match model, with multinomial logistic regression and Elo as
+  baselines for comparison.
+* Provide a clean structure you can extend with richer data (player-level
+  stats, injuries, betting odds, xG, market value).
 
 ---
 
@@ -30,7 +33,7 @@ worldcup_forecast/
     config.py          # paths + 2026 tournament constants
     data/              # loaders + template CSV generation
     features/          # match-level feature engineering
-    models/            # elo_model.py, baseline_logistic.py
+    models/            # tree_model.py (primary), baseline_logistic.py, elo_model.py
     simulation/        # match / group / knockout / tournament simulators
     evaluation/        # backtesting on past World Cups
     visualisation/     # chart generation
@@ -77,24 +80,32 @@ Python 3.10+ recommended.
 
 ## How to run
 
+The `--model` flag selects which match model drives the simulation. The
+default is **`xgboost`** (primary); `logistic` and `elo` are baselines.
+
 ```bash
-# Train the logistic model on historical results and save it
-python main.py --mode train
+# Train the primary model (XGBoost) + the logistic baseline, and save both
+python main.py --mode train                 # defaults to --model xgboost
+
+# Train with a different tree backend
+python main.py --mode train --model lightgbm
+python main.py --mode train --model catboost   # requires `pip install catboost`
 
 # Simulate the tournament and export tables + charts (quick mode)
-python main.py --mode simulate --n_simulations 10000
+python main.py --mode simulate --n_simulations 10000 --model xgboost
 
 # Full pipeline: load -> features -> train -> predict -> simulate -> export
-python main.py --mode full --n_simulations 10000
+python main.py --mode full --n_simulations 10000 --model xgboost
 
-# Use the Elo baseline instead of the logistic model
+# Use a baseline instead of the tree model
+python main.py --mode simulate --model logistic
 python main.py --mode simulate --model elo
 
 # Final, higher-precision run
-python main.py --mode simulate --n_simulations 100000
+python main.py --mode simulate --n_simulations 100000 --model xgboost
 
-# Backtest the match model on the 2014 / 2018 / 2022 World Cups
-python main.py --mode backtest
+# Backtest: compares the chosen tree model against the logistic baseline
+python main.py --mode backtest --model xgboost
 ```
 
 Run the tests with:
@@ -107,21 +118,33 @@ pytest
 
 ## How the match model works
 
-Two interchangeable models predict the three-way outcome
-(`team_a_win`, `draw`, `team_b_win`):
+Three interchangeable models predict the three-way outcome
+(`team_a_win`, `draw`, `team_b_win`). All share the same feature matrix and the
+same probability interface (`src/models/common.py`), so the simulator treats
+them identically.
 
-1. **Elo baseline** (`src/models/elo_model.py`)
-   Uses the classic Elo expected-score formula on the two teams' ratings, adds
-   a home-advantage term for non-neutral games, and splits probability into
-   win/draw/loss with a draw model that shrinks as the rating gap widens.
+1. **Gradient-boosted trees — primary** (`src/models/tree_model.py`)
+   A multiclass gradient-boosting classifier with three interchangeable
+   backends: **XGBoost** (default), **LightGBM**, and **CatBoost**. Trees
+   capture non-linear interactions between features (e.g. how form matters more
+   when teams are evenly matched) and need no feature scaling. Defaults use
+   shallow trees with mild regularisation to avoid overfitting the limited
+   international match history; tune via keyword overrides to `train_model`.
 
-2. **Multinomial logistic regression** (`src/models/baseline_logistic.py`)
-   Trained on engineered match features (encoded `result`: 0 loss / 1 draw /
-   2 win from team A's perspective). Features include Elo, FIFA rank/points,
-   their differences, rolling 10-match form (win rate, goals for/against, goal
-   difference), and flags for neutral venue / World Cup / major tournament.
-   Feature building lives in `src/features/build_features.py` and avoids
-   look-ahead leakage by only using each team's matches *before* kickoff.
+2. **Multinomial logistic regression — baseline** (`src/models/baseline_logistic.py`)
+   A `StandardScaler` + softmax `LogisticRegression` pipeline. Linear, fast,
+   and interpretable — a sensible benchmark the tree models should beat.
+
+3. **Elo — baseline** (`src/models/elo_model.py`)
+   The classic Elo expected-score formula plus a home-advantage term and a draw
+   model that shrinks as the rating gap widens. No training required.
+
+All models are trained on engineered match features (target `result`:
+0 loss / 1 draw / 2 win from team A's perspective): Elo, FIFA rank/points and
+their differences, rolling 10-match form (win rate, goals for/against, goal
+difference), and neutral / World Cup / major-tournament flags. Feature building
+lives in `src/features/build_features.py` and avoids look-ahead leakage by only
+using each team's matches *before* kickoff.
 
 ---
 
@@ -169,8 +192,9 @@ In `outputs/charts/`:
 
 `src/evaluation/backtest.py` trains only on matches *before* a target World Cup
 and tests on that tournament's matches (2014, 2018, 2022), reporting accuracy,
-multiclass log loss, multiclass Brier score, and a calibration table. This
-time-respecting split avoids leakage.
+multiclass log loss, multiclass Brier score, and a calibration table for each
+model. By default it compares the chosen tree model against the logistic
+baseline so you can see the lift. This time-respecting split avoids leakage.
 
 > Note: the bundled **template** data is synthetic, so backtest numbers are
 > illustrative. Supply real historical data for meaningful evaluation.
@@ -184,8 +208,10 @@ The code is structured so you can extend it without rewrites:
 * **Richer features** — add columns in `src/features/build_features.py`
   (player availability/injuries, squad market value, xG, rest days, travel).
 * **Betting odds** — blend bookmaker-implied probabilities into the predictor.
-* **Better match model** — swap the logistic model for gradient boosting or a
-  bivariate-Poisson goals model (the `MatchPredictor` interface stays the same).
+* **Tune / extend models** — the tree backends in `src/models/tree_model.py`
+  accept hyperparameter overrides; you could add early stopping, calibrated
+  probabilities, or a bivariate-Poisson goals model behind the same
+  `MatchPredictor` interface.
 * **Official knockout seeding** — replace the Elo-seeded bracket in
   `simulate_knockout_stage.py` with FIFA's third-place placement table.
 * **Calibration** — add probability calibration (e.g. isotonic) before
