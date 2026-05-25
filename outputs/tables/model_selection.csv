@@ -1,4 +1,4 @@
 model,best_log_loss,best_accuracy,default_log_loss,default_accuracy,best_params
-catboost,0.961520325324248,0.5460227272727273,0.9841047869287126,0.5431818181818182,"{'iterations': 200, 'depth': 4, 'learning_rate': 0.03}"
-xgboost,0.9798595302928598,0.5420454545454545,1.104350320736712,0.5125,"{'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.03}"
-lightgbm,0.9949070200460486,0.5318181818181819,1.134507945493525,0.5125,"{'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.03}"
+catboost,0.9077267348172415,0.5892045454545455,0.9285673837452262,0.571590909090909,"{'iterations': 200, 'depth': 3, 'learning_rate': 0.03}"
+xgboost,0.9286148223129093,0.5778409090909091,1.053528638846949,0.5573863636363636,"{'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.03}"
+lightgbm,0.9453161118953802,0.5761363636363637,1.0901691226220431,0.5465909090909091,"{'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.03}"

@@ -2,9 +2,9 @@
   "model": "catboost",
   "params": {
     "iterations": 200,
-    "depth": 4,
+    "depth": 3,
     "learning_rate": 0.03
   },
-  "walk_forward_log_loss": 0.961520325324248,
-  "walk_forward_accuracy": 0.5460227272727273
+  "walk_forward_log_loss": 0.9077267348172415,
+  "walk_forward_accuracy": 0.5892045454545455
 }

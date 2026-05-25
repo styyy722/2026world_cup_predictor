@@ -32,6 +32,8 @@ NUMERIC_FEATURES = [
     "team_a_recent_goals_against_10", "team_b_recent_goals_against_10",
     "recent_goal_diff_a", "recent_goal_diff_b", "recent_goal_diff_diff",
     "team_a_rest_days", "team_b_rest_days", "rest_days_diff",
+    "team_a_momentum", "team_b_momentum", "momentum_diff",
+    "team_a_streak", "team_b_streak", "streak_diff",
     "team_a_absences", "team_b_absences", "absence_diff",
     "team_a_market_value", "team_b_market_value", "market_value_diff",
     "team_a_xg_diff_10", "team_b_xg_diff_10", "xg_diff_delta",
@@ -39,6 +41,8 @@ NUMERIC_FEATURES = [
 ]
 
 ROLL_WINDOW = 10  # number of recent matches used for form features
+SHORT_WINDOW = 5  # short window for recent-form momentum
+STREAK_CLIP = 5   # cap the signed win/loss streak
 
 _WORLD_CUP_KEYS = ("fifa world cup", "world cup")
 _MAJOR_KEYS = (
@@ -87,6 +91,7 @@ class _FormTracker:
         self._ga: dict[str, deque] = defaultdict(lambda: deque(maxlen=window))
         self._pts: dict[str, deque] = defaultdict(lambda: deque(maxlen=window))
         self._last_date: dict[str, pd.Timestamp] = {}
+        self._streak: dict[str, int] = defaultdict(int)
 
     def features(self, team: str, date: pd.Timestamp | None = None) -> dict[str, float]:
         gf = self._gf[team]
@@ -96,19 +101,28 @@ class _FormTracker:
         rest_days = 7.0
         if date is not None and team in self._last_date:
             rest_days = float(np.clip((date - self._last_date[team]).days, 0, 30))
+        streak = float(self._streak[team])
         if n == 0:
             # Neutral priors for teams with no history yet.
             return {
                 "win_rate": 0.33,
+                "form5": 0.33,
+                "momentum": 0.0,
+                "streak": 0.0,
                 "gf": 1.2,
                 "ga": 1.2,
                 "gd": 0.0,
                 "rest_days": rest_days,
             }
         win_rate = sum(1 for p in pts if p == 3) / n
+        recent = list(pts)[-SHORT_WINDOW:]
+        form5 = sum(1 for p in recent if p == 3) / len(recent)
         gf_mean = float(np.mean(gf))
         ga_mean = float(np.mean(ga))
-        return {"win_rate": win_rate, "gf": gf_mean, "ga": ga_mean,
+        return {"win_rate": win_rate, "form5": form5,
+                # Momentum: recent (last 5) win rate vs the longer baseline.
+                "momentum": form5 - win_rate, "streak": streak,
+                "gf": gf_mean, "ga": ga_mean,
                 "gd": gf_mean - ga_mean, "rest_days": rest_days}
 
     def update(self, team: str, goals_for: int, goals_against: int,
@@ -117,10 +131,14 @@ class _FormTracker:
         self._ga[team].append(goals_against)
         if goals_for > goals_against:
             self._pts[team].append(3)
+            self._streak[team] = max(1, self._streak[team] + 1)
         elif goals_for == goals_against:
             self._pts[team].append(1)
+            self._streak[team] = 0  # a draw resets the win/loss run
         else:
             self._pts[team].append(0)
+            self._streak[team] = min(-1, self._streak[team] - 1)
+        self._streak[team] = int(np.clip(self._streak[team], -STREAK_CLIP, STREAK_CLIP))
         if date is not None:
             self._last_date[team] = date
 
@@ -292,6 +310,12 @@ def _assemble_row(team_a, team_b, elo_a, elo_b, rank_a, rank_b,
         "team_a_rest_days": form_a["rest_days"],
         "team_b_rest_days": form_b["rest_days"],
         "rest_days_diff": form_a["rest_days"] - form_b["rest_days"],
+        "team_a_momentum": form_a["momentum"],
+        "team_b_momentum": form_b["momentum"],
+        "momentum_diff": form_a["momentum"] - form_b["momentum"],
+        "team_a_streak": form_a["streak"],
+        "team_b_streak": form_b["streak"],
+        "streak_diff": form_a["streak"] - form_b["streak"],
         "team_a_absences": context_a["absences"],
         "team_b_absences": context_b["absences"],
         "absence_diff": context_b["absences"] - context_a["absences"],
@@ -352,6 +376,9 @@ def build_fixture_features(team_a: str, team_b: str, neutral: bool,
     elo_b, rank_b, pts_b = get(team_b)
     neutral_prior = {
         "win_rate": 0.33,
+        "form5": 0.33,
+        "momentum": 0.0,
+        "streak": 0.0,
         "gf": 1.2,
         "ga": 1.2,
         "gd": 0.0,

@@ -96,6 +96,10 @@ default is **`xgboost`** (primary); `logistic` and `elo` are baselines.
 # Validate raw-data files and create empty templates for any missing files
 python main.py --mode validate-data
 
+# Generate a synthetic SAMPLE dataset (incl. team_context.csv) to try the
+# pipeline without real data (demo only - not real)
+python main.py --mode sample-data
+
 # Train the primary model (XGBoost) + the logistic baseline, and save both
 python main.py --mode train                 # defaults to --model xgboost
 python main.py --mode train --calibration sigmoid
@@ -180,12 +184,22 @@ them identically.
    model that shrinks as the rating gap widens. No training required.
 
 All models are trained on engineered match features (target `result`:
-0 loss / 1 draw / 2 win from team A's perspective): Elo, FIFA rank/points and
-their differences, rolling 10-match form (win rate, goals for/against, goal
-difference), rest-day gaps, optional absences, optional squad market values,
-optional xG form, and neutral / World Cup / major-tournament flags. Feature
-building lives in `src/features/build_features.py` and avoids look-ahead
-leakage by only using each team's matches *before* kickoff.
+0 loss / 1 draw / 2 win from team A's perspective):
+
+* **Strength:** Elo, FIFA rank/points and their differences.
+* **Form (rolling 10 matches):** win rate, goals for/against, goal difference.
+* **Team dynamics:** recent-form *momentum* (last-5 win rate minus the 10-match
+  rate) and a signed win/loss *streak* — these capture short-term swings that
+  the static Elo/FIFA snapshots miss.
+* **Player/team availability (from optional `team_context.csv`):** number of
+  absences (injuries + suspensions), squad market value, and recent xG balance.
+* **Context:** rest-day gaps and neutral / World Cup / major-tournament flags.
+
+Feature building lives in `src/features/build_features.py` and avoids look-ahead
+leakage by only using each team's matches *before* kickoff. The availability and
+dynamics features are populated when `team_context.csv` is present (real data
+from Transfermarkt/FBref/Understat, or the synthetic `--mode sample-data` demo);
+when it is absent they fall back to neutral values, so the pipeline still runs.
 
 If `--calibration sigmoid` or `--calibration isotonic` is supplied during
 `train` or `full`, the saved classifier is wrapped with scikit-learn probability
