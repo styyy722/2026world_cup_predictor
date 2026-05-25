@@ -1,0 +1,4 @@
+model,best_log_loss,best_accuracy,default_log_loss,default_accuracy,best_params
+catboost,0.9539366300097417,0.5616666666666666,0.9826211833351711,0.5508333333333333,"{'iterations': 200, 'depth': 3, 'learning_rate': 0.03}"
+xgboost,0.9814495165369526,0.5466666666666666,1.120506848485023,0.505,"{'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.03}"
+lightgbm,0.9906076994938068,0.5441666666666667,1.1633102737278587,0.49666666666666665,"{'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.03}"

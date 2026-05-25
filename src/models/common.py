@@ -96,3 +96,25 @@ def load_best_params(name: str) -> dict:
         return {}
     with open(path) as fh:
         return json.load(fh)
+
+
+def _selection_path() -> Path:
+    return config.MODELS_DIR / "selected_model.json"
+
+
+def save_selection(selection: dict) -> Path:
+    """Persist which model was selected as best (and its tuned params)."""
+    path = _selection_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w") as fh:
+        json.dump(selection, fh, indent=2)
+    return path
+
+
+def load_selection() -> dict:
+    """Load the selected-best-model record, or ``{}`` if none saved."""
+    path = _selection_path()
+    if not path.exists():
+        return {}
+    with open(path) as fh:
+        return json.load(fh)

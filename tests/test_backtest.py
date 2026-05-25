@@ -48,3 +48,31 @@ def test_best_params_roundtrip(tmp_path, monkeypatch):
     assert common.load_best_params("xgboost") == params
     # Missing file returns an empty dict, not an error.
     assert common.load_best_params("does_not_exist") == {}
+
+
+def test_selection_roundtrip(tmp_path, monkeypatch):
+    from src import config
+    monkeypatch.setattr(config, "MODELS_DIR", tmp_path)
+    sel = {"model": "lightgbm", "params": {"max_depth": 3},
+           "walk_forward_log_loss": 0.98}
+    common.save_selection(sel)
+    assert common.load_selection() == sel
+    # No selection saved yet -> empty dict.
+    monkeypatch.setattr(config, "MODELS_DIR", tmp_path / "empty")
+    assert common.load_selection() == {}
+
+
+def test_tune_and_select_picks_lowest_log_loss(features, monkeypatch):
+    # Tiny grids across two fast backends keep the test quick.
+    tiny = {
+        "xgboost": {"max_depth": [3], "n_estimators": [80]},
+        "lightgbm": {"max_depth": [3], "n_estimators": [80]},
+    }
+    monkeypatch.setattr(bt, "_PARAM_GRIDS", tiny)
+    res = bt.tune_and_select(model_kinds=("xgboost", "lightgbm"),
+                             features=features, n_splits=3, verbose=False)
+    assert res["best_model"] in ("xgboost", "lightgbm")
+    # The comparison is sorted best-first and the winner matches it.
+    assert res["comparison"].iloc[0]["model"] == res["best_model"]
+    assert res["best_score"] == pytest.approx(
+        res["comparison"]["best_log_loss"].min())

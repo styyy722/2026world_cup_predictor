@@ -218,6 +218,11 @@ _PARAM_GRIDS = {
         "max_depth": [3, 4, 6],
         "learning_rate": [0.03, 0.05, 0.1],
     },
+    "catboost": {
+        "iterations": [200, 400, 600],
+        "depth": [3, 4, 6],
+        "learning_rate": [0.03, 0.05, 0.1],
+    },
     "logistic": {
         "C": [0.1, 0.3, 1.0, 3.0, 10.0],
     },
@@ -286,6 +291,68 @@ def tune_model(model_kind: str = "xgboost", features: pd.DataFrame | None = None
         "baseline_score": float(baseline["log_loss"]),
         "baseline_accuracy": float(baseline["accuracy"]),
         "results": results,
+    }
+
+
+# The three gradient-boosting backends we compare by default.
+BOOSTING_MODELS = ("xgboost", "lightgbm", "catboost")
+
+
+def tune_and_select(model_kinds: tuple[str, ...] = BOOSTING_MODELS,
+                    features: pd.DataFrame | None = None, n_splits: int = 4,
+                    verbose: bool = True) -> dict:
+    """Tune every available model and select the best by walk-forward log loss.
+
+    Rather than assume one booster is best, this tunes each installed backend
+    and picks the winner empirically (lowest walk-forward log loss, a proper
+    scoring rule; accuracy is reported as a secondary view).
+
+    Returns a dict with the winning ``best_model`` / ``best_params`` /
+    ``best_score``, a ``per_model`` map of each backend's tuning result, and a
+    ``comparison`` DataFrame summarising all backends (best-first).
+    """
+    if features is None:
+        features = bf.build_training_features()
+
+    available = [m for m in model_kinds if m in tree.available_backends()]
+    missing = [m for m in model_kinds if m not in available]
+    if missing:
+        print(f"[select] skipping unavailable backends (not installed): {missing}")
+    if not available:
+        raise RuntimeError("No requested boosting backends are installed.")
+
+    per_model: dict[str, dict] = {}
+    rows = []
+    for m in available:
+        if verbose:
+            print(f"[select] === tuning {m} ===")
+        res = tune_model(m, features=features, n_splits=n_splits, verbose=verbose)
+        per_model[m] = res
+        rows.append({
+            "model": m,
+            "best_log_loss": res["best_score"],
+            "best_accuracy": res["best_accuracy"],
+            "default_log_loss": res["baseline_score"],
+            "default_accuracy": res["baseline_accuracy"],
+            "best_params": res["best_params"],
+        })
+
+    comparison = pd.DataFrame(rows).sort_values("best_log_loss").reset_index(drop=True)
+    best_model = comparison.iloc[0]["model"]
+    if verbose:
+        print("\n[select] model comparison (walk-forward, tuned):")
+        for _, r in comparison.iterrows():
+            print(f"[select]  {r['model']:>9}: logloss={r['best_log_loss']:.4f} "
+                  f"acc={r['best_accuracy']:.4f}  params={r['best_params']}")
+        print(f"[select] WINNER: {best_model}")
+
+    return {
+        "best_model": best_model,
+        "best_params": per_model[best_model]["best_params"],
+        "best_score": per_model[best_model]["best_score"],
+        "best_accuracy": per_model[best_model]["best_accuracy"],
+        "per_model": per_model,
+        "comparison": comparison,
     }
 
 

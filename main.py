@@ -35,8 +35,22 @@ DEFAULT_MODEL = "xgboost"
 _TREE_BACKENDS = ("xgboost", "lightgbm", "catboost")
 
 
+def _resolve_model(model_kind: str) -> str:
+    """Resolve 'best' to the model chosen by `--mode select`."""
+    if model_kind != "best":
+        return model_kind
+    sel = common.load_selection()
+    if not sel:
+        raise ValueError(
+            "No selected model found. Run `python main.py --mode select` first."
+        )
+    print(f"[model] using selected best model: {sel['model']}")
+    return sel["model"]
+
+
 def _build_predictor(model_kind: str) -> MatchPredictor:
     """Construct the requested predictor with latest ratings and form."""
+    model_kind = _resolve_model(model_kind)
     ratings = loaders.latest_ratings()
     if model_kind == "elo":
         return MatchPredictor.from_elo(ratings)
@@ -57,6 +71,7 @@ def run_train(model_kind: str = DEFAULT_MODEL) -> None:
     The logistic regression is always trained as a baseline for comparison; the
     selected tree backend (default XGBoost) is the primary forecasting model.
     """
+    model_kind = _resolve_model(model_kind)
     print("[train] Building training features from historical results...")
     features = bf.build_training_features()
     print(f"[train] {len(features)} historical matches in training set.")
@@ -112,6 +127,8 @@ def run_backtest(model_kind: str = DEFAULT_MODEL) -> None:
     Runs both per-World-Cup backtests and the expanding-window walk-forward
     cross-validation over the entire match history.
     """
+    if model_kind == "best":
+        model_kind = _resolve_model(model_kind)
     models = ["logistic"]
     if model_kind in _TREE_BACKENDS and model_kind not in models:
         models.append(model_kind)
@@ -156,6 +173,42 @@ def run_tune(model_kind: str = DEFAULT_MODEL) -> None:
           f"{res['baseline_accuracy']:.4f} -> {res['best_accuracy']:.4f}")
 
 
+def run_select() -> None:
+    """Tune all three boosters, compare, and select + persist the best.
+
+    Tunes XGBoost, LightGBM and CatBoost (whichever are installed) via
+    walk-forward CV, picks the one with the lowest log loss, saves each
+    backend's tuned params and the overall selection, writes a comparison
+    table, and retrains the winner so simulate/full can use `--model best`.
+    """
+    config.ensure_dirs()
+    features = bf.build_training_features()
+    res = bt.tune_and_select(features=features)
+
+    # Persist every backend's tuned params (so any can be used later).
+    for model_kind, mres in res["per_model"].items():
+        common.save_best_params(model_kind, mres["best_params"])
+        res_path = config.TABLES_DIR / f"tuning_results_{model_kind}.csv"
+        mres["results"].to_csv(res_path, index=False)
+
+    # Persist the comparison and the selection record.
+    res["comparison"].to_csv(config.TABLES_DIR / "model_selection.csv", index=False)
+    selection = {
+        "model": res["best_model"],
+        "params": res["best_params"],
+        "walk_forward_log_loss": res["best_score"],
+        "walk_forward_accuracy": res["best_accuracy"],
+    }
+    sel_path = common.save_selection(selection)
+    print(f"[select] Saved selection ({res['best_model']}) to {sel_path}")
+
+    # Retrain and save the winning model so `--model best` works immediately.
+    best = res["best_model"]
+    model = tree.train_model(features, backend=best, **res["best_params"])
+    tree.save_model(model, backend=best)
+    print(f"[select] Retrained and saved winning model: {best}")
+
+
 def _print_top(team_stage: pd.DataFrame, n: int = 10) -> None:
     print("\nTop title contenders:")
     cols = ["team", "group", "prob_reach_sf", "prob_reach_final", "prob_champion"]
@@ -167,15 +220,17 @@ def _print_top(team_stage: pd.DataFrame, n: int = 10) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="2026 World Cup forecaster")
-    parser.add_argument("--mode", required=True,
-                        choices=["train", "simulate", "full", "backtest", "tune"])
+    parser.add_argument(
+        "--mode", required=True,
+        choices=["train", "simulate", "full", "backtest", "tune", "select"])
     parser.add_argument("--n_simulations", type=int, default=config.QUICK_SIMULATIONS)
     parser.add_argument(
         "--model",
-        choices=["xgboost", "lightgbm", "catboost", "logistic", "elo"],
+        choices=["best", "xgboost", "lightgbm", "catboost", "logistic", "elo"],
         default=DEFAULT_MODEL,
         help="Match model to drive the simulation. Tree backends are the "
-             "primary models; 'logistic' is the baseline.",
+             "primary models; 'best' uses the winner of `--mode select`; "
+             "'logistic' is the baseline.",
     )
     args = parser.parse_args()
 
@@ -187,6 +242,8 @@ def main() -> None:
         run_backtest(args.model)
     elif args.mode == "tune":
         run_tune(args.model)
+    elif args.mode == "select":
+        run_select()
     elif args.mode == "full":
         run_train(args.model)
         run_simulate(args.n_simulations, args.model)

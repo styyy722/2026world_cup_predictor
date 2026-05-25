@@ -88,7 +88,12 @@ python main.py --mode train                 # defaults to --model xgboost
 
 # Train with a different tree backend
 python main.py --mode train --model lightgbm
-python main.py --mode train --model catboost   # requires `pip install catboost`
+python main.py --mode train --model catboost
+
+# Compare ALL three boosters (tuned) and select the best automatically
+python main.py --mode select
+# ...then drive everything with the winner
+python main.py --mode full --model best --n_simulations 10000
 
 # Simulate the tournament and export tables + charts (quick mode)
 python main.py --mode simulate --n_simulations 10000 --model xgboost
@@ -112,7 +117,9 @@ python main.py --mode backtest --model xgboost
 
 `tune` saves the best hyperparameters to `models_store/<model>_best_params.json`;
 `train` and `full` then load and apply them automatically (the run logs
-"tuned params" when they do).
+"tuned params" when they do). `select` goes further: it tunes **all three
+boosters** and records the winner in `models_store/selected_model.json`, which
+`--model best` then uses.
 
 Run the tests with:
 
@@ -131,11 +138,16 @@ them identically.
 
 1. **Gradient-boosted trees — primary** (`src/models/tree_model.py`)
    A multiclass gradient-boosting classifier with three interchangeable
-   backends: **XGBoost** (default), **LightGBM**, and **CatBoost**. Trees
-   capture non-linear interactions between features (e.g. how form matters more
-   when teams are evenly matched) and need no feature scaling. Defaults use
-   shallow trees with mild regularisation to avoid overfitting the limited
-   international match history; tune via keyword overrides to `train_model`.
+   backends: **XGBoost**, **LightGBM**, and **CatBoost**. Trees capture
+   non-linear interactions between features (e.g. how form matters more when
+   teams are evenly matched) and need no feature scaling.
+
+   **Why not just XGBoost?** No single booster is best on every dataset — they
+   differ in tree-growth strategy (level-wise vs leaf-wise vs symmetric),
+   regularisation, and how they handle small/noisy data. Rather than assume a
+   winner, `--mode select` tunes all three and picks the one with the lowest
+   walk-forward log loss on *your* data; `--model best` then uses it. XGBoost is
+   only the default until a selection is made.
 
 2. **Multinomial logistic regression — baseline** (`src/models/baseline_logistic.py`)
    A `StandardScaler` + softmax `LogisticRegression` pipeline. Linear, fast,
@@ -187,7 +199,9 @@ In `outputs/tables/`:
 * **`backtest_summary.csv`** — accuracy / log loss / Brier per scope
   (`wc:<year>` World Cups and `walk_forward` over all history) and model.
 * **`tuning_results_<model>.csv`** — every hyperparameter configuration tried
-  during `--mode tune`, with its walk-forward score (written by tuning runs).
+  during `--mode tune` / `--mode select`, with its walk-forward score.
+* **`model_selection.csv`** — tuned walk-forward log loss / accuracy for each
+  booster (XGBoost / LightGBM / CatBoost), best-first (written by `--mode select`).
 
 In `outputs/charts/`:
 
@@ -215,13 +229,17 @@ Both report accuracy, multiclass log loss, multiclass Brier score, and a
 calibration table, and compare the chosen tree model against the logistic
 baseline.
 
-### Tuning
+### Tuning and model selection
 
-`--mode tune` grid-searches hyperparameters using the **walk-forward log loss**
-(a proper scoring rule) as the objective, prints every configuration's score,
-saves the best params, and retrains. On the bundled synthetic data this already
-cuts the default XGBoost's overfitting (walk-forward log loss ≈ 1.14 → 0.99,
-accuracy ≈ 0.50 → 0.55); the grids live in `_PARAM_GRIDS` and are easy to widen.
+`--mode tune` grid-searches one model's hyperparameters using the **walk-forward
+log loss** (a proper scoring rule) as the objective, prints every config's
+score, saves the best params, and retrains.
+
+`--mode select` runs that search for **all three boosters** (XGBoost, LightGBM,
+CatBoost), then picks the backend with the lowest walk-forward log loss and
+records it in `models_store/selected_model.json`. Use `--model best` afterwards
+to drive `train` / `simulate` / `full` with the winner. The per-booster grids
+live in `_PARAM_GRIDS` and are easy to widen.
 
 > Note: the bundled **template** data is synthetic, so absolute numbers are
 > illustrative. Supply real historical data for meaningful evaluation.
