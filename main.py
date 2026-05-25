@@ -245,6 +245,13 @@ def run_validate_data() -> None:
     loaders.validate_raw_data_files()
 
 
+def run_sample_data() -> None:
+    """Generate a synthetic SAMPLE dataset (results + team_context) for demos."""
+    from src.data import sample
+    print("[sample-data] Generating synthetic sample data (NOT real)...")
+    sample.write_sample_data()
+
+
 def _print_top(team_stage: pd.DataFrame, n: int = 10) -> None:
     print("\nTop title contenders:")
     cols = ["team", "group", "prob_reach_sf", "prob_reach_final", "prob_champion"]
@@ -260,6 +267,7 @@ def main() -> None:
         "--mode", required=True,
         choices=[
             "validate-data",
+            "sample-data",
             "train",
             "simulate",
             "full",
@@ -297,6 +305,8 @@ def main() -> None:
 
     if args.mode == "validate-data":
         run_validate_data()
+    elif args.mode == "sample-data":
+        run_sample_data()
     elif args.mode == "train":
         run_train(args.model, calibration=args.calibration)
     elif args.mode == "simulate":
