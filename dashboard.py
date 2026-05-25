@@ -6,7 +6,7 @@ Run with:
 from __future__ import annotations
 
 import pandas as pd
-import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 from src import config
@@ -59,15 +59,26 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:
     plot_df = top.assign(prob_champion_pct=_pct(top["prob_champion"]))
-    fig = px.bar(
-        plot_df,
-        x="prob_champion_pct",
-        y="team",
-        color="group",
-        orientation="h",
-        labels={"prob_champion_pct": "Champion probability (%)", "team": ""},
+    plot_df = plot_df.sort_values("prob_champion_pct")
+    fig = go.Figure(
+        go.Bar(
+            x=plot_df["prob_champion_pct"],
+            y=plot_df["team"],
+            orientation="h",
+            marker_color="#2563eb",
+            text=plot_df["group"].map(lambda group: f"Group {group}"),
+            hovertemplate=(
+                "%{y}<br>Champion probability: %{x:.1f}%<br>%{text}"
+                "<extra></extra>"
+            ),
+        )
     )
-    fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=440)
+    fig.update_layout(
+        height=440,
+        xaxis_title="Champion probability (%)",
+        yaxis_title="",
+        margin={"l": 20, "r": 20, "t": 20, "b": 40},
+    )
     st.plotly_chart(fig, width="stretch")
 
     display = team_stage.copy()
