@@ -68,12 +68,12 @@ with tab1:
         labels={"prob_champion_pct": "Champion probability (%)", "team": ""},
     )
     fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=440)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     display = team_stage.copy()
     for col in [c for c in display.columns if c.startswith("prob_")]:
         display[col] = _pct(display[col])
-    st.dataframe(display, use_container_width=True, hide_index=True)
+    st.dataframe(display, width="stretch", hide_index=True)
 
 with tab2:
     group = st.selectbox("Group", sorted(team_stage["group"].dropna().unique()))
@@ -97,7 +97,7 @@ with tab2:
             "prob_reach_r32",
             "prob_champion",
         ]],
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -105,10 +105,10 @@ with tab3:
     if match_probs.empty:
         st.info("No match probability table found yet.")
     else:
-        st.dataframe(match_probs, use_container_width=True, hide_index=True)
+        st.dataframe(match_probs, width="stretch", hide_index=True)
 
 with tab4:
     if backtest.empty:
         st.info("No backtest summary found yet.")
     else:
-        st.dataframe(backtest, use_container_width=True, hide_index=True)
+        st.dataframe(backtest, width="stretch", hide_index=True)
