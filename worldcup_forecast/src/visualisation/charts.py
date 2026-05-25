@@ -78,9 +78,12 @@ def plot_stage_progression(team_stage: pd.DataFrame, top_n: int = 8,
 
 def generate_all_charts(team_stage: pd.DataFrame) -> list[Path]:
     """Render every chart and return the written paths."""
+    from . import bracket  # local import avoids a circular dependency
+
     config.ensure_dirs()
     return [
         plot_champion_probabilities(team_stage),
         plot_expected_group_points(team_stage),
         plot_stage_progression(team_stage),
+        bracket.plot_quarter_final_bracket(team_stage),
     ]
