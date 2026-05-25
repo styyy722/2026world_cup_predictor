@@ -26,6 +26,7 @@ import numpy as np
 import pandas as pd
 
 from .. import config
+from . import templates
 
 # How strongly each effect feeds into the synthetic match strengths (Elo pts).
 # These are deliberately sizeable so the time-varying effects (which the static
@@ -39,6 +40,7 @@ HOME_ADVANTAGE = 60.0
 _TOURNAMENTS = ["Friendly", "FIFA World Cup", "UEFA Euro", "Copa America",
                 "World Cup qualification", "Nations League"]
 _T_WEIGHTS = np.array([0.45, 0.08, 0.07, 0.07, 0.23, 0.10])
+_POSITIONS = ("GK", "DF", "DF", "MF", "MF", "FW", "FW", "FW")
 
 
 def _team_strengths() -> dict[str, float]:
@@ -75,6 +77,144 @@ def make_team_context(strengths: dict[str, float],
                 "xg_for_10": round(xg_for, 3),
                 "xg_against_10": round(xg_against, 3),
             })
+    return pd.DataFrame(rows)
+
+
+def _player_rows(team: str) -> list[dict]:
+    """Small synthetic player pool for optional player-level feature demos."""
+    return [
+        {
+            "player": f"{team} Player {i + 1}",
+            "position": _POSITIONS[i % len(_POSITIONS)],
+            "club": f"{team} FC",
+            "is_probable_starter": i < 5,
+        }
+        for i in range(8)
+    ]
+
+
+def make_player_status(context: pd.DataFrame) -> pd.DataFrame:
+    """Synthetic player availability snapshots aligned to team_context."""
+    rows = []
+    for r in context.itertuples(index=False):
+        players = _player_rows(r.team)
+        injured = int(getattr(r, "injured_players"))
+        suspended = int(getattr(r, "suspended_players"))
+        unavailable = injured + suspended
+        for i, player in enumerate(players):
+            if i < injured:
+                status = "injured"
+                injury_type = "sample soft-tissue"
+            elif i < unavailable:
+                status = "suspended"
+                injury_type = ""
+            elif i == unavailable and unavailable > 0:
+                status = "doubtful"
+                injury_type = "sample fitness test"
+            else:
+                status = "available"
+                injury_type = ""
+            rows.append({
+                "as_of_date": r.date,
+                "team": r.team,
+                "player": player["player"],
+                "position": player["position"],
+                "club": player["club"],
+                "squad_status": "provisional",
+                "availability_status": status,
+                "injury_type": injury_type,
+                "expected_return": "",
+                "is_probable_starter": player["is_probable_starter"],
+                "source_url": "synthetic://sample-data",
+            })
+    return pd.DataFrame(rows)
+
+
+def make_player_form(strengths: dict[str, float],
+                     start_year: int = 2003, end_year: int = 2026,
+                     seed: int = 21) -> pd.DataFrame:
+    """Synthetic player-form rows with strength-correlated minutes/xG."""
+    rng = np.random.default_rng(seed)
+    rows = []
+    for year in range(start_year, end_year + 1):
+        for team, elo in strengths.items():
+            strength = max(0.1, (elo - 1350.0) / 600.0)
+            for i, player in enumerate(_player_rows(team)):
+                starter = player["is_probable_starter"]
+                minutes = rng.integers(1800, 3600) if starter else rng.integers(400, 1800)
+                attacking_role = 1.0 if player["position"] == "FW" else 0.45
+                goals = max(0.0, rng.normal(5.0 * strength * attacking_role, 1.5))
+                assists = max(0.0, rng.normal(3.5 * strength * attacking_role, 1.0))
+                xg = max(0.0, goals + rng.normal(0.2, 0.8))
+                xa = max(0.0, assists + rng.normal(0.2, 0.6))
+                cards = max(0.0, rng.normal(4.0 if player["position"] != "FW" else 2.0, 1.5))
+                rows.append({
+                    "date": f"{year}-06-01",
+                    "season": f"{year - 1}-{year}",
+                    "team": team,
+                    "player": player["player"],
+                    "club": player["club"],
+                    "competition": "Sample club season",
+                    "minutes": int(minutes),
+                    "starts": int(minutes // 90),
+                    "goals": round(goals, 2),
+                    "assists": round(assists, 2),
+                    "xg": round(xg, 2),
+                    "xa": round(xa, 2),
+                    "cards": round(cards, 2),
+                    "source_url": "synthetic://sample-data",
+                })
+    return pd.DataFrame(rows)
+
+
+def make_team_status(strengths: dict[str, float],
+                     start: str = "2003-01-01", end: str = "2026-04-01",
+                     seed: int = 31) -> pd.DataFrame:
+    """Synthetic team experience/stability snapshots."""
+    rng = np.random.default_rng(seed)
+    snapshots = pd.date_range(start, end, freq="182D")
+    confeds = ["AFC", "CAF", "CONCACAF", "CONMEBOL", "UEFA"]
+    rows = []
+    for i, (team, elo) in enumerate(strengths.items()):
+        confed = confeds[i % len(confeds)]
+        for d in snapshots:
+            rows.append({
+                "as_of_date": d.strftime("%Y-%m-%d"),
+                "team": team,
+                "average_age": round(np.clip(26.0 + rng.normal(0, 1.8), 21, 33), 2),
+                "total_caps": int(max(80, (elo - 1300) * 1.8 + rng.normal(0, 35))),
+                "coach_tenure_days": int(max(30, rng.gamma(3.0, 220.0))),
+                "fifa_confederation": confed,
+                "source_url": "synthetic://sample-data",
+            })
+    return pd.DataFrame(rows)
+
+
+def make_match_context(seed: int = 41) -> pd.DataFrame:
+    """Synthetic fixture weather/travel context for the 2026 fixtures."""
+    if not config.FIXTURES_FILE.exists():
+        return templates.make_template(templates.optional_spec("match_context.csv"))
+    rng = np.random.default_rng(seed)
+    fixtures = pd.read_csv(config.FIXTURES_FILE)
+    rows = []
+    for m in fixtures.itertuples(index=False):
+        travel_a = float(rng.integers(300, 5000))
+        travel_b = float(rng.integers(300, 5000))
+        rows.append({
+            "match_id": m.match_id,
+            "date": m.date,
+            "team_a": m.team_a,
+            "team_b": m.team_b,
+            "venue": m.venue,
+            "city": f"Sample City {m.group}",
+            "temperature_c": round(float(rng.normal(24, 5)), 1),
+            "humidity_pct": round(float(np.clip(rng.normal(55, 15), 15, 95)), 1),
+            "wind_kmh": round(float(np.clip(rng.normal(12, 6), 0, 45)), 1),
+            "altitude_m": round(float(np.clip(rng.normal(350, 500), 0, 2200)), 0),
+            "team_a_travel_km": travel_a,
+            "team_b_travel_km": travel_b,
+            "source_url": "synthetic://sample-data",
+        })
     return pd.DataFrame(rows)
 
 
@@ -162,14 +302,30 @@ def write_sample_data() -> None:
         )
     strengths = _team_strengths()
     context = make_team_context(strengths)
+    player_status = make_player_status(context)
+    player_form = make_player_form(strengths)
+    team_status = make_team_status(strengths)
+    match_context = make_match_context()
     results = make_results(strengths, context)
 
     context_path = config.RAW_DIR / "team_context.csv"
+    player_status_path = config.RAW_DIR / "player_status.csv"
+    player_form_path = config.RAW_DIR / "player_form.csv"
+    team_status_path = config.RAW_DIR / "team_status.csv"
+    match_context_path = config.RAW_DIR / "match_context.csv"
     context.to_csv(context_path, index=False)
+    player_status.to_csv(player_status_path, index=False)
+    player_form.to_csv(player_form_path, index=False)
+    team_status.to_csv(team_status_path, index=False)
+    match_context.to_csv(match_context_path, index=False)
     results.to_csv(config.RESULTS_FILE, index=False)
     print(f"[sample-data] Wrote synthetic {results.shape[0]} results -> "
           f"{_rel(config.RESULTS_FILE)}")
     print(f"[sample-data] Wrote synthetic team context -> {_rel(context_path)}")
+    print(f"[sample-data] Wrote synthetic player status -> {_rel(player_status_path)}")
+    print(f"[sample-data] Wrote synthetic player form -> {_rel(player_form_path)}")
+    print(f"[sample-data] Wrote synthetic team status -> {_rel(team_status_path)}")
+    print(f"[sample-data] Wrote synthetic match context -> {_rel(match_context_path)}")
     print("[sample-data] NOTE: synthetic data for demos only - not real.")
 
 

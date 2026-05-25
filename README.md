@@ -73,6 +73,10 @@ Optional enhancement files can also be placed in `data/raw/`:
 | File | Expected columns | Used for |
 |------|------------------|----------|
 | `team_context.csv` | `date, team, injured_players, suspended_players, squad_market_value_eur, xg_for_10, xg_against_10` | richer availability, market-value, and xG features |
+| `player_status.csv` | `as_of_date, team, player, position, club, squad_status, availability_status, injury_type, expected_return, is_probable_starter, source_url` | squad availability, injuries, suspensions, likely starters |
+| `player_form.csv` | `date, season, team, player, club, competition, minutes, starts, goals, assists, xg, xa, cards, source_url` | player match fitness, attacking output, discipline |
+| `team_status.csv` | `as_of_date, team, average_age, total_caps, coach_tenure_days, fifa_confederation, source_url` | squad experience and coaching stability |
+| `match_context.csv` | `match_id, date, team_a, team_b, venue, city, temperature_c, humidity_pct, wind_kmh, altitude_m, team_a_travel_km, team_b_travel_km, source_url` | fixture weather, altitude, and travel load |
 | `betting_odds.csv` | `match_id, date, team_a, team_b, team_a_decimal_odds, draw_decimal_odds, team_b_decimal_odds, bookmaker` | optional bookmaker-implied probability blending |
 
 ---
@@ -96,8 +100,8 @@ default is **`xgboost`** (primary); `logistic` and `elo` are baselines.
 # Validate raw-data files and create empty templates for any missing files
 python main.py --mode validate-data
 
-# Generate a synthetic SAMPLE dataset (incl. team_context.csv) to try the
-# pipeline without real data (demo only - not real)
+# Generate a synthetic SAMPLE dataset, including optional player/team/context
+# files, to try the pipeline without real data (demo only - not real)
 python main.py --mode sample-data
 
 # Train the primary model (XGBoost) + the logistic baseline, and save both
@@ -191,15 +195,19 @@ All models are trained on engineered match features (target `result`:
 * **Team dynamics:** recent-form *momentum* (last-5 win rate minus the 10-match
   rate) and a signed win/loss *streak* — these capture short-term swings that
   the static Elo/FIFA snapshots miss.
-* **Player/team availability (from optional `team_context.csv`):** number of
-  absences (injuries + suspensions), squad market value, and recent xG balance.
-* **Context:** rest-day gaps and neutral / World Cup / major-tournament flags.
+* **Player/team availability:** absences, unavailable/doubtful players,
+  probable-starter counts, squad market value, recent xG balance, player
+  minutes and xG/xA output, cards, average age, total caps, and coach tenure.
+* **Context:** rest-day gaps, fixture weather, altitude, travel estimates, and
+  neutral / World Cup / major-tournament flags.
 
 Feature building lives in `src/features/build_features.py` and avoids look-ahead
 leakage by only using each team's matches *before* kickoff. The availability and
-dynamics features are populated when `team_context.csv` is present (real data
-from Transfermarkt/FBref/Understat, or the synthetic `--mode sample-data` demo);
-when it is absent they fall back to neutral values, so the pipeline still runs.
+dynamics features are populated when optional CSVs are present. Real data can
+come from FIFA squad/federation pages, Transfermarkt, FBref/Statbunker,
+RotoWire/Sports Mole/SportsGambler and Open-Meteo; the synthetic
+`--mode sample-data` demo writes compatible placeholder files. When optional
+files are absent, the pipeline falls back to neutral values.
 
 If `--calibration sigmoid` or `--calibration isotonic` is supplied during
 `train` or `full`, the saved classifier is wrapped with scikit-learn probability

@@ -33,6 +33,7 @@ class MatchPredictor:
                  ratings: pd.DataFrame | None = None,
                  form: dict[str, dict] | None = None,
                  context: pd.DataFrame | None = None,
+                 optional_context: dict[str, pd.DataFrame] | None = None,
                  odds: pd.DataFrame | None = None,
                  odds_weight: float = 0.0):
         self.model_kind = model_kind
@@ -40,6 +41,7 @@ class MatchPredictor:
         self.ratings = ratings
         self.form = form or {}
         self.context = context
+        self.optional_context = optional_context or {}
         self.odds = odds if odds is not None and not odds.empty else None
         self.odds_weight = max(0.0, min(1.0, float(odds_weight)))
         # Map team -> Elo for fast lookup (used by Elo model and tie-breaks).
@@ -57,23 +59,27 @@ class MatchPredictor:
     def from_logistic(cls, model, ratings: pd.DataFrame,
                       form: dict[str, dict],
                       context: pd.DataFrame | None = None,
+                      optional_context: dict[str, pd.DataFrame] | None = None,
                       odds: pd.DataFrame | None = None,
                       odds_weight: float = 0.0) -> "MatchPredictor":
         return cls(
             "logistic", model=model, ratings=ratings, form=form,
-            context=context, odds=odds, odds_weight=odds_weight,
+            context=context, optional_context=optional_context,
+            odds=odds, odds_weight=odds_weight,
         )
 
     @classmethod
     def from_classifier(cls, model_kind: str, model, ratings: pd.DataFrame,
                         form: dict[str, dict],
                         context: pd.DataFrame | None = None,
+                        optional_context: dict[str, pd.DataFrame] | None = None,
                         odds: pd.DataFrame | None = None,
                         odds_weight: float = 0.0) -> "MatchPredictor":
         """Build a predictor for any feature-driven classifier backend."""
         return cls(
             model_kind, model=model, ratings=ratings, form=form,
-            context=context, odds=odds, odds_weight=odds_weight,
+            context=context, optional_context=optional_context,
+            odds=odds, odds_weight=odds_weight,
         )
 
     @classmethod
@@ -100,7 +106,8 @@ class MatchPredictor:
         else:
             row = bf.build_fixture_features(
                 team_a, team_b, neutral, self.ratings, self.form,
-                context=self.context, match_date=match_date,
+                context=self.context, match_date=match_date, match_id=match_id,
+                optional=self.optional_context,
                 is_world_cup=1, is_major_tournament=1,
             )
             p = common.predict_proba_dicts(self.model, row)

@@ -9,7 +9,11 @@ def test_new_dynamics_columns_present_in_matrix():
     feats = bf.build_training_features()
     X = bf.features_to_matrix(feats)
     for col in ["team_a_momentum", "team_b_momentum", "momentum_diff",
-                "team_a_streak", "team_b_streak", "streak_diff"]:
+                "team_a_streak", "team_b_streak", "streak_diff",
+                "team_a_unavailable_players", "team_b_unavailable_players",
+                "team_a_player_minutes_index", "team_b_player_minutes_index",
+                "team_a_average_age", "team_b_average_age",
+                "temperature_c", "travel_km_diff"]:
         assert col in X.columns
     assert not X.isna().any().any()
 
@@ -60,8 +64,16 @@ def test_sample_generator_writes_team_context(tmp_path, monkeypatch):
 
     sample.write_sample_data()
     ctx = pd.read_csv(tmp_path / "team_context.csv")
+    player_status = pd.read_csv(tmp_path / "player_status.csv")
+    player_form = pd.read_csv(tmp_path / "player_form.csv")
+    team_status = pd.read_csv(tmp_path / "team_status.csv")
+    match_context = pd.read_csv(tmp_path / "match_context.csv")
     res = pd.read_csv(config.RESULTS_FILE)
     assert set(["injured_players", "squad_market_value_eur", "xg_for_10"]).issubset(ctx.columns)
+    assert set(["availability_status", "is_probable_starter"]).issubset(player_status.columns)
+    assert set(["minutes", "xg", "xa"]).issubset(player_form.columns)
+    assert set(["average_age", "coach_tenure_days"]).issubset(team_status.columns)
+    assert set(["temperature_c", "team_a_travel_km"]).issubset(match_context.columns)
     assert len(res) > 0
     # Stronger team should carry a higher average squad market value.
     val = ctx.groupby("team")["squad_market_value_eur"].mean()

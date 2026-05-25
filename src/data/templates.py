@@ -150,6 +150,112 @@ OPTIONAL_RAW_DATA_SPECS: tuple[RawDataSpec, ...] = (
         ),
     ),
     RawDataSpec(
+        filename="player_status.csv",
+        columns=(
+            "as_of_date",
+            "team",
+            "player",
+            "position",
+            "club",
+            "squad_status",
+            "availability_status",
+            "injury_type",
+            "expected_return",
+            "is_probable_starter",
+            "source_url",
+        ),
+        source=(
+            "Optional player availability from FIFA squad announcements, "
+            "national federation squad pages, Transfermarkt injury history, "
+            "RotoWire, Sports Mole, or SportsGambler"
+        ),
+        instructions=(
+            "Keep one row per player per status snapshot date.",
+            "Use squad_status for final/provisional/replaced/out-of-squad states.",
+            "Use availability_status values such as available, doubtful, "
+            "injured, suspended, or out.",
+            "Keep source_url populated so late injury/news updates are auditable.",
+        ),
+    ),
+    RawDataSpec(
+        filename="player_form.csv",
+        columns=(
+            "date",
+            "season",
+            "team",
+            "player",
+            "club",
+            "competition",
+            "minutes",
+            "starts",
+            "goals",
+            "assists",
+            "xg",
+            "xa",
+            "cards",
+            "source_url",
+        ),
+        source=(
+            "Optional club/international player form from FBref, Statbunker, "
+            "Kaggle FBref-derived files, or manually audited public sources"
+        ),
+        instructions=(
+            "Keep one row per player per season or snapshot date.",
+            "Use minutes and xG/xA when available; leave unknown values blank.",
+            "Prefer public CSV exports or manually reviewed tables over paid APIs.",
+        ),
+    ),
+    RawDataSpec(
+        filename="team_status.csv",
+        columns=(
+            "as_of_date",
+            "team",
+            "average_age",
+            "total_caps",
+            "coach_tenure_days",
+            "fifa_confederation",
+            "source_url",
+        ),
+        source=(
+            "Optional team status from FIFA team pages, national federation "
+            "profiles, Transfermarkt squad pages, or Statbunker"
+        ),
+        instructions=(
+            "Keep one row per team per status snapshot date.",
+            "Use average_age, total_caps, and coach_tenure_days as squad "
+            "experience/stability proxies.",
+            "Leave fifa_confederation as text; the current model uses the "
+            "numeric stability fields.",
+        ),
+    ),
+    RawDataSpec(
+        filename="match_context.csv",
+        columns=(
+            "match_id",
+            "date",
+            "team_a",
+            "team_b",
+            "venue",
+            "city",
+            "temperature_c",
+            "humidity_pct",
+            "wind_kmh",
+            "altitude_m",
+            "team_a_travel_km",
+            "team_b_travel_km",
+            "source_url",
+        ),
+        source=(
+            "Optional match context from FIFA schedule/venue pages plus free "
+            "weather and geography sources such as Open-Meteo"
+        ),
+        instructions=(
+            "Keep one row per fixture when venue/weather/travel estimates are known.",
+            "Use neutral defaults if weather forecasts are not yet available.",
+            "Do not require a paid API for the first version.",
+        ),
+    ),
+    RawDataSpec(
         filename="betting_odds.csv",
         columns=(
             "match_id",

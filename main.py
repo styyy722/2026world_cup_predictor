@@ -59,6 +59,12 @@ def _build_predictor(model_kind: str, odds_weight: float = 0.0) -> MatchPredicto
 
     form = bf.current_form_table()
     context = loaders.load_team_context()
+    optional_context = {
+        "player_status": loaders.load_player_status(),
+        "player_form": loaders.load_player_form(),
+        "team_status": loaders.load_team_status(),
+        "match_context": loaders.load_match_context(),
+    }
     if model_kind == "logistic":
         model = logit.load_model()
     elif model_kind in _TREE_BACKENDS:
@@ -71,6 +77,7 @@ def _build_predictor(model_kind: str, odds_weight: float = 0.0) -> MatchPredicto
         ratings,
         form,
         context=context,
+        optional_context=optional_context,
         odds=odds,
         odds_weight=odds_weight,
     )
@@ -246,7 +253,7 @@ def run_validate_data() -> None:
 
 
 def run_sample_data() -> None:
-    """Generate a synthetic SAMPLE dataset (results + team_context) for demos."""
+    """Generate synthetic SAMPLE results plus optional context CSVs for demos."""
     from src.data import sample
     print("[sample-data] Generating synthetic sample data (NOT real)...")
     sample.write_sample_data()

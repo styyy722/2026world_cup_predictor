@@ -1,0 +1,2257 @@
+as_of_date,team,average_age,total_caps,coach_tenure_days,fifa_confederation,source_url
+2003-01-01,Algeria,25.29,436,832,AFC,synthetic://sample-data
+2003-07-02,Algeria,27.38,436,915,AFC,synthetic://sample-data
+2003-12-31,Algeria,28.09,394,396,AFC,synthetic://sample-data
+2004-06-30,Algeria,26.8,366,827,AFC,synthetic://sample-data
+2004-12-29,Algeria,25.55,406,445,AFC,synthetic://sample-data
+2005-06-29,Algeria,26.17,373,495,AFC,synthetic://sample-data
+2005-12-28,Algeria,23.71,415,950,AFC,synthetic://sample-data
+2006-06-28,Algeria,24.91,402,336,AFC,synthetic://sample-data
+2006-12-27,Algeria,27.69,428,872,AFC,synthetic://sample-data
+2007-06-27,Algeria,28.71,357,105,AFC,synthetic://sample-data
+2007-12-26,Algeria,27.15,413,753,AFC,synthetic://sample-data
+2008-06-25,Algeria,23.73,402,943,AFC,synthetic://sample-data
+2008-12-24,Algeria,24.72,434,383,AFC,synthetic://sample-data
+2009-06-24,Algeria,23.99,426,360,AFC,synthetic://sample-data
+2009-12-23,Algeria,24.83,398,628,AFC,synthetic://sample-data
+2010-06-23,Algeria,26.04,413,835,AFC,synthetic://sample-data
+2010-12-22,Algeria,27.38,474,495,AFC,synthetic://sample-data
+2011-06-22,Algeria,29.65,443,221,AFC,synthetic://sample-data
+2011-12-21,Algeria,25.68,489,818,AFC,synthetic://sample-data
+2012-06-20,Algeria,25.55,401,730,AFC,synthetic://sample-data
+2012-12-19,Algeria,25.65,445,599,AFC,synthetic://sample-data
+2013-06-19,Algeria,25.2,448,744,AFC,synthetic://sample-data
+2013-12-18,Algeria,24.12,402,855,AFC,synthetic://sample-data
+2014-06-18,Algeria,26.51,433,846,AFC,synthetic://sample-data
+2014-12-17,Algeria,25.0,371,860,AFC,synthetic://sample-data
+2015-06-17,Algeria,26.09,421,270,AFC,synthetic://sample-data
+2015-12-16,Algeria,27.74,465,988,AFC,synthetic://sample-data
+2016-06-15,Algeria,26.48,413,611,AFC,synthetic://sample-data
+2016-12-14,Algeria,25.02,434,1432,AFC,synthetic://sample-data
+2017-06-14,Algeria,27.08,451,249,AFC,synthetic://sample-data
+2017-12-13,Algeria,26.18,411,425,AFC,synthetic://sample-data
+2018-06-13,Algeria,29.07,509,1361,AFC,synthetic://sample-data
+2018-12-12,Algeria,26.51,440,340,AFC,synthetic://sample-data
+2019-06-12,Algeria,26.96,412,154,AFC,synthetic://sample-data
+2019-12-11,Algeria,26.46,415,485,AFC,synthetic://sample-data
+2020-06-10,Algeria,26.15,402,563,AFC,synthetic://sample-data
+2020-12-09,Algeria,23.97,490,1271,AFC,synthetic://sample-data
+2021-06-09,Algeria,25.4,477,678,AFC,synthetic://sample-data
+2021-12-08,Algeria,29.28,433,714,AFC,synthetic://sample-data
+2022-06-08,Algeria,25.46,432,463,AFC,synthetic://sample-data
+2022-12-07,Algeria,27.9,465,1127,AFC,synthetic://sample-data
+2023-06-07,Algeria,27.37,406,1004,AFC,synthetic://sample-data
+2023-12-06,Algeria,24.72,437,166,AFC,synthetic://sample-data
+2024-06-05,Algeria,24.17,375,353,AFC,synthetic://sample-data
+2024-12-04,Algeria,25.95,422,1040,AFC,synthetic://sample-data
+2025-06-04,Algeria,26.32,393,784,AFC,synthetic://sample-data
+2025-12-03,Algeria,22.49,473,283,AFC,synthetic://sample-data
+2003-01-01,Argentina,24.42,1264,191,CAF,synthetic://sample-data
+2003-07-02,Argentina,27.04,1307,488,CAF,synthetic://sample-data
+2003-12-31,Argentina,24.44,1310,537,CAF,synthetic://sample-data
+2004-06-30,Argentina,26.26,1209,583,CAF,synthetic://sample-data
+2004-12-29,Argentina,28.68,1236,529,CAF,synthetic://sample-data
+2005-06-29,Argentina,23.81,1290,1321,CAF,synthetic://sample-data
+2005-12-28,Argentina,27.24,1238,964,CAF,synthetic://sample-data
+2006-06-28,Argentina,24.38,1263,511,CAF,synthetic://sample-data
+2006-12-27,Argentina,27.76,1283,842,CAF,synthetic://sample-data
+2007-06-27,Argentina,27.25,1230,1062,CAF,synthetic://sample-data
+2007-12-26,Argentina,28.57,1259,586,CAF,synthetic://sample-data
+2008-06-25,Argentina,22.82,1261,628,CAF,synthetic://sample-data
+2008-12-24,Argentina,26.73,1252,724,CAF,synthetic://sample-data
+2009-06-24,Argentina,27.42,1269,620,CAF,synthetic://sample-data
+2009-12-23,Argentina,25.18,1220,835,CAF,synthetic://sample-data
+2010-06-23,Argentina,23.46,1250,1081,CAF,synthetic://sample-data
+2010-12-22,Argentina,27.56,1258,293,CAF,synthetic://sample-data
+2011-06-22,Argentina,25.8,1265,895,CAF,synthetic://sample-data
+2011-12-21,Argentina,27.93,1236,655,CAF,synthetic://sample-data
+2012-06-20,Argentina,28.42,1247,870,CAF,synthetic://sample-data
+2012-12-19,Argentina,24.7,1299,914,CAF,synthetic://sample-data
+2013-06-19,Argentina,27.95,1260,412,CAF,synthetic://sample-data
+2013-12-18,Argentina,26.14,1263,1010,CAF,synthetic://sample-data
+2014-06-18,Argentina,29.42,1249,535,CAF,synthetic://sample-data
+2014-12-17,Argentina,24.91,1265,764,CAF,synthetic://sample-data
+2015-06-17,Argentina,24.95,1227,1362,CAF,synthetic://sample-data
+2015-12-16,Argentina,26.72,1185,520,CAF,synthetic://sample-data
+2016-06-15,Argentina,23.82,1283,141,CAF,synthetic://sample-data
+2016-12-14,Argentina,24.09,1242,517,CAF,synthetic://sample-data
+2017-06-14,Argentina,26.56,1248,423,CAF,synthetic://sample-data
+2017-12-13,Argentina,24.63,1220,399,CAF,synthetic://sample-data
+2018-06-13,Argentina,30.14,1240,1608,CAF,synthetic://sample-data
+2018-12-12,Argentina,25.0,1261,851,CAF,synthetic://sample-data
+2019-06-12,Argentina,28.91,1235,1090,CAF,synthetic://sample-data
+2019-12-11,Argentina,21.0,1208,430,CAF,synthetic://sample-data
+2020-06-10,Argentina,27.04,1233,1221,CAF,synthetic://sample-data
+2020-12-09,Argentina,26.04,1275,278,CAF,synthetic://sample-data
+2021-06-09,Argentina,27.8,1237,605,CAF,synthetic://sample-data
+2021-12-08,Argentina,26.12,1286,812,CAF,synthetic://sample-data
+2022-06-08,Argentina,23.31,1264,62,CAF,synthetic://sample-data
+2022-12-07,Argentina,24.97,1242,1239,CAF,synthetic://sample-data
+2023-06-07,Argentina,32.38,1250,968,CAF,synthetic://sample-data
+2023-12-06,Argentina,25.87,1275,842,CAF,synthetic://sample-data
+2024-06-05,Argentina,24.92,1227,937,CAF,synthetic://sample-data
+2024-12-04,Argentina,26.78,1256,705,CAF,synthetic://sample-data
+2025-06-04,Argentina,27.11,1271,1249,CAF,synthetic://sample-data
+2025-12-03,Argentina,25.05,1218,861,CAF,synthetic://sample-data
+2003-01-01,Australia,25.13,428,486,CONCACAF,synthetic://sample-data
+2003-07-02,Australia,28.27,299,571,CONCACAF,synthetic://sample-data
+2003-12-31,Australia,25.18,423,1324,CONCACAF,synthetic://sample-data
+2004-06-30,Australia,27.18,403,514,CONCACAF,synthetic://sample-data
+2004-12-29,Australia,23.15,373,842,CONCACAF,synthetic://sample-data
+2005-06-29,Australia,27.54,337,416,CONCACAF,synthetic://sample-data
+2005-12-28,Australia,27.95,382,498,CONCACAF,synthetic://sample-data
+2006-06-28,Australia,25.16,356,414,CONCACAF,synthetic://sample-data
+2006-12-27,Australia,23.99,382,328,CONCACAF,synthetic://sample-data
+2007-06-27,Australia,24.31,361,739,CONCACAF,synthetic://sample-data
+2007-12-26,Australia,26.47,372,67,CONCACAF,synthetic://sample-data
+2008-06-25,Australia,25.9,392,1131,CONCACAF,synthetic://sample-data
+2008-12-24,Australia,25.57,436,1461,CONCACAF,synthetic://sample-data
+2009-06-24,Australia,27.7,433,358,CONCACAF,synthetic://sample-data
+2009-12-23,Australia,25.98,432,1089,CONCACAF,synthetic://sample-data
+2010-06-23,Australia,25.63,439,796,CONCACAF,synthetic://sample-data
+2010-12-22,Australia,25.17,354,718,CONCACAF,synthetic://sample-data
+2011-06-22,Australia,28.23,421,1431,CONCACAF,synthetic://sample-data
+2011-12-21,Australia,27.87,423,828,CONCACAF,synthetic://sample-data
+2012-06-20,Australia,27.05,364,81,CONCACAF,synthetic://sample-data
+2012-12-19,Australia,26.05,335,716,CONCACAF,synthetic://sample-data
+2013-06-19,Australia,26.41,443,278,CONCACAF,synthetic://sample-data
+2013-12-18,Australia,24.3,408,867,CONCACAF,synthetic://sample-data
+2014-06-18,Australia,30.6,328,204,CONCACAF,synthetic://sample-data
+2014-12-17,Australia,24.45,431,409,CONCACAF,synthetic://sample-data
+2015-06-17,Australia,25.26,420,938,CONCACAF,synthetic://sample-data
+2015-12-16,Australia,27.34,404,1743,CONCACAF,synthetic://sample-data
+2016-06-15,Australia,25.44,409,1126,CONCACAF,synthetic://sample-data
+2016-12-14,Australia,29.61,484,128,CONCACAF,synthetic://sample-data
+2017-06-14,Australia,28.47,410,376,CONCACAF,synthetic://sample-data
+2017-12-13,Australia,26.31,450,316,CONCACAF,synthetic://sample-data
+2018-06-13,Australia,28.74,429,553,CONCACAF,synthetic://sample-data
+2018-12-12,Australia,22.85,332,332,CONCACAF,synthetic://sample-data
+2019-06-12,Australia,28.43,421,950,CONCACAF,synthetic://sample-data
+2019-12-11,Australia,27.71,418,663,CONCACAF,synthetic://sample-data
+2020-06-10,Australia,28.26,378,150,CONCACAF,synthetic://sample-data
+2020-12-09,Australia,26.22,477,505,CONCACAF,synthetic://sample-data
+2021-06-09,Australia,23.97,415,696,CONCACAF,synthetic://sample-data
+2021-12-08,Australia,26.48,346,828,CONCACAF,synthetic://sample-data
+2022-06-08,Australia,26.77,404,319,CONCACAF,synthetic://sample-data
+2022-12-07,Australia,25.73,420,638,CONCACAF,synthetic://sample-data
+2023-06-07,Australia,28.92,307,866,CONCACAF,synthetic://sample-data
+2023-12-06,Australia,27.16,431,941,CONCACAF,synthetic://sample-data
+2024-06-05,Australia,25.36,408,1034,CONCACAF,synthetic://sample-data
+2024-12-04,Australia,24.86,356,747,CONCACAF,synthetic://sample-data
+2025-06-04,Australia,30.2,420,1129,CONCACAF,synthetic://sample-data
+2025-12-03,Australia,24.94,301,1289,CONCACAF,synthetic://sample-data
+2003-01-01,Austria,22.59,717,904,CONMEBOL,synthetic://sample-data
+2003-07-02,Austria,25.57,555,349,CONMEBOL,synthetic://sample-data
+2003-12-31,Austria,22.19,599,1111,CONMEBOL,synthetic://sample-data
+2004-06-30,Austria,26.16,527,499,CONMEBOL,synthetic://sample-data
+2004-12-29,Austria,27.59,603,738,CONMEBOL,synthetic://sample-data
+2005-06-29,Austria,25.3,591,370,CONMEBOL,synthetic://sample-data
+2005-12-28,Austria,25.88,616,828,CONMEBOL,synthetic://sample-data
+2006-06-28,Austria,25.77,542,817,CONMEBOL,synthetic://sample-data
+2006-12-27,Austria,29.16,607,1834,CONMEBOL,synthetic://sample-data
+2007-06-27,Austria,29.06,625,799,CONMEBOL,synthetic://sample-data
+2007-12-26,Austria,25.18,601,908,CONMEBOL,synthetic://sample-data
+2008-06-25,Austria,27.87,609,851,CONMEBOL,synthetic://sample-data
+2008-12-24,Austria,26.14,558,387,CONMEBOL,synthetic://sample-data
+2009-06-24,Austria,24.19,609,631,CONMEBOL,synthetic://sample-data
+2009-12-23,Austria,22.33,607,513,CONMEBOL,synthetic://sample-data
+2010-06-23,Austria,24.27,684,942,CONMEBOL,synthetic://sample-data
+2010-12-22,Austria,28.15,584,499,CONMEBOL,synthetic://sample-data
+2011-06-22,Austria,26.34,550,363,CONMEBOL,synthetic://sample-data
+2011-12-21,Austria,26.97,583,319,CONMEBOL,synthetic://sample-data
+2012-06-20,Austria,26.8,599,640,CONMEBOL,synthetic://sample-data
+2012-12-19,Austria,24.06,598,108,CONMEBOL,synthetic://sample-data
+2013-06-19,Austria,26.15,653,1039,CONMEBOL,synthetic://sample-data
+2013-12-18,Austria,28.88,591,993,CONMEBOL,synthetic://sample-data
+2014-06-18,Austria,24.88,574,564,CONMEBOL,synthetic://sample-data
+2014-12-17,Austria,26.28,634,472,CONMEBOL,synthetic://sample-data
+2015-06-17,Austria,27.13,634,1233,CONMEBOL,synthetic://sample-data
+2015-12-16,Austria,26.76,671,843,CONMEBOL,synthetic://sample-data
+2016-06-15,Austria,28.31,640,343,CONMEBOL,synthetic://sample-data
+2016-12-14,Austria,25.31,646,719,CONMEBOL,synthetic://sample-data
+2017-06-14,Austria,30.46,678,632,CONMEBOL,synthetic://sample-data
+2017-12-13,Austria,28.53,593,352,CONMEBOL,synthetic://sample-data
+2018-06-13,Austria,26.53,609,692,CONMEBOL,synthetic://sample-data
+2018-12-12,Austria,25.36,619,887,CONMEBOL,synthetic://sample-data
+2019-06-12,Austria,25.62,705,1024,CONMEBOL,synthetic://sample-data
+2019-12-11,Austria,26.6,634,343,CONMEBOL,synthetic://sample-data
+2020-06-10,Austria,26.45,562,835,CONMEBOL,synthetic://sample-data
+2020-12-09,Austria,27.31,622,341,CONMEBOL,synthetic://sample-data
+2021-06-09,Austria,25.29,663,1244,CONMEBOL,synthetic://sample-data
+2021-12-08,Austria,26.27,590,1264,CONMEBOL,synthetic://sample-data
+2022-06-08,Austria,24.87,572,800,CONMEBOL,synthetic://sample-data
+2022-12-07,Austria,26.19,586,330,CONMEBOL,synthetic://sample-data
+2023-06-07,Austria,21.93,649,407,CONMEBOL,synthetic://sample-data
+2023-12-06,Austria,21.0,629,667,CONMEBOL,synthetic://sample-data
+2024-06-05,Austria,27.8,603,160,CONMEBOL,synthetic://sample-data
+2024-12-04,Austria,24.96,620,180,CONMEBOL,synthetic://sample-data
+2025-06-04,Austria,26.66,609,235,CONMEBOL,synthetic://sample-data
+2025-12-03,Austria,22.0,620,1132,CONMEBOL,synthetic://sample-data
+2003-01-01,Belgium,21.36,857,166,UEFA,synthetic://sample-data
+2003-07-02,Belgium,29.11,871,712,UEFA,synthetic://sample-data
+2003-12-31,Belgium,26.9,883,148,UEFA,synthetic://sample-data
+2004-06-30,Belgium,23.76,788,786,UEFA,synthetic://sample-data
+2004-12-29,Belgium,28.6,899,728,UEFA,synthetic://sample-data
+2005-06-29,Belgium,27.55,871,766,UEFA,synthetic://sample-data
+2005-12-28,Belgium,25.8,846,788,UEFA,synthetic://sample-data
+2006-06-28,Belgium,27.68,885,267,UEFA,synthetic://sample-data
+2006-12-27,Belgium,26.98,820,76,UEFA,synthetic://sample-data
+2007-06-27,Belgium,26.44,859,1068,UEFA,synthetic://sample-data
+2007-12-26,Belgium,28.9,838,1403,UEFA,synthetic://sample-data
+2008-06-25,Belgium,26.9,793,349,UEFA,synthetic://sample-data
+2008-12-24,Belgium,26.12,859,250,UEFA,synthetic://sample-data
+2009-06-24,Belgium,24.2,910,836,UEFA,synthetic://sample-data
+2009-12-23,Belgium,24.53,840,733,UEFA,synthetic://sample-data
+2010-06-23,Belgium,23.08,871,279,UEFA,synthetic://sample-data
+2010-12-22,Belgium,22.6,891,253,UEFA,synthetic://sample-data
+2011-06-22,Belgium,28.13,875,257,UEFA,synthetic://sample-data
+2011-12-21,Belgium,28.67,830,916,UEFA,synthetic://sample-data
+2012-06-20,Belgium,23.01,928,542,UEFA,synthetic://sample-data
+2012-12-19,Belgium,24.22,867,778,UEFA,synthetic://sample-data
+2013-06-19,Belgium,27.88,895,547,UEFA,synthetic://sample-data
+2013-12-18,Belgium,26.23,865,1173,UEFA,synthetic://sample-data
+2014-06-18,Belgium,25.71,826,132,UEFA,synthetic://sample-data
+2014-12-17,Belgium,26.04,793,466,UEFA,synthetic://sample-data
+2015-06-17,Belgium,26.39,809,377,UEFA,synthetic://sample-data
+2015-12-16,Belgium,27.54,868,2111,UEFA,synthetic://sample-data
+2016-06-15,Belgium,28.74,860,617,UEFA,synthetic://sample-data
+2016-12-14,Belgium,22.51,817,1323,UEFA,synthetic://sample-data
+2017-06-14,Belgium,29.38,878,431,UEFA,synthetic://sample-data
+2017-12-13,Belgium,25.21,856,544,UEFA,synthetic://sample-data
+2018-06-13,Belgium,29.82,884,636,UEFA,synthetic://sample-data
+2018-12-12,Belgium,24.97,845,631,UEFA,synthetic://sample-data
+2019-06-12,Belgium,22.09,905,214,UEFA,synthetic://sample-data
+2019-12-11,Belgium,22.81,893,871,UEFA,synthetic://sample-data
+2020-06-10,Belgium,27.44,847,677,UEFA,synthetic://sample-data
+2020-12-09,Belgium,25.21,874,237,UEFA,synthetic://sample-data
+2021-06-09,Belgium,25.09,890,797,UEFA,synthetic://sample-data
+2021-12-08,Belgium,27.43,926,1075,UEFA,synthetic://sample-data
+2022-06-08,Belgium,26.23,824,412,UEFA,synthetic://sample-data
+2022-12-07,Belgium,26.68,808,241,UEFA,synthetic://sample-data
+2023-06-07,Belgium,23.91,836,528,UEFA,synthetic://sample-data
+2023-12-06,Belgium,24.72,789,500,UEFA,synthetic://sample-data
+2024-06-05,Belgium,24.97,803,1913,UEFA,synthetic://sample-data
+2024-12-04,Belgium,26.7,781,345,UEFA,synthetic://sample-data
+2025-06-04,Belgium,25.77,862,588,UEFA,synthetic://sample-data
+2025-12-03,Belgium,24.28,850,366,UEFA,synthetic://sample-data
+2003-01-01,Brazil,26.63,1182,418,AFC,synthetic://sample-data
+2003-07-02,Brazil,25.76,1165,904,AFC,synthetic://sample-data
+2003-12-31,Brazil,23.03,1190,167,AFC,synthetic://sample-data
+2004-06-30,Brazil,26.4,1197,302,AFC,synthetic://sample-data
+2004-12-29,Brazil,27.28,1244,1570,AFC,synthetic://sample-data
+2005-06-29,Brazil,28.89,1155,491,AFC,synthetic://sample-data
+2005-12-28,Brazil,27.36,1121,1090,AFC,synthetic://sample-data
+2006-06-28,Brazil,25.72,1134,454,AFC,synthetic://sample-data
+2006-12-27,Brazil,23.59,1152,572,AFC,synthetic://sample-data
+2007-06-27,Brazil,29.0,1179,1031,AFC,synthetic://sample-data
+2007-12-26,Brazil,24.98,1091,1085,AFC,synthetic://sample-data
+2008-06-25,Brazil,30.78,1154,816,AFC,synthetic://sample-data
+2008-12-24,Brazil,23.95,1139,356,AFC,synthetic://sample-data
+2009-06-24,Brazil,22.84,1177,794,AFC,synthetic://sample-data
+2009-12-23,Brazil,23.13,1134,303,AFC,synthetic://sample-data
+2010-06-23,Brazil,27.24,1130,2157,AFC,synthetic://sample-data
+2010-12-22,Brazil,23.62,1115,714,AFC,synthetic://sample-data
+2011-06-22,Brazil,26.19,1205,317,AFC,synthetic://sample-data
+2011-12-21,Brazil,24.38,1220,827,AFC,synthetic://sample-data
+2012-06-20,Brazil,27.43,1173,369,AFC,synthetic://sample-data
+2012-12-19,Brazil,27.56,1169,495,AFC,synthetic://sample-data
+2013-06-19,Brazil,28.44,1202,652,AFC,synthetic://sample-data
+2013-12-18,Brazil,26.63,1178,1007,AFC,synthetic://sample-data
+2014-06-18,Brazil,27.36,1178,401,AFC,synthetic://sample-data
+2014-12-17,Brazil,28.1,1230,446,AFC,synthetic://sample-data
+2015-06-17,Brazil,22.65,1178,336,AFC,synthetic://sample-data
+2015-12-16,Brazil,23.91,1209,245,AFC,synthetic://sample-data
+2016-06-15,Brazil,28.29,1159,738,AFC,synthetic://sample-data
+2016-12-14,Brazil,23.57,1255,222,AFC,synthetic://sample-data
+2017-06-14,Brazil,26.36,1190,1027,AFC,synthetic://sample-data
+2017-12-13,Brazil,23.59,1170,111,AFC,synthetic://sample-data
+2018-06-13,Brazil,24.79,1188,161,AFC,synthetic://sample-data
+2018-12-12,Brazil,26.89,1201,477,AFC,synthetic://sample-data
+2019-06-12,Brazil,24.99,1155,394,AFC,synthetic://sample-data
+2019-12-11,Brazil,27.28,1120,444,AFC,synthetic://sample-data
+2020-06-10,Brazil,26.28,1251,1155,AFC,synthetic://sample-data
+2020-12-09,Brazil,26.72,1172,293,AFC,synthetic://sample-data
+2021-06-09,Brazil,28.0,1121,1174,AFC,synthetic://sample-data
+2021-12-08,Brazil,26.13,1216,658,AFC,synthetic://sample-data
+2022-06-08,Brazil,22.33,1150,1344,AFC,synthetic://sample-data
+2022-12-07,Brazil,25.44,1231,564,AFC,synthetic://sample-data
+2023-06-07,Brazil,25.05,1229,1110,AFC,synthetic://sample-data
+2023-12-06,Brazil,27.51,1173,2008,AFC,synthetic://sample-data
+2024-06-05,Brazil,28.22,1194,1100,AFC,synthetic://sample-data
+2024-12-04,Brazil,26.31,1163,495,AFC,synthetic://sample-data
+2025-06-04,Brazil,27.54,1202,1300,AFC,synthetic://sample-data
+2025-12-03,Brazil,26.51,1106,390,AFC,synthetic://sample-data
+2003-01-01,Cameroon,26.12,453,448,CAF,synthetic://sample-data
+2003-07-02,Cameroon,25.26,447,401,CAF,synthetic://sample-data
+2003-12-31,Cameroon,25.01,439,350,CAF,synthetic://sample-data
+2004-06-30,Cameroon,28.38,420,1070,CAF,synthetic://sample-data
+2004-12-29,Cameroon,25.97,449,328,CAF,synthetic://sample-data
+2005-06-29,Cameroon,27.42,454,173,CAF,synthetic://sample-data
+2005-12-28,Cameroon,24.85,484,791,CAF,synthetic://sample-data
+2006-06-28,Cameroon,27.99,460,360,CAF,synthetic://sample-data
+2006-12-27,Cameroon,27.75,386,1124,CAF,synthetic://sample-data
+2007-06-27,Cameroon,24.8,488,960,CAF,synthetic://sample-data
+2007-12-26,Cameroon,23.3,435,560,CAF,synthetic://sample-data
+2008-06-25,Cameroon,24.91,456,583,CAF,synthetic://sample-data
+2008-12-24,Cameroon,24.94,436,567,CAF,synthetic://sample-data
+2009-06-24,Cameroon,23.2,448,777,CAF,synthetic://sample-data
+2009-12-23,Cameroon,25.06,477,406,CAF,synthetic://sample-data
+2010-06-23,Cameroon,25.76,450,515,CAF,synthetic://sample-data
+2010-12-22,Cameroon,26.34,398,863,CAF,synthetic://sample-data
+2011-06-22,Cameroon,25.69,479,516,CAF,synthetic://sample-data
+2011-12-21,Cameroon,29.06,496,1270,CAF,synthetic://sample-data
+2012-06-20,Cameroon,26.94,454,210,CAF,synthetic://sample-data
+2012-12-19,Cameroon,24.52,485,1975,CAF,synthetic://sample-data
+2013-06-19,Cameroon,28.31,440,1251,CAF,synthetic://sample-data
+2013-12-18,Cameroon,25.63,444,1101,CAF,synthetic://sample-data
+2014-06-18,Cameroon,26.59,410,964,CAF,synthetic://sample-data
+2014-12-17,Cameroon,24.38,426,280,CAF,synthetic://sample-data
+2015-06-17,Cameroon,29.16,412,561,CAF,synthetic://sample-data
+2015-12-16,Cameroon,24.52,433,626,CAF,synthetic://sample-data
+2016-06-15,Cameroon,25.87,421,1301,CAF,synthetic://sample-data
+2016-12-14,Cameroon,25.01,437,437,CAF,synthetic://sample-data
+2017-06-14,Cameroon,24.84,472,995,CAF,synthetic://sample-data
+2017-12-13,Cameroon,26.66,426,1171,CAF,synthetic://sample-data
+2018-06-13,Cameroon,26.91,459,311,CAF,synthetic://sample-data
+2018-12-12,Cameroon,24.63,409,382,CAF,synthetic://sample-data
+2019-06-12,Cameroon,25.84,427,1457,CAF,synthetic://sample-data
+2019-12-11,Cameroon,27.71,472,335,CAF,synthetic://sample-data
+2020-06-10,Cameroon,28.39,458,776,CAF,synthetic://sample-data
+2020-12-09,Cameroon,27.15,428,1115,CAF,synthetic://sample-data
+2021-06-09,Cameroon,25.34,394,1110,CAF,synthetic://sample-data
+2021-12-08,Cameroon,24.41,497,671,CAF,synthetic://sample-data
+2022-06-08,Cameroon,27.73,405,134,CAF,synthetic://sample-data
+2022-12-07,Cameroon,25.62,380,1914,CAF,synthetic://sample-data
+2023-06-07,Cameroon,26.37,439,700,CAF,synthetic://sample-data
+2023-12-06,Cameroon,25.49,487,489,CAF,synthetic://sample-data
+2024-06-05,Cameroon,25.61,513,1150,CAF,synthetic://sample-data
+2024-12-04,Cameroon,27.43,459,714,CAF,synthetic://sample-data
+2025-06-04,Cameroon,26.43,544,609,CAF,synthetic://sample-data
+2025-12-03,Cameroon,23.27,423,754,CAF,synthetic://sample-data
+2003-01-01,Canada,27.03,518,307,CONCACAF,synthetic://sample-data
+2003-07-02,Canada,27.26,430,1743,CONCACAF,synthetic://sample-data
+2003-12-31,Canada,24.84,482,1206,CONCACAF,synthetic://sample-data
+2004-06-30,Canada,30.23,461,613,CONCACAF,synthetic://sample-data
+2004-12-29,Canada,25.8,424,412,CONCACAF,synthetic://sample-data
+2005-06-29,Canada,21.7,456,758,CONCACAF,synthetic://sample-data
+2005-12-28,Canada,27.63,340,424,CONCACAF,synthetic://sample-data
+2006-06-28,Canada,25.36,466,1162,CONCACAF,synthetic://sample-data
+2006-12-27,Canada,26.24,498,465,CONCACAF,synthetic://sample-data
+2007-06-27,Canada,24.84,414,448,CONCACAF,synthetic://sample-data
+2007-12-26,Canada,23.01,495,836,CONCACAF,synthetic://sample-data
+2008-06-25,Canada,26.67,402,1213,CONCACAF,synthetic://sample-data
+2008-12-24,Canada,23.79,467,106,CONCACAF,synthetic://sample-data
+2009-06-24,Canada,24.45,476,329,CONCACAF,synthetic://sample-data
+2009-12-23,Canada,26.69,461,701,CONCACAF,synthetic://sample-data
+2010-06-23,Canada,27.26,468,86,CONCACAF,synthetic://sample-data
+2010-12-22,Canada,25.02,429,537,CONCACAF,synthetic://sample-data
+2011-06-22,Canada,27.04,389,436,CONCACAF,synthetic://sample-data
+2011-12-21,Canada,23.99,448,396,CONCACAF,synthetic://sample-data
+2012-06-20,Canada,25.63,438,494,CONCACAF,synthetic://sample-data
+2012-12-19,Canada,28.3,453,633,CONCACAF,synthetic://sample-data
+2013-06-19,Canada,26.52,438,670,CONCACAF,synthetic://sample-data
+2013-12-18,Canada,24.53,506,339,CONCACAF,synthetic://sample-data
+2014-06-18,Canada,26.87,398,503,CONCACAF,synthetic://sample-data
+2014-12-17,Canada,25.88,469,312,CONCACAF,synthetic://sample-data
+2015-06-17,Canada,23.8,492,634,CONCACAF,synthetic://sample-data
+2015-12-16,Canada,26.3,399,1432,CONCACAF,synthetic://sample-data
+2016-06-15,Canada,27.37,399,93,CONCACAF,synthetic://sample-data
+2016-12-14,Canada,24.33,475,882,CONCACAF,synthetic://sample-data
+2017-06-14,Canada,23.33,464,909,CONCACAF,synthetic://sample-data
+2017-12-13,Canada,24.58,393,444,CONCACAF,synthetic://sample-data
+2018-06-13,Canada,23.98,413,2095,CONCACAF,synthetic://sample-data
+2018-12-12,Canada,23.45,498,140,CONCACAF,synthetic://sample-data
+2019-06-12,Canada,23.98,401,415,CONCACAF,synthetic://sample-data
+2019-12-11,Canada,28.07,373,432,CONCACAF,synthetic://sample-data
+2020-06-10,Canada,26.95,468,228,CONCACAF,synthetic://sample-data
+2020-12-09,Canada,24.5,465,426,CONCACAF,synthetic://sample-data
+2021-06-09,Canada,24.68,412,612,CONCACAF,synthetic://sample-data
+2021-12-08,Canada,22.73,412,726,CONCACAF,synthetic://sample-data
+2022-06-08,Canada,26.67,452,585,CONCACAF,synthetic://sample-data
+2022-12-07,Canada,29.24,445,487,CONCACAF,synthetic://sample-data
+2023-06-07,Canada,23.1,410,124,CONCACAF,synthetic://sample-data
+2023-12-06,Canada,26.13,426,488,CONCACAF,synthetic://sample-data
+2024-06-05,Canada,24.68,427,219,CONCACAF,synthetic://sample-data
+2024-12-04,Canada,25.36,497,387,CONCACAF,synthetic://sample-data
+2025-06-04,Canada,26.61,393,891,CONCACAF,synthetic://sample-data
+2025-12-03,Canada,27.76,471,480,CONCACAF,synthetic://sample-data
+2003-01-01,Chile,26.73,544,111,CONMEBOL,synthetic://sample-data
+2003-07-02,Chile,22.73,512,579,CONMEBOL,synthetic://sample-data
+2003-12-31,Chile,26.12,456,429,CONMEBOL,synthetic://sample-data
+2004-06-30,Chile,27.97,460,476,CONMEBOL,synthetic://sample-data
+2004-12-29,Chile,26.7,552,933,CONMEBOL,synthetic://sample-data
+2005-06-29,Chile,25.05,510,1470,CONMEBOL,synthetic://sample-data
+2005-12-28,Chile,26.2,520,667,CONMEBOL,synthetic://sample-data
+2006-06-28,Chile,23.94,497,483,CONMEBOL,synthetic://sample-data
+2006-12-27,Chile,27.26,517,908,CONMEBOL,synthetic://sample-data
+2007-06-27,Chile,21.5,497,965,CONMEBOL,synthetic://sample-data
+2007-12-26,Chile,21.33,496,357,CONMEBOL,synthetic://sample-data
+2008-06-25,Chile,24.7,512,386,CONMEBOL,synthetic://sample-data
+2008-12-24,Chile,27.66,524,518,CONMEBOL,synthetic://sample-data
+2009-06-24,Chile,24.39,494,743,CONMEBOL,synthetic://sample-data
+2009-12-23,Chile,26.4,564,664,CONMEBOL,synthetic://sample-data
+2010-06-23,Chile,27.78,517,847,CONMEBOL,synthetic://sample-data
+2010-12-22,Chile,27.19,511,320,CONMEBOL,synthetic://sample-data
+2011-06-22,Chile,24.51,548,317,CONMEBOL,synthetic://sample-data
+2011-12-21,Chile,29.53,548,365,CONMEBOL,synthetic://sample-data
+2012-06-20,Chile,28.74,570,868,CONMEBOL,synthetic://sample-data
+2012-12-19,Chile,28.94,537,737,CONMEBOL,synthetic://sample-data
+2013-06-19,Chile,26.77,559,1344,CONMEBOL,synthetic://sample-data
+2013-12-18,Chile,21.83,518,447,CONMEBOL,synthetic://sample-data
+2014-06-18,Chile,25.2,564,214,CONMEBOL,synthetic://sample-data
+2014-12-17,Chile,24.75,464,199,CONMEBOL,synthetic://sample-data
+2015-06-17,Chile,23.64,582,525,CONMEBOL,synthetic://sample-data
+2015-12-16,Chile,27.04,461,1069,CONMEBOL,synthetic://sample-data
+2016-06-15,Chile,25.9,536,657,CONMEBOL,synthetic://sample-data
+2016-12-14,Chile,23.79,513,853,CONMEBOL,synthetic://sample-data
+2017-06-14,Chile,27.47,504,814,CONMEBOL,synthetic://sample-data
+2017-12-13,Chile,24.17,509,409,CONMEBOL,synthetic://sample-data
+2018-06-13,Chile,24.5,441,480,CONMEBOL,synthetic://sample-data
+2018-12-12,Chile,24.08,460,847,CONMEBOL,synthetic://sample-data
+2019-06-12,Chile,27.99,553,298,CONMEBOL,synthetic://sample-data
+2019-12-11,Chile,25.74,547,304,CONMEBOL,synthetic://sample-data
+2020-06-10,Chile,28.25,477,625,CONMEBOL,synthetic://sample-data
+2020-12-09,Chile,23.33,491,328,CONMEBOL,synthetic://sample-data
+2021-06-09,Chile,24.06,548,478,CONMEBOL,synthetic://sample-data
+2021-12-08,Chile,27.52,455,944,CONMEBOL,synthetic://sample-data
+2022-06-08,Chile,27.28,550,1188,CONMEBOL,synthetic://sample-data
+2022-12-07,Chile,25.78,495,629,CONMEBOL,synthetic://sample-data
+2023-06-07,Chile,26.1,509,824,CONMEBOL,synthetic://sample-data
+2023-12-06,Chile,26.5,522,1092,CONMEBOL,synthetic://sample-data
+2024-06-05,Chile,24.94,486,918,CONMEBOL,synthetic://sample-data
+2024-12-04,Chile,25.55,577,320,CONMEBOL,synthetic://sample-data
+2025-06-04,Chile,26.73,503,285,CONMEBOL,synthetic://sample-data
+2025-12-03,Chile,27.54,466,493,CONMEBOL,synthetic://sample-data
+2003-01-01,Colombia,26.04,675,428,UEFA,synthetic://sample-data
+2003-07-02,Colombia,26.27,671,591,UEFA,synthetic://sample-data
+2003-12-31,Colombia,23.7,687,345,UEFA,synthetic://sample-data
+2004-06-30,Colombia,24.81,725,770,UEFA,synthetic://sample-data
+2004-12-29,Colombia,23.49,738,837,UEFA,synthetic://sample-data
+2005-06-29,Colombia,28.01,712,436,UEFA,synthetic://sample-data
+2005-12-28,Colombia,30.03,706,353,UEFA,synthetic://sample-data
+2006-06-28,Colombia,27.83,726,351,UEFA,synthetic://sample-data
+2006-12-27,Colombia,25.01,643,1021,UEFA,synthetic://sample-data
+2007-06-27,Colombia,23.87,691,368,UEFA,synthetic://sample-data
+2007-12-26,Colombia,23.71,677,1365,UEFA,synthetic://sample-data
+2008-06-25,Colombia,28.85,713,437,UEFA,synthetic://sample-data
+2008-12-24,Colombia,27.39,674,545,UEFA,synthetic://sample-data
+2009-06-24,Colombia,27.8,677,1017,UEFA,synthetic://sample-data
+2009-12-23,Colombia,25.1,662,677,UEFA,synthetic://sample-data
+2010-06-23,Colombia,26.17,690,622,UEFA,synthetic://sample-data
+2010-12-22,Colombia,26.84,737,572,UEFA,synthetic://sample-data
+2011-06-22,Colombia,28.12,796,407,UEFA,synthetic://sample-data
+2011-12-21,Colombia,25.18,720,667,UEFA,synthetic://sample-data
+2012-06-20,Colombia,23.27,645,1207,UEFA,synthetic://sample-data
+2012-12-19,Colombia,26.06,722,571,UEFA,synthetic://sample-data
+2013-06-19,Colombia,26.29,738,671,UEFA,synthetic://sample-data
+2013-12-18,Colombia,27.05,712,445,UEFA,synthetic://sample-data
+2014-06-18,Colombia,27.24,731,255,UEFA,synthetic://sample-data
+2014-12-17,Colombia,23.03,723,1075,UEFA,synthetic://sample-data
+2015-06-17,Colombia,30.23,664,691,UEFA,synthetic://sample-data
+2015-12-16,Colombia,22.43,715,642,UEFA,synthetic://sample-data
+2016-06-15,Colombia,26.48,749,360,UEFA,synthetic://sample-data
+2016-12-14,Colombia,28.59,705,1270,UEFA,synthetic://sample-data
+2017-06-14,Colombia,26.57,666,404,UEFA,synthetic://sample-data
+2017-12-13,Colombia,27.84,756,719,UEFA,synthetic://sample-data
+2018-06-13,Colombia,22.51,741,227,UEFA,synthetic://sample-data
+2018-12-12,Colombia,29.67,719,366,UEFA,synthetic://sample-data
+2019-06-12,Colombia,26.57,742,687,UEFA,synthetic://sample-data
+2019-12-11,Colombia,26.97,727,195,UEFA,synthetic://sample-data
+2020-06-10,Colombia,28.41,677,107,UEFA,synthetic://sample-data
+2020-12-09,Colombia,25.71,690,1138,UEFA,synthetic://sample-data
+2021-06-09,Colombia,25.92,651,1701,UEFA,synthetic://sample-data
+2021-12-08,Colombia,23.04,726,669,UEFA,synthetic://sample-data
+2022-06-08,Colombia,27.04,728,443,UEFA,synthetic://sample-data
+2022-12-07,Colombia,27.68,725,431,UEFA,synthetic://sample-data
+2023-06-07,Colombia,25.17,687,563,UEFA,synthetic://sample-data
+2023-12-06,Colombia,25.69,696,507,UEFA,synthetic://sample-data
+2024-06-05,Colombia,23.87,671,395,UEFA,synthetic://sample-data
+2024-12-04,Colombia,26.86,709,563,UEFA,synthetic://sample-data
+2025-06-04,Colombia,26.95,730,966,UEFA,synthetic://sample-data
+2025-12-03,Colombia,26.11,642,504,UEFA,synthetic://sample-data
+2003-01-01,Costa Rica,24.7,348,837,AFC,synthetic://sample-data
+2003-07-02,Costa Rica,22.73,287,1173,AFC,synthetic://sample-data
+2003-12-31,Costa Rica,27.13,301,862,AFC,synthetic://sample-data
+2004-06-30,Costa Rica,27.56,330,876,AFC,synthetic://sample-data
+2004-12-29,Costa Rica,31.03,286,677,AFC,synthetic://sample-data
+2005-06-29,Costa Rica,26.61,399,269,AFC,synthetic://sample-data
+2005-12-28,Costa Rica,28.44,296,1399,AFC,synthetic://sample-data
+2006-06-28,Costa Rica,25.89,338,513,AFC,synthetic://sample-data
+2006-12-27,Costa Rica,29.19,231,1063,AFC,synthetic://sample-data
+2007-06-27,Costa Rica,22.73,345,739,AFC,synthetic://sample-data
+2007-12-26,Costa Rica,24.44,296,489,AFC,synthetic://sample-data
+2008-06-25,Costa Rica,26.91,307,815,AFC,synthetic://sample-data
+2008-12-24,Costa Rica,21.36,294,502,AFC,synthetic://sample-data
+2009-06-24,Costa Rica,25.06,287,300,AFC,synthetic://sample-data
+2009-12-23,Costa Rica,26.19,376,555,AFC,synthetic://sample-data
+2010-06-23,Costa Rica,25.79,305,716,AFC,synthetic://sample-data
+2010-12-22,Costa Rica,25.09,329,352,AFC,synthetic://sample-data
+2011-06-22,Costa Rica,24.97,275,739,AFC,synthetic://sample-data
+2011-12-21,Costa Rica,24.3,317,432,AFC,synthetic://sample-data
+2012-06-20,Costa Rica,26.18,307,825,AFC,synthetic://sample-data
+2012-12-19,Costa Rica,24.92,348,566,AFC,synthetic://sample-data
+2013-06-19,Costa Rica,25.83,329,390,AFC,synthetic://sample-data
+2013-12-18,Costa Rica,26.29,310,598,AFC,synthetic://sample-data
+2014-06-18,Costa Rica,26.94,369,346,AFC,synthetic://sample-data
+2014-12-17,Costa Rica,23.38,304,579,AFC,synthetic://sample-data
+2015-06-17,Costa Rica,23.74,291,590,AFC,synthetic://sample-data
+2015-12-16,Costa Rica,26.27,320,364,AFC,synthetic://sample-data
+2016-06-15,Costa Rica,21.61,290,345,AFC,synthetic://sample-data
+2016-12-14,Costa Rica,25.18,388,997,AFC,synthetic://sample-data
+2017-06-14,Costa Rica,22.53,376,398,AFC,synthetic://sample-data
+2017-12-13,Costa Rica,25.7,309,1234,AFC,synthetic://sample-data
+2018-06-13,Costa Rica,26.8,336,1300,AFC,synthetic://sample-data
+2018-12-12,Costa Rica,25.72,301,211,AFC,synthetic://sample-data
+2019-06-12,Costa Rica,21.0,352,350,AFC,synthetic://sample-data
+2019-12-11,Costa Rica,27.26,303,676,AFC,synthetic://sample-data
+2020-06-10,Costa Rica,25.42,316,1363,AFC,synthetic://sample-data
+2020-12-09,Costa Rica,24.4,327,819,AFC,synthetic://sample-data
+2021-06-09,Costa Rica,25.9,311,866,AFC,synthetic://sample-data
+2021-12-08,Costa Rica,25.72,362,1023,AFC,synthetic://sample-data
+2022-06-08,Costa Rica,26.75,277,779,AFC,synthetic://sample-data
+2022-12-07,Costa Rica,26.01,327,506,AFC,synthetic://sample-data
+2023-06-07,Costa Rica,27.58,339,1087,AFC,synthetic://sample-data
+2023-12-06,Costa Rica,26.25,338,569,AFC,synthetic://sample-data
+2024-06-05,Costa Rica,28.16,311,557,AFC,synthetic://sample-data
+2024-12-04,Costa Rica,25.73,304,149,AFC,synthetic://sample-data
+2025-06-04,Costa Rica,26.24,293,1071,AFC,synthetic://sample-data
+2025-12-03,Costa Rica,23.67,293,499,AFC,synthetic://sample-data
+2003-01-01,Croatia,25.99,751,304,CAF,synthetic://sample-data
+2003-07-02,Croatia,25.67,842,1012,CAF,synthetic://sample-data
+2003-12-31,Croatia,24.89,833,439,CAF,synthetic://sample-data
+2004-06-30,Croatia,23.47,853,1033,CAF,synthetic://sample-data
+2004-12-29,Croatia,27.66,757,616,CAF,synthetic://sample-data
+2005-06-29,Croatia,24.34,759,279,CAF,synthetic://sample-data
+2005-12-28,Croatia,27.44,819,1376,CAF,synthetic://sample-data
+2006-06-28,Croatia,27.13,737,288,CAF,synthetic://sample-data
+2006-12-27,Croatia,26.33,784,393,CAF,synthetic://sample-data
+2007-06-27,Croatia,23.27,781,718,CAF,synthetic://sample-data
+2007-12-26,Croatia,28.27,766,234,CAF,synthetic://sample-data
+2008-06-25,Croatia,26.56,737,179,CAF,synthetic://sample-data
+2008-12-24,Croatia,25.63,799,507,CAF,synthetic://sample-data
+2009-06-24,Croatia,27.56,778,450,CAF,synthetic://sample-data
+2009-12-23,Croatia,26.46,825,823,CAF,synthetic://sample-data
+2010-06-23,Croatia,27.91,779,1450,CAF,synthetic://sample-data
+2010-12-22,Croatia,28.48,832,658,CAF,synthetic://sample-data
+2011-06-22,Croatia,24.55,764,1067,CAF,synthetic://sample-data
+2011-12-21,Croatia,28.83,728,557,CAF,synthetic://sample-data
+2012-06-20,Croatia,29.04,773,427,CAF,synthetic://sample-data
+2012-12-19,Croatia,27.15,783,556,CAF,synthetic://sample-data
+2013-06-19,Croatia,25.32,779,365,CAF,synthetic://sample-data
+2013-12-18,Croatia,30.28,787,414,CAF,synthetic://sample-data
+2014-06-18,Croatia,27.36,758,810,CAF,synthetic://sample-data
+2014-12-17,Croatia,25.19,784,955,CAF,synthetic://sample-data
+2015-06-17,Croatia,26.63,796,146,CAF,synthetic://sample-data
+2015-12-16,Croatia,25.82,772,297,CAF,synthetic://sample-data
+2016-06-15,Croatia,26.38,828,555,CAF,synthetic://sample-data
+2016-12-14,Croatia,26.63,678,632,CAF,synthetic://sample-data
+2017-06-14,Croatia,27.19,830,488,CAF,synthetic://sample-data
+2017-12-13,Croatia,27.25,792,832,CAF,synthetic://sample-data
+2018-06-13,Croatia,25.97,767,701,CAF,synthetic://sample-data
+2018-12-12,Croatia,28.51,797,1147,CAF,synthetic://sample-data
+2019-06-12,Croatia,26.38,711,270,CAF,synthetic://sample-data
+2019-12-11,Croatia,27.63,766,173,CAF,synthetic://sample-data
+2020-06-10,Croatia,25.71,724,789,CAF,synthetic://sample-data
+2020-12-09,Croatia,22.08,794,426,CAF,synthetic://sample-data
+2021-06-09,Croatia,27.17,756,267,CAF,synthetic://sample-data
+2021-12-08,Croatia,27.79,831,267,CAF,synthetic://sample-data
+2022-06-08,Croatia,24.83,793,434,CAF,synthetic://sample-data
+2022-12-07,Croatia,28.61,798,338,CAF,synthetic://sample-data
+2023-06-07,Croatia,29.52,795,1420,CAF,synthetic://sample-data
+2023-12-06,Croatia,24.88,733,236,CAF,synthetic://sample-data
+2024-06-05,Croatia,25.12,858,444,CAF,synthetic://sample-data
+2024-12-04,Croatia,28.82,783,783,CAF,synthetic://sample-data
+2025-06-04,Croatia,23.36,751,491,CAF,synthetic://sample-data
+2025-12-03,Croatia,26.2,810,254,CAF,synthetic://sample-data
+2003-01-01,Denmark,23.75,673,793,CONCACAF,synthetic://sample-data
+2003-07-02,Denmark,26.42,717,208,CONCACAF,synthetic://sample-data
+2003-12-31,Denmark,26.68,624,2298,CONCACAF,synthetic://sample-data
+2004-06-30,Denmark,27.8,667,595,CONCACAF,synthetic://sample-data
+2004-12-29,Denmark,29.09,677,893,CONCACAF,synthetic://sample-data
+2005-06-29,Denmark,26.95,705,343,CONCACAF,synthetic://sample-data
+2005-12-28,Denmark,25.38,649,141,CONCACAF,synthetic://sample-data
+2006-06-28,Denmark,23.4,649,901,CONCACAF,synthetic://sample-data
+2006-12-27,Denmark,28.15,682,499,CONCACAF,synthetic://sample-data
+2007-06-27,Denmark,26.72,670,556,CONCACAF,synthetic://sample-data
+2007-12-26,Denmark,28.65,649,511,CONCACAF,synthetic://sample-data
+2008-06-25,Denmark,22.69,713,466,CONCACAF,synthetic://sample-data
+2008-12-24,Denmark,26.43,676,651,CONCACAF,synthetic://sample-data
+2009-06-24,Denmark,23.63,677,899,CONCACAF,synthetic://sample-data
+2009-12-23,Denmark,26.01,665,672,CONCACAF,synthetic://sample-data
+2010-06-23,Denmark,27.15,721,1544,CONCACAF,synthetic://sample-data
+2010-12-22,Denmark,28.22,665,526,CONCACAF,synthetic://sample-data
+2011-06-22,Denmark,26.96,622,230,CONCACAF,synthetic://sample-data
+2011-12-21,Denmark,23.83,612,605,CONCACAF,synthetic://sample-data
+2012-06-20,Denmark,24.19,693,1311,CONCACAF,synthetic://sample-data
+2012-12-19,Denmark,27.85,646,1065,CONCACAF,synthetic://sample-data
+2013-06-19,Denmark,24.04,747,304,CONCACAF,synthetic://sample-data
+2013-12-18,Denmark,24.66,687,366,CONCACAF,synthetic://sample-data
+2014-06-18,Denmark,27.72,697,426,CONCACAF,synthetic://sample-data
+2014-12-17,Denmark,23.0,653,267,CONCACAF,synthetic://sample-data
+2015-06-17,Denmark,26.0,703,398,CONCACAF,synthetic://sample-data
+2015-12-16,Denmark,25.18,738,210,CONCACAF,synthetic://sample-data
+2016-06-15,Denmark,27.1,715,751,CONCACAF,synthetic://sample-data
+2016-12-14,Denmark,29.16,680,643,CONCACAF,synthetic://sample-data
+2017-06-14,Denmark,27.83,681,163,CONCACAF,synthetic://sample-data
+2017-12-13,Denmark,21.83,686,702,CONCACAF,synthetic://sample-data
+2018-06-13,Denmark,24.78,584,641,CONCACAF,synthetic://sample-data
+2018-12-12,Denmark,25.33,697,235,CONCACAF,synthetic://sample-data
+2019-06-12,Denmark,25.54,690,1303,CONCACAF,synthetic://sample-data
+2019-12-11,Denmark,26.66,679,642,CONCACAF,synthetic://sample-data
+2020-06-10,Denmark,28.81,656,805,CONCACAF,synthetic://sample-data
+2020-12-09,Denmark,24.42,702,731,CONCACAF,synthetic://sample-data
+2021-06-09,Denmark,26.46,664,448,CONCACAF,synthetic://sample-data
+2021-12-08,Denmark,27.4,664,668,CONCACAF,synthetic://sample-data
+2022-06-08,Denmark,30.04,694,1063,CONCACAF,synthetic://sample-data
+2022-12-07,Denmark,25.22,709,339,CONCACAF,synthetic://sample-data
+2023-06-07,Denmark,27.87,669,668,CONCACAF,synthetic://sample-data
+2023-12-06,Denmark,25.44,657,354,CONCACAF,synthetic://sample-data
+2024-06-05,Denmark,24.98,648,399,CONCACAF,synthetic://sample-data
+2024-12-04,Denmark,28.82,649,519,CONCACAF,synthetic://sample-data
+2025-06-04,Denmark,23.3,674,675,CONCACAF,synthetic://sample-data
+2025-12-03,Denmark,25.87,669,589,CONCACAF,synthetic://sample-data
+2003-01-01,Ecuador,24.29,572,480,CONMEBOL,synthetic://sample-data
+2003-07-02,Ecuador,27.36,481,281,CONMEBOL,synthetic://sample-data
+2003-12-31,Ecuador,28.63,528,1165,CONMEBOL,synthetic://sample-data
+2004-06-30,Ecuador,25.93,503,596,CONMEBOL,synthetic://sample-data
+2004-12-29,Ecuador,27.12,506,442,CONMEBOL,synthetic://sample-data
+2005-06-29,Ecuador,25.26,517,206,CONMEBOL,synthetic://sample-data
+2005-12-28,Ecuador,27.1,545,674,CONMEBOL,synthetic://sample-data
+2006-06-28,Ecuador,23.68,517,405,CONMEBOL,synthetic://sample-data
+2006-12-27,Ecuador,30.15,547,164,CONMEBOL,synthetic://sample-data
+2007-06-27,Ecuador,28.24,593,904,CONMEBOL,synthetic://sample-data
+2007-12-26,Ecuador,24.77,491,584,CONMEBOL,synthetic://sample-data
+2008-06-25,Ecuador,28.94,591,1063,CONMEBOL,synthetic://sample-data
+2008-12-24,Ecuador,25.14,502,698,CONMEBOL,synthetic://sample-data
+2009-06-24,Ecuador,23.28,492,473,CONMEBOL,synthetic://sample-data
+2009-12-23,Ecuador,27.58,518,238,CONMEBOL,synthetic://sample-data
+2010-06-23,Ecuador,28.28,520,815,CONMEBOL,synthetic://sample-data
+2010-12-22,Ecuador,25.4,548,527,CONMEBOL,synthetic://sample-data
+2011-06-22,Ecuador,22.51,538,546,CONMEBOL,synthetic://sample-data
+2011-12-21,Ecuador,26.75,486,350,CONMEBOL,synthetic://sample-data
+2012-06-20,Ecuador,23.33,537,195,CONMEBOL,synthetic://sample-data
+2012-12-19,Ecuador,26.23,494,1582,CONMEBOL,synthetic://sample-data
+2013-06-19,Ecuador,27.27,532,1019,CONMEBOL,synthetic://sample-data
+2013-12-18,Ecuador,26.77,544,1321,CONMEBOL,synthetic://sample-data
+2014-06-18,Ecuador,23.56,487,1150,CONMEBOL,synthetic://sample-data
+2014-12-17,Ecuador,28.33,587,1050,CONMEBOL,synthetic://sample-data
+2015-06-17,Ecuador,27.73,518,262,CONMEBOL,synthetic://sample-data
+2015-12-16,Ecuador,25.84,501,418,CONMEBOL,synthetic://sample-data
+2016-06-15,Ecuador,26.11,523,828,CONMEBOL,synthetic://sample-data
+2016-12-14,Ecuador,30.13,573,516,CONMEBOL,synthetic://sample-data
+2017-06-14,Ecuador,25.12,542,2396,CONMEBOL,synthetic://sample-data
+2017-12-13,Ecuador,25.01,535,877,CONMEBOL,synthetic://sample-data
+2018-06-13,Ecuador,24.63,501,751,CONMEBOL,synthetic://sample-data
+2018-12-12,Ecuador,32.13,438,478,CONMEBOL,synthetic://sample-data
+2019-06-12,Ecuador,24.44,548,533,CONMEBOL,synthetic://sample-data
+2019-12-11,Ecuador,28.35,541,606,CONMEBOL,synthetic://sample-data
+2020-06-10,Ecuador,28.2,490,1186,CONMEBOL,synthetic://sample-data
+2020-12-09,Ecuador,30.4,536,665,CONMEBOL,synthetic://sample-data
+2021-06-09,Ecuador,26.12,558,424,CONMEBOL,synthetic://sample-data
+2021-12-08,Ecuador,23.94,547,300,CONMEBOL,synthetic://sample-data
+2022-06-08,Ecuador,28.76,451,109,CONMEBOL,synthetic://sample-data
+2022-12-07,Ecuador,26.17,564,743,CONMEBOL,synthetic://sample-data
+2023-06-07,Ecuador,27.64,473,244,CONMEBOL,synthetic://sample-data
+2023-12-06,Ecuador,30.32,510,550,CONMEBOL,synthetic://sample-data
+2024-06-05,Ecuador,24.09,461,825,CONMEBOL,synthetic://sample-data
+2024-12-04,Ecuador,25.05,526,790,CONMEBOL,synthetic://sample-data
+2025-06-04,Ecuador,24.52,468,392,CONMEBOL,synthetic://sample-data
+2025-12-03,Ecuador,24.31,512,811,CONMEBOL,synthetic://sample-data
+2003-01-01,Egypt,26.87,506,901,UEFA,synthetic://sample-data
+2003-07-02,Egypt,26.25,547,569,UEFA,synthetic://sample-data
+2003-12-31,Egypt,24.61,515,1092,UEFA,synthetic://sample-data
+2004-06-30,Egypt,26.67,464,406,UEFA,synthetic://sample-data
+2004-12-29,Egypt,28.91,464,1532,UEFA,synthetic://sample-data
+2005-06-29,Egypt,26.21,456,1450,UEFA,synthetic://sample-data
+2005-12-28,Egypt,27.02,534,559,UEFA,synthetic://sample-data
+2006-06-28,Egypt,28.15,427,268,UEFA,synthetic://sample-data
+2006-12-27,Egypt,27.42,470,1370,UEFA,synthetic://sample-data
+2007-06-27,Egypt,28.44,518,451,UEFA,synthetic://sample-data
+2007-12-26,Egypt,24.98,452,1334,UEFA,synthetic://sample-data
+2008-06-25,Egypt,24.48,502,340,UEFA,synthetic://sample-data
+2008-12-24,Egypt,26.25,463,1125,UEFA,synthetic://sample-data
+2009-06-24,Egypt,26.63,476,998,UEFA,synthetic://sample-data
+2009-12-23,Egypt,22.88,474,301,UEFA,synthetic://sample-data
+2010-06-23,Egypt,22.84,555,501,UEFA,synthetic://sample-data
+2010-12-22,Egypt,24.96,521,493,UEFA,synthetic://sample-data
+2011-06-22,Egypt,22.68,530,253,UEFA,synthetic://sample-data
+2011-12-21,Egypt,29.41,470,315,UEFA,synthetic://sample-data
+2012-06-20,Egypt,24.74,498,39,UEFA,synthetic://sample-data
+2012-12-19,Egypt,26.82,529,392,UEFA,synthetic://sample-data
+2013-06-19,Egypt,28.37,493,1132,UEFA,synthetic://sample-data
+2013-12-18,Egypt,26.59,550,182,UEFA,synthetic://sample-data
+2014-06-18,Egypt,26.67,457,190,UEFA,synthetic://sample-data
+2014-12-17,Egypt,28.16,443,367,UEFA,synthetic://sample-data
+2015-06-17,Egypt,26.41,524,630,UEFA,synthetic://sample-data
+2015-12-16,Egypt,22.71,476,173,UEFA,synthetic://sample-data
+2016-06-15,Egypt,25.56,507,314,UEFA,synthetic://sample-data
+2016-12-14,Egypt,24.64,474,334,UEFA,synthetic://sample-data
+2017-06-14,Egypt,24.64,535,220,UEFA,synthetic://sample-data
+2017-12-13,Egypt,23.07,512,689,UEFA,synthetic://sample-data
+2018-06-13,Egypt,29.27,532,781,UEFA,synthetic://sample-data
+2018-12-12,Egypt,25.77,516,171,UEFA,synthetic://sample-data
+2019-06-12,Egypt,23.0,465,1081,UEFA,synthetic://sample-data
+2019-12-11,Egypt,25.59,468,749,UEFA,synthetic://sample-data
+2020-06-10,Egypt,26.31,538,473,UEFA,synthetic://sample-data
+2020-12-09,Egypt,26.64,494,533,UEFA,synthetic://sample-data
+2021-06-09,Egypt,25.29,444,937,UEFA,synthetic://sample-data
+2021-12-08,Egypt,24.09,543,194,UEFA,synthetic://sample-data
+2022-06-08,Egypt,29.84,434,162,UEFA,synthetic://sample-data
+2022-12-07,Egypt,25.19,425,1570,UEFA,synthetic://sample-data
+2023-06-07,Egypt,26.34,427,319,UEFA,synthetic://sample-data
+2023-12-06,Egypt,27.3,502,272,UEFA,synthetic://sample-data
+2024-06-05,Egypt,28.16,472,316,UEFA,synthetic://sample-data
+2024-12-04,Egypt,23.09,458,1437,UEFA,synthetic://sample-data
+2025-06-04,Egypt,26.96,513,256,UEFA,synthetic://sample-data
+2025-12-03,Egypt,29.49,563,625,UEFA,synthetic://sample-data
+2003-01-01,England,24.99,1112,1144,AFC,synthetic://sample-data
+2003-07-02,England,25.44,1058,1815,AFC,synthetic://sample-data
+2003-12-31,England,28.27,1066,222,AFC,synthetic://sample-data
+2004-06-30,England,27.58,1025,256,AFC,synthetic://sample-data
+2004-12-29,England,27.3,1070,478,AFC,synthetic://sample-data
+2005-06-29,England,23.87,1076,565,AFC,synthetic://sample-data
+2005-12-28,England,25.1,1074,197,AFC,synthetic://sample-data
+2006-06-28,England,28.46,1053,317,AFC,synthetic://sample-data
+2006-12-27,England,26.34,1033,618,AFC,synthetic://sample-data
+2007-06-27,England,26.71,1110,538,AFC,synthetic://sample-data
+2007-12-26,England,29.53,1107,533,AFC,synthetic://sample-data
+2008-06-25,England,22.68,1040,463,AFC,synthetic://sample-data
+2008-12-24,England,26.04,1088,414,AFC,synthetic://sample-data
+2009-06-24,England,25.58,1086,283,AFC,synthetic://sample-data
+2009-12-23,England,27.94,1075,671,AFC,synthetic://sample-data
+2010-06-23,England,27.06,1032,1169,AFC,synthetic://sample-data
+2010-12-22,England,24.05,1036,719,AFC,synthetic://sample-data
+2011-06-22,England,27.3,1090,707,AFC,synthetic://sample-data
+2011-12-21,England,24.77,1059,982,AFC,synthetic://sample-data
+2012-06-20,England,25.92,1096,379,AFC,synthetic://sample-data
+2012-12-19,England,25.94,1088,919,AFC,synthetic://sample-data
+2013-06-19,England,27.28,1039,241,AFC,synthetic://sample-data
+2013-12-18,England,26.93,1101,912,AFC,synthetic://sample-data
+2014-06-18,England,28.49,1080,514,AFC,synthetic://sample-data
+2014-12-17,England,29.84,1114,263,AFC,synthetic://sample-data
+2015-06-17,England,24.29,1072,775,AFC,synthetic://sample-data
+2015-12-16,England,27.49,1121,637,AFC,synthetic://sample-data
+2016-06-15,England,26.6,1064,243,AFC,synthetic://sample-data
+2016-12-14,England,25.8,1009,394,AFC,synthetic://sample-data
+2017-06-14,England,27.08,1081,939,AFC,synthetic://sample-data
+2017-12-13,England,25.6,1025,1035,AFC,synthetic://sample-data
+2018-06-13,England,26.99,1104,358,AFC,synthetic://sample-data
+2018-12-12,England,26.26,1066,750,AFC,synthetic://sample-data
+2019-06-12,England,23.97,1051,2030,AFC,synthetic://sample-data
+2019-12-11,England,28.55,1084,224,AFC,synthetic://sample-data
+2020-06-10,England,27.09,1046,902,AFC,synthetic://sample-data
+2020-12-09,England,24.71,1063,378,AFC,synthetic://sample-data
+2021-06-09,England,30.1,1098,767,AFC,synthetic://sample-data
+2021-12-08,England,24.36,1035,1432,AFC,synthetic://sample-data
+2022-06-08,England,26.05,1115,332,AFC,synthetic://sample-data
+2022-12-07,England,26.37,1055,665,AFC,synthetic://sample-data
+2023-06-07,England,24.53,1143,266,AFC,synthetic://sample-data
+2023-12-06,England,26.33,1126,471,AFC,synthetic://sample-data
+2024-06-05,England,27.34,1078,440,AFC,synthetic://sample-data
+2024-12-04,England,26.39,1089,1130,AFC,synthetic://sample-data
+2025-06-04,England,26.3,1127,981,AFC,synthetic://sample-data
+2025-12-03,England,27.43,1121,200,AFC,synthetic://sample-data
+2003-01-01,France,24.0,1169,1287,CAF,synthetic://sample-data
+2003-07-02,France,25.68,1176,375,CAF,synthetic://sample-data
+2003-12-31,France,23.61,1127,1123,CAF,synthetic://sample-data
+2004-06-30,France,31.03,1154,743,CAF,synthetic://sample-data
+2004-12-29,France,28.48,1151,95,CAF,synthetic://sample-data
+2005-06-29,France,23.23,1198,944,CAF,synthetic://sample-data
+2005-12-28,France,26.76,1191,329,CAF,synthetic://sample-data
+2006-06-28,France,28.68,1191,139,CAF,synthetic://sample-data
+2006-12-27,France,24.89,1146,1607,CAF,synthetic://sample-data
+2007-06-27,France,26.05,1156,262,CAF,synthetic://sample-data
+2007-12-26,France,24.99,1120,228,CAF,synthetic://sample-data
+2008-06-25,France,24.87,1183,797,CAF,synthetic://sample-data
+2008-12-24,France,26.15,1180,921,CAF,synthetic://sample-data
+2009-06-24,France,23.42,1169,375,CAF,synthetic://sample-data
+2009-12-23,France,28.57,1173,803,CAF,synthetic://sample-data
+2010-06-23,France,27.24,1119,815,CAF,synthetic://sample-data
+2010-12-22,France,28.61,1177,537,CAF,synthetic://sample-data
+2011-06-22,France,28.81,1190,407,CAF,synthetic://sample-data
+2011-12-21,France,28.65,1179,547,CAF,synthetic://sample-data
+2012-06-20,France,24.84,1227,1645,CAF,synthetic://sample-data
+2012-12-19,France,24.69,1160,458,CAF,synthetic://sample-data
+2013-06-19,France,25.58,1099,742,CAF,synthetic://sample-data
+2013-12-18,France,25.18,1211,1048,CAF,synthetic://sample-data
+2014-06-18,France,25.83,1215,866,CAF,synthetic://sample-data
+2014-12-17,France,22.86,1196,56,CAF,synthetic://sample-data
+2015-06-17,France,28.72,1119,940,CAF,synthetic://sample-data
+2015-12-16,France,26.2,1193,206,CAF,synthetic://sample-data
+2016-06-15,France,26.4,1179,175,CAF,synthetic://sample-data
+2016-12-14,France,28.11,1191,398,CAF,synthetic://sample-data
+2017-06-14,France,25.31,1141,198,CAF,synthetic://sample-data
+2017-12-13,France,26.47,1157,1112,CAF,synthetic://sample-data
+2018-06-13,France,24.97,1170,1714,CAF,synthetic://sample-data
+2018-12-12,France,27.45,1208,550,CAF,synthetic://sample-data
+2019-06-12,France,25.24,1188,54,CAF,synthetic://sample-data
+2019-12-11,France,26.19,1206,341,CAF,synthetic://sample-data
+2020-06-10,France,24.23,1129,588,CAF,synthetic://sample-data
+2020-12-09,France,27.97,1183,233,CAF,synthetic://sample-data
+2021-06-09,France,25.99,1110,161,CAF,synthetic://sample-data
+2021-12-08,France,25.84,1174,519,CAF,synthetic://sample-data
+2022-06-08,France,23.47,1172,738,CAF,synthetic://sample-data
+2022-12-07,France,26.85,1178,548,CAF,synthetic://sample-data
+2023-06-07,France,24.57,1168,463,CAF,synthetic://sample-data
+2023-12-06,France,27.1,1144,960,CAF,synthetic://sample-data
+2024-06-05,France,23.81,1179,1188,CAF,synthetic://sample-data
+2024-12-04,France,24.15,1153,344,CAF,synthetic://sample-data
+2025-06-04,France,29.78,1126,379,CAF,synthetic://sample-data
+2025-12-03,France,22.09,1250,280,CAF,synthetic://sample-data
+2003-01-01,Germany,27.75,994,401,CONCACAF,synthetic://sample-data
+2003-07-02,Germany,25.49,956,311,CONCACAF,synthetic://sample-data
+2003-12-31,Germany,22.61,940,295,CONCACAF,synthetic://sample-data
+2004-06-30,Germany,25.58,974,228,CONCACAF,synthetic://sample-data
+2004-12-29,Germany,24.66,918,559,CONCACAF,synthetic://sample-data
+2005-06-29,Germany,24.79,982,307,CONCACAF,synthetic://sample-data
+2005-12-28,Germany,25.45,887,552,CONCACAF,synthetic://sample-data
+2006-06-28,Germany,26.24,1001,556,CONCACAF,synthetic://sample-data
+2006-12-27,Germany,23.51,1013,273,CONCACAF,synthetic://sample-data
+2007-06-27,Germany,27.12,1013,497,CONCACAF,synthetic://sample-data
+2007-12-26,Germany,22.33,993,160,CONCACAF,synthetic://sample-data
+2008-06-25,Germany,25.46,959,854,CONCACAF,synthetic://sample-data
+2008-12-24,Germany,28.35,1011,646,CONCACAF,synthetic://sample-data
+2009-06-24,Germany,26.5,964,179,CONCACAF,synthetic://sample-data
+2009-12-23,Germany,26.27,926,155,CONCACAF,synthetic://sample-data
+2010-06-23,Germany,24.83,973,234,CONCACAF,synthetic://sample-data
+2010-12-22,Germany,25.94,1044,507,CONCACAF,synthetic://sample-data
+2011-06-22,Germany,26.59,989,499,CONCACAF,synthetic://sample-data
+2011-12-21,Germany,26.3,988,633,CONCACAF,synthetic://sample-data
+2012-06-20,Germany,26.44,1035,1719,CONCACAF,synthetic://sample-data
+2012-12-19,Germany,25.3,978,855,CONCACAF,synthetic://sample-data
+2013-06-19,Germany,26.01,960,514,CONCACAF,synthetic://sample-data
+2013-12-18,Germany,23.18,1005,1233,CONCACAF,synthetic://sample-data
+2014-06-18,Germany,27.45,950,325,CONCACAF,synthetic://sample-data
+2014-12-17,Germany,24.94,959,557,CONCACAF,synthetic://sample-data
+2015-06-17,Germany,26.54,950,787,CONCACAF,synthetic://sample-data
+2015-12-16,Germany,29.44,975,1077,CONCACAF,synthetic://sample-data
+2016-06-15,Germany,27.64,989,571,CONCACAF,synthetic://sample-data
+2016-12-14,Germany,28.88,983,704,CONCACAF,synthetic://sample-data
+2017-06-14,Germany,27.13,1024,701,CONCACAF,synthetic://sample-data
+2017-12-13,Germany,28.02,986,510,CONCACAF,synthetic://sample-data
+2018-06-13,Germany,24.8,973,805,CONCACAF,synthetic://sample-data
+2018-12-12,Germany,29.7,980,788,CONCACAF,synthetic://sample-data
+2019-06-12,Germany,24.23,995,659,CONCACAF,synthetic://sample-data
+2019-12-11,Germany,28.52,944,811,CONCACAF,synthetic://sample-data
+2020-06-10,Germany,28.34,1007,1158,CONCACAF,synthetic://sample-data
+2020-12-09,Germany,24.32,1022,604,CONCACAF,synthetic://sample-data
+2021-06-09,Germany,25.0,994,128,CONCACAF,synthetic://sample-data
+2021-12-08,Germany,25.04,904,568,CONCACAF,synthetic://sample-data
+2022-06-08,Germany,24.8,976,819,CONCACAF,synthetic://sample-data
+2022-12-07,Germany,25.49,1020,193,CONCACAF,synthetic://sample-data
+2023-06-07,Germany,29.12,950,528,CONCACAF,synthetic://sample-data
+2023-12-06,Germany,26.2,964,902,CONCACAF,synthetic://sample-data
+2024-06-05,Germany,29.22,978,661,CONCACAF,synthetic://sample-data
+2024-12-04,Germany,26.62,1072,311,CONCACAF,synthetic://sample-data
+2025-06-04,Germany,26.68,1026,355,CONCACAF,synthetic://sample-data
+2025-12-03,Germany,27.77,1024,747,CONCACAF,synthetic://sample-data
+2003-01-01,Ghana,27.02,397,1773,CONMEBOL,synthetic://sample-data
+2003-07-02,Ghana,26.85,425,371,CONMEBOL,synthetic://sample-data
+2003-12-31,Ghana,27.63,403,721,CONMEBOL,synthetic://sample-data
+2004-06-30,Ghana,27.46,399,321,CONMEBOL,synthetic://sample-data
+2004-12-29,Ghana,28.63,426,328,CONMEBOL,synthetic://sample-data
+2005-06-29,Ghana,26.35,431,481,CONMEBOL,synthetic://sample-data
+2005-12-28,Ghana,25.72,419,584,CONMEBOL,synthetic://sample-data
+2006-06-28,Ghana,24.57,443,842,CONMEBOL,synthetic://sample-data
+2006-12-27,Ghana,25.29,459,354,CONMEBOL,synthetic://sample-data
+2007-06-27,Ghana,23.25,399,384,CONMEBOL,synthetic://sample-data
+2007-12-26,Ghana,25.74,416,405,CONMEBOL,synthetic://sample-data
+2008-06-25,Ghana,26.44,382,384,CONMEBOL,synthetic://sample-data
+2008-12-24,Ghana,27.07,408,666,CONMEBOL,synthetic://sample-data
+2009-06-24,Ghana,24.38,340,664,CONMEBOL,synthetic://sample-data
+2009-12-23,Ghana,27.57,466,629,CONMEBOL,synthetic://sample-data
+2010-06-23,Ghana,22.81,373,1146,CONMEBOL,synthetic://sample-data
+2010-12-22,Ghana,26.41,384,520,CONMEBOL,synthetic://sample-data
+2011-06-22,Ghana,23.85,429,1263,CONMEBOL,synthetic://sample-data
+2011-12-21,Ghana,25.55,476,1540,CONMEBOL,synthetic://sample-data
+2012-06-20,Ghana,24.05,340,307,CONMEBOL,synthetic://sample-data
+2012-12-19,Ghana,29.31,431,943,CONMEBOL,synthetic://sample-data
+2013-06-19,Ghana,23.09,455,894,CONMEBOL,synthetic://sample-data
+2013-12-18,Ghana,27.72,425,162,CONMEBOL,synthetic://sample-data
+2014-06-18,Ghana,26.28,367,426,CONMEBOL,synthetic://sample-data
+2014-12-17,Ghana,26.34,408,638,CONMEBOL,synthetic://sample-data
+2015-06-17,Ghana,25.33,363,1025,CONMEBOL,synthetic://sample-data
+2015-12-16,Ghana,27.62,419,40,CONMEBOL,synthetic://sample-data
+2016-06-15,Ghana,26.13,435,423,CONMEBOL,synthetic://sample-data
+2016-12-14,Ghana,25.58,445,1227,CONMEBOL,synthetic://sample-data
+2017-06-14,Ghana,27.01,417,330,CONMEBOL,synthetic://sample-data
+2017-12-13,Ghana,27.05,411,875,CONMEBOL,synthetic://sample-data
+2018-06-13,Ghana,28.79,429,1293,CONMEBOL,synthetic://sample-data
+2018-12-12,Ghana,25.79,394,1047,CONMEBOL,synthetic://sample-data
+2019-06-12,Ghana,27.22,472,380,CONMEBOL,synthetic://sample-data
+2019-12-11,Ghana,30.01,398,649,CONMEBOL,synthetic://sample-data
+2020-06-10,Ghana,24.6,482,908,CONMEBOL,synthetic://sample-data
+2020-12-09,Ghana,25.3,384,432,CONMEBOL,synthetic://sample-data
+2021-06-09,Ghana,23.79,443,1066,CONMEBOL,synthetic://sample-data
+2021-12-08,Ghana,28.5,454,523,CONMEBOL,synthetic://sample-data
+2022-06-08,Ghana,24.28,422,578,CONMEBOL,synthetic://sample-data
+2022-12-07,Ghana,28.63,421,444,CONMEBOL,synthetic://sample-data
+2023-06-07,Ghana,28.14,362,462,CONMEBOL,synthetic://sample-data
+2023-12-06,Ghana,26.56,459,628,CONMEBOL,synthetic://sample-data
+2024-06-05,Ghana,26.27,442,646,CONMEBOL,synthetic://sample-data
+2024-12-04,Ghana,25.52,368,1246,CONMEBOL,synthetic://sample-data
+2025-06-04,Ghana,25.44,429,920,CONMEBOL,synthetic://sample-data
+2025-12-03,Ghana,26.66,388,1357,CONMEBOL,synthetic://sample-data
+2003-01-01,Iran,25.66,430,752,UEFA,synthetic://sample-data
+2003-07-02,Iran,28.99,410,77,UEFA,synthetic://sample-data
+2003-12-31,Iran,24.07,418,1297,UEFA,synthetic://sample-data
+2004-06-30,Iran,22.9,379,451,UEFA,synthetic://sample-data
+2004-12-29,Iran,24.29,388,106,UEFA,synthetic://sample-data
+2005-06-29,Iran,25.04,422,490,UEFA,synthetic://sample-data
+2005-12-28,Iran,29.7,430,579,UEFA,synthetic://sample-data
+2006-06-28,Iran,21.77,369,149,UEFA,synthetic://sample-data
+2006-12-27,Iran,27.23,467,1091,UEFA,synthetic://sample-data
+2007-06-27,Iran,23.09,430,823,UEFA,synthetic://sample-data
+2007-12-26,Iran,27.84,473,603,UEFA,synthetic://sample-data
+2008-06-25,Iran,28.12,388,362,UEFA,synthetic://sample-data
+2008-12-24,Iran,25.71,419,870,UEFA,synthetic://sample-data
+2009-06-24,Iran,32.93,420,915,UEFA,synthetic://sample-data
+2009-12-23,Iran,26.6,412,1143,UEFA,synthetic://sample-data
+2010-06-23,Iran,30.01,376,1205,UEFA,synthetic://sample-data
+2010-12-22,Iran,25.37,449,267,UEFA,synthetic://sample-data
+2011-06-22,Iran,23.76,375,655,UEFA,synthetic://sample-data
+2011-12-21,Iran,24.75,392,546,UEFA,synthetic://sample-data
+2012-06-20,Iran,24.55,469,668,UEFA,synthetic://sample-data
+2012-12-19,Iran,27.14,454,446,UEFA,synthetic://sample-data
+2013-06-19,Iran,30.37,435,366,UEFA,synthetic://sample-data
+2013-12-18,Iran,27.38,491,755,UEFA,synthetic://sample-data
+2014-06-18,Iran,23.08,440,735,UEFA,synthetic://sample-data
+2014-12-17,Iran,28.56,394,293,UEFA,synthetic://sample-data
+2015-06-17,Iran,25.98,353,275,UEFA,synthetic://sample-data
+2015-12-16,Iran,26.76,405,559,UEFA,synthetic://sample-data
+2016-06-15,Iran,27.54,381,537,UEFA,synthetic://sample-data
+2016-12-14,Iran,25.93,419,67,UEFA,synthetic://sample-data
+2017-06-14,Iran,21.49,423,377,UEFA,synthetic://sample-data
+2017-12-13,Iran,24.7,437,829,UEFA,synthetic://sample-data
+2018-06-13,Iran,23.1,425,1144,UEFA,synthetic://sample-data
+2018-12-12,Iran,28.72,329,819,UEFA,synthetic://sample-data
+2019-06-12,Iran,25.58,413,1580,UEFA,synthetic://sample-data
+2019-12-11,Iran,24.46,438,491,UEFA,synthetic://sample-data
+2020-06-10,Iran,25.4,457,831,UEFA,synthetic://sample-data
+2020-12-09,Iran,24.8,349,819,UEFA,synthetic://sample-data
+2021-06-09,Iran,27.68,454,619,UEFA,synthetic://sample-data
+2021-12-08,Iran,26.73,398,215,UEFA,synthetic://sample-data
+2022-06-08,Iran,25.6,417,128,UEFA,synthetic://sample-data
+2022-12-07,Iran,26.03,410,903,UEFA,synthetic://sample-data
+2023-06-07,Iran,27.05,509,939,UEFA,synthetic://sample-data
+2023-12-06,Iran,24.2,427,358,UEFA,synthetic://sample-data
+2024-06-05,Iran,28.97,355,937,UEFA,synthetic://sample-data
+2024-12-04,Iran,27.24,472,835,UEFA,synthetic://sample-data
+2025-06-04,Iran,25.53,490,778,UEFA,synthetic://sample-data
+2025-12-03,Iran,24.64,409,462,UEFA,synthetic://sample-data
+2003-01-01,Italy,24.43,1005,1195,AFC,synthetic://sample-data
+2003-07-02,Italy,26.59,988,371,AFC,synthetic://sample-data
+2003-12-31,Italy,26.64,1012,601,AFC,synthetic://sample-data
+2004-06-30,Italy,26.88,956,351,AFC,synthetic://sample-data
+2004-12-29,Italy,27.05,1002,712,AFC,synthetic://sample-data
+2005-06-29,Italy,28.29,974,754,AFC,synthetic://sample-data
+2005-12-28,Italy,27.16,1018,314,AFC,synthetic://sample-data
+2006-06-28,Italy,27.04,955,711,AFC,synthetic://sample-data
+2006-12-27,Italy,26.11,983,427,AFC,synthetic://sample-data
+2007-06-27,Italy,29.64,979,542,AFC,synthetic://sample-data
+2007-12-26,Italy,27.82,893,370,AFC,synthetic://sample-data
+2008-06-25,Italy,24.88,1030,576,AFC,synthetic://sample-data
+2008-12-24,Italy,24.76,1014,1853,AFC,synthetic://sample-data
+2009-06-24,Italy,25.39,995,343,AFC,synthetic://sample-data
+2009-12-23,Italy,25.58,985,705,AFC,synthetic://sample-data
+2010-06-23,Italy,29.03,957,536,AFC,synthetic://sample-data
+2010-12-22,Italy,23.27,947,530,AFC,synthetic://sample-data
+2011-06-22,Italy,25.5,852,1182,AFC,synthetic://sample-data
+2011-12-21,Italy,26.07,929,1128,AFC,synthetic://sample-data
+2012-06-20,Italy,26.47,970,909,AFC,synthetic://sample-data
+2012-12-19,Italy,29.76,1006,353,AFC,synthetic://sample-data
+2013-06-19,Italy,24.55,999,773,AFC,synthetic://sample-data
+2013-12-18,Italy,23.93,921,1307,AFC,synthetic://sample-data
+2014-06-18,Italy,27.25,977,1336,AFC,synthetic://sample-data
+2014-12-17,Italy,27.94,998,502,AFC,synthetic://sample-data
+2015-06-17,Italy,24.53,1000,611,AFC,synthetic://sample-data
+2015-12-16,Italy,27.74,988,1228,AFC,synthetic://sample-data
+2016-06-15,Italy,25.45,1019,128,AFC,synthetic://sample-data
+2016-12-14,Italy,25.41,985,321,AFC,synthetic://sample-data
+2017-06-14,Italy,25.27,1035,665,AFC,synthetic://sample-data
+2017-12-13,Italy,22.26,1020,467,AFC,synthetic://sample-data
+2018-06-13,Italy,22.35,914,1064,AFC,synthetic://sample-data
+2018-12-12,Italy,25.92,1017,287,AFC,synthetic://sample-data
+2019-06-12,Italy,23.41,978,893,AFC,synthetic://sample-data
+2019-12-11,Italy,25.45,1000,824,AFC,synthetic://sample-data
+2020-06-10,Italy,25.69,975,375,AFC,synthetic://sample-data
+2020-12-09,Italy,26.33,974,348,AFC,synthetic://sample-data
+2021-06-09,Italy,27.18,978,689,AFC,synthetic://sample-data
+2021-12-08,Italy,23.88,1003,255,AFC,synthetic://sample-data
+2022-06-08,Italy,24.63,928,1571,AFC,synthetic://sample-data
+2022-12-07,Italy,24.06,907,440,AFC,synthetic://sample-data
+2023-06-07,Italy,27.19,963,444,AFC,synthetic://sample-data
+2023-12-06,Italy,26.46,957,349,AFC,synthetic://sample-data
+2024-06-05,Italy,29.38,914,739,AFC,synthetic://sample-data
+2024-12-04,Italy,26.96,1006,892,AFC,synthetic://sample-data
+2025-06-04,Italy,27.42,976,512,AFC,synthetic://sample-data
+2025-12-03,Italy,23.08,936,825,AFC,synthetic://sample-data
+2003-01-01,Ivory Coast,27.75,451,461,CAF,synthetic://sample-data
+2003-07-02,Ivory Coast,25.85,440,293,CAF,synthetic://sample-data
+2003-12-31,Ivory Coast,26.34,470,1041,CAF,synthetic://sample-data
+2004-06-30,Ivory Coast,24.76,427,792,CAF,synthetic://sample-data
+2004-12-29,Ivory Coast,24.58,462,1201,CAF,synthetic://sample-data
+2005-06-29,Ivory Coast,25.92,460,313,CAF,synthetic://sample-data
+2005-12-28,Ivory Coast,29.26,463,320,CAF,synthetic://sample-data
+2006-06-28,Ivory Coast,24.16,436,651,CAF,synthetic://sample-data
+2006-12-27,Ivory Coast,26.63,459,1326,CAF,synthetic://sample-data
+2007-06-27,Ivory Coast,24.92,402,465,CAF,synthetic://sample-data
+2007-12-26,Ivory Coast,28.75,445,1080,CAF,synthetic://sample-data
+2008-06-25,Ivory Coast,23.65,474,624,CAF,synthetic://sample-data
+2008-12-24,Ivory Coast,27.81,517,701,CAF,synthetic://sample-data
+2009-06-24,Ivory Coast,23.52,435,517,CAF,synthetic://sample-data
+2009-12-23,Ivory Coast,26.93,446,754,CAF,synthetic://sample-data
+2010-06-23,Ivory Coast,25.93,459,160,CAF,synthetic://sample-data
+2010-12-22,Ivory Coast,23.36,459,916,CAF,synthetic://sample-data
+2011-06-22,Ivory Coast,22.98,468,1602,CAF,synthetic://sample-data
+2011-12-21,Ivory Coast,27.33,466,352,CAF,synthetic://sample-data
+2012-06-20,Ivory Coast,27.15,448,291,CAF,synthetic://sample-data
+2012-12-19,Ivory Coast,24.71,453,324,CAF,synthetic://sample-data
+2013-06-19,Ivory Coast,25.38,433,602,CAF,synthetic://sample-data
+2013-12-18,Ivory Coast,28.17,467,1219,CAF,synthetic://sample-data
+2014-06-18,Ivory Coast,22.75,431,191,CAF,synthetic://sample-data
+2014-12-17,Ivory Coast,28.03,477,973,CAF,synthetic://sample-data
+2015-06-17,Ivory Coast,24.01,480,213,CAF,synthetic://sample-data
+2015-12-16,Ivory Coast,29.49,439,306,CAF,synthetic://sample-data
+2016-06-15,Ivory Coast,25.11,412,147,CAF,synthetic://sample-data
+2016-12-14,Ivory Coast,25.3,430,1099,CAF,synthetic://sample-data
+2017-06-14,Ivory Coast,27.96,423,346,CAF,synthetic://sample-data
+2017-12-13,Ivory Coast,26.51,501,651,CAF,synthetic://sample-data
+2018-06-13,Ivory Coast,27.12,465,426,CAF,synthetic://sample-data
+2018-12-12,Ivory Coast,25.05,443,279,CAF,synthetic://sample-data
+2019-06-12,Ivory Coast,25.99,421,533,CAF,synthetic://sample-data
+2019-12-11,Ivory Coast,24.79,494,398,CAF,synthetic://sample-data
+2020-06-10,Ivory Coast,24.79,443,155,CAF,synthetic://sample-data
+2020-12-09,Ivory Coast,29.17,422,904,CAF,synthetic://sample-data
+2021-06-09,Ivory Coast,24.61,489,349,CAF,synthetic://sample-data
+2021-12-08,Ivory Coast,25.68,477,1503,CAF,synthetic://sample-data
+2022-06-08,Ivory Coast,24.3,424,1187,CAF,synthetic://sample-data
+2022-12-07,Ivory Coast,21.78,516,465,CAF,synthetic://sample-data
+2023-06-07,Ivory Coast,24.98,419,511,CAF,synthetic://sample-data
+2023-12-06,Ivory Coast,23.46,443,1187,CAF,synthetic://sample-data
+2024-06-05,Ivory Coast,26.8,446,1023,CAF,synthetic://sample-data
+2024-12-04,Ivory Coast,25.73,461,577,CAF,synthetic://sample-data
+2025-06-04,Ivory Coast,26.87,485,249,CAF,synthetic://sample-data
+2025-12-03,Ivory Coast,26.76,481,364,CAF,synthetic://sample-data
+2003-01-01,Japan,25.26,689,458,CONCACAF,synthetic://sample-data
+2003-07-02,Japan,26.6,611,599,CONCACAF,synthetic://sample-data
+2003-12-31,Japan,24.78,587,172,CONCACAF,synthetic://sample-data
+2004-06-30,Japan,27.55,600,512,CONCACAF,synthetic://sample-data
+2004-12-29,Japan,23.95,604,201,CONCACAF,synthetic://sample-data
+2005-06-29,Japan,27.93,645,474,CONCACAF,synthetic://sample-data
+2005-12-28,Japan,25.51,636,442,CONCACAF,synthetic://sample-data
+2006-06-28,Japan,23.08,713,216,CONCACAF,synthetic://sample-data
+2006-12-27,Japan,26.81,705,421,CONCACAF,synthetic://sample-data
+2007-06-27,Japan,25.49,622,627,CONCACAF,synthetic://sample-data
+2007-12-26,Japan,27.61,584,1661,CONCACAF,synthetic://sample-data
+2008-06-25,Japan,27.89,646,1296,CONCACAF,synthetic://sample-data
+2008-12-24,Japan,24.46,628,448,CONCACAF,synthetic://sample-data
+2009-06-24,Japan,26.0,661,373,CONCACAF,synthetic://sample-data
+2009-12-23,Japan,23.24,654,322,CONCACAF,synthetic://sample-data
+2010-06-23,Japan,26.27,611,687,CONCACAF,synthetic://sample-data
+2010-12-22,Japan,28.77,635,715,CONCACAF,synthetic://sample-data
+2011-06-22,Japan,23.8,579,445,CONCACAF,synthetic://sample-data
+2011-12-21,Japan,25.94,606,406,CONCACAF,synthetic://sample-data
+2012-06-20,Japan,24.31,654,668,CONCACAF,synthetic://sample-data
+2012-12-19,Japan,28.13,605,96,CONCACAF,synthetic://sample-data
+2013-06-19,Japan,25.43,590,1216,CONCACAF,synthetic://sample-data
+2013-12-18,Japan,29.54,676,325,CONCACAF,synthetic://sample-data
+2014-06-18,Japan,27.08,697,278,CONCACAF,synthetic://sample-data
+2014-12-17,Japan,24.19,609,715,CONCACAF,synthetic://sample-data
+2015-06-17,Japan,27.17,677,1135,CONCACAF,synthetic://sample-data
+2015-12-16,Japan,25.86,684,574,CONCACAF,synthetic://sample-data
+2016-06-15,Japan,26.89,664,573,CONCACAF,synthetic://sample-data
+2016-12-14,Japan,31.12,641,429,CONCACAF,synthetic://sample-data
+2017-06-14,Japan,25.66,659,279,CONCACAF,synthetic://sample-data
+2017-12-13,Japan,22.64,575,511,CONCACAF,synthetic://sample-data
+2018-06-13,Japan,26.82,635,750,CONCACAF,synthetic://sample-data
+2018-12-12,Japan,25.98,654,418,CONCACAF,synthetic://sample-data
+2019-06-12,Japan,27.61,619,1311,CONCACAF,synthetic://sample-data
+2019-12-11,Japan,24.35,620,463,CONCACAF,synthetic://sample-data
+2020-06-10,Japan,24.97,685,170,CONCACAF,synthetic://sample-data
+2020-12-09,Japan,24.1,613,161,CONCACAF,synthetic://sample-data
+2021-06-09,Japan,25.57,640,573,CONCACAF,synthetic://sample-data
+2021-12-08,Japan,28.29,730,262,CONCACAF,synthetic://sample-data
+2022-06-08,Japan,27.93,590,444,CONCACAF,synthetic://sample-data
+2022-12-07,Japan,26.5,588,439,CONCACAF,synthetic://sample-data
+2023-06-07,Japan,24.82,646,1886,CONCACAF,synthetic://sample-data
+2023-12-06,Japan,27.55,634,794,CONCACAF,synthetic://sample-data
+2024-06-05,Japan,26.15,589,264,CONCACAF,synthetic://sample-data
+2024-12-04,Japan,26.84,624,151,CONCACAF,synthetic://sample-data
+2025-06-04,Japan,28.47,681,446,CONCACAF,synthetic://sample-data
+2025-12-03,Japan,27.36,594,1478,CONCACAF,synthetic://sample-data
+2003-01-01,Mexico,23.54,729,314,CONMEBOL,synthetic://sample-data
+2003-07-02,Mexico,25.71,666,523,CONMEBOL,synthetic://sample-data
+2003-12-31,Mexico,26.04,726,452,CONMEBOL,synthetic://sample-data
+2004-06-30,Mexico,25.98,650,214,CONMEBOL,synthetic://sample-data
+2004-12-29,Mexico,25.98,676,1351,CONMEBOL,synthetic://sample-data
+2005-06-29,Mexico,25.5,704,1569,CONMEBOL,synthetic://sample-data
+2005-12-28,Mexico,25.55,676,216,CONMEBOL,synthetic://sample-data
+2006-06-28,Mexico,28.22,617,843,CONMEBOL,synthetic://sample-data
+2006-12-27,Mexico,23.74,656,326,CONMEBOL,synthetic://sample-data
+2007-06-27,Mexico,25.57,715,188,CONMEBOL,synthetic://sample-data
+2007-12-26,Mexico,25.35,647,293,CONMEBOL,synthetic://sample-data
+2008-06-25,Mexico,24.41,694,678,CONMEBOL,synthetic://sample-data
+2008-12-24,Mexico,26.38,708,1016,CONMEBOL,synthetic://sample-data
+2009-06-24,Mexico,26.95,724,1472,CONMEBOL,synthetic://sample-data
+2009-12-23,Mexico,23.81,703,783,CONMEBOL,synthetic://sample-data
+2010-06-23,Mexico,27.49,661,303,CONMEBOL,synthetic://sample-data
+2010-12-22,Mexico,23.14,655,261,CONMEBOL,synthetic://sample-data
+2011-06-22,Mexico,24.58,623,766,CONMEBOL,synthetic://sample-data
+2011-12-21,Mexico,25.13,658,738,CONMEBOL,synthetic://sample-data
+2012-06-20,Mexico,27.35,692,1094,CONMEBOL,synthetic://sample-data
+2012-12-19,Mexico,28.4,705,467,CONMEBOL,synthetic://sample-data
+2013-06-19,Mexico,24.62,668,222,CONMEBOL,synthetic://sample-data
+2013-12-18,Mexico,26.2,710,271,CONMEBOL,synthetic://sample-data
+2014-06-18,Mexico,23.61,658,842,CONMEBOL,synthetic://sample-data
+2014-12-17,Mexico,24.23,692,433,CONMEBOL,synthetic://sample-data
+2015-06-17,Mexico,28.39,683,395,CONMEBOL,synthetic://sample-data
+2015-12-16,Mexico,27.94,670,426,CONMEBOL,synthetic://sample-data
+2016-06-15,Mexico,28.06,730,942,CONMEBOL,synthetic://sample-data
+2016-12-14,Mexico,26.39,786,352,CONMEBOL,synthetic://sample-data
+2017-06-14,Mexico,27.08,659,703,CONMEBOL,synthetic://sample-data
+2017-12-13,Mexico,26.07,741,763,CONMEBOL,synthetic://sample-data
+2018-06-13,Mexico,23.67,783,1223,CONMEBOL,synthetic://sample-data
+2018-12-12,Mexico,23.52,671,528,CONMEBOL,synthetic://sample-data
+2019-06-12,Mexico,26.04,665,1152,CONMEBOL,synthetic://sample-data
+2019-12-11,Mexico,26.05,730,1717,CONMEBOL,synthetic://sample-data
+2020-06-10,Mexico,25.92,695,442,CONMEBOL,synthetic://sample-data
+2020-12-09,Mexico,25.84,769,543,CONMEBOL,synthetic://sample-data
+2021-06-09,Mexico,27.12,641,1311,CONMEBOL,synthetic://sample-data
+2021-12-08,Mexico,23.25,679,275,CONMEBOL,synthetic://sample-data
+2022-06-08,Mexico,23.37,677,185,CONMEBOL,synthetic://sample-data
+2022-12-07,Mexico,26.59,694,630,CONMEBOL,synthetic://sample-data
+2023-06-07,Mexico,24.9,647,229,CONMEBOL,synthetic://sample-data
+2023-12-06,Mexico,25.07,777,1792,CONMEBOL,synthetic://sample-data
+2024-06-05,Mexico,26.4,734,586,CONMEBOL,synthetic://sample-data
+2024-12-04,Mexico,27.79,662,778,CONMEBOL,synthetic://sample-data
+2025-06-04,Mexico,26.48,710,443,CONMEBOL,synthetic://sample-data
+2025-12-03,Mexico,27.04,708,371,CONMEBOL,synthetic://sample-data
+2003-01-01,Morocco,24.16,734,978,UEFA,synthetic://sample-data
+2003-07-02,Morocco,28.23,722,562,UEFA,synthetic://sample-data
+2003-12-31,Morocco,26.91,754,211,UEFA,synthetic://sample-data
+2004-06-30,Morocco,24.47,743,1044,UEFA,synthetic://sample-data
+2004-12-29,Morocco,27.39,702,816,UEFA,synthetic://sample-data
+2005-06-29,Morocco,27.15,709,270,UEFA,synthetic://sample-data
+2005-12-28,Morocco,28.64,781,1817,UEFA,synthetic://sample-data
+2006-06-28,Morocco,28.07,776,274,UEFA,synthetic://sample-data
+2006-12-27,Morocco,24.73,740,254,UEFA,synthetic://sample-data
+2007-06-27,Morocco,28.1,733,274,UEFA,synthetic://sample-data
+2007-12-26,Morocco,27.23,735,592,UEFA,synthetic://sample-data
+2008-06-25,Morocco,26.7,713,764,UEFA,synthetic://sample-data
+2008-12-24,Morocco,25.8,787,684,UEFA,synthetic://sample-data
+2009-06-24,Morocco,28.77,782,574,UEFA,synthetic://sample-data
+2009-12-23,Morocco,25.85,745,128,UEFA,synthetic://sample-data
+2010-06-23,Morocco,24.77,736,692,UEFA,synthetic://sample-data
+2010-12-22,Morocco,26.36,758,922,UEFA,synthetic://sample-data
+2011-06-22,Morocco,21.66,744,961,UEFA,synthetic://sample-data
+2011-12-21,Morocco,24.97,799,383,UEFA,synthetic://sample-data
+2012-06-20,Morocco,24.91,769,243,UEFA,synthetic://sample-data
+2012-12-19,Morocco,26.03,775,1911,UEFA,synthetic://sample-data
+2013-06-19,Morocco,26.17,768,563,UEFA,synthetic://sample-data
+2013-12-18,Morocco,25.41,736,408,UEFA,synthetic://sample-data
+2014-06-18,Morocco,26.36,785,395,UEFA,synthetic://sample-data
+2014-12-17,Morocco,25.1,761,409,UEFA,synthetic://sample-data
+2015-06-17,Morocco,24.95,725,727,UEFA,synthetic://sample-data
+2015-12-16,Morocco,28.82,765,470,UEFA,synthetic://sample-data
+2016-06-15,Morocco,25.45,748,1719,UEFA,synthetic://sample-data
+2016-12-14,Morocco,24.86,760,510,UEFA,synthetic://sample-data
+2017-06-14,Morocco,24.38,780,662,UEFA,synthetic://sample-data
+2017-12-13,Morocco,25.99,712,348,UEFA,synthetic://sample-data
+2018-06-13,Morocco,27.95,752,737,UEFA,synthetic://sample-data
+2018-12-12,Morocco,27.51,768,945,UEFA,synthetic://sample-data
+2019-06-12,Morocco,27.44,744,1362,UEFA,synthetic://sample-data
+2019-12-11,Morocco,23.25,807,821,UEFA,synthetic://sample-data
+2020-06-10,Morocco,25.53,733,524,UEFA,synthetic://sample-data
+2020-12-09,Morocco,25.81,705,531,UEFA,synthetic://sample-data
+2021-06-09,Morocco,23.41,755,612,UEFA,synthetic://sample-data
+2021-12-08,Morocco,24.27,773,1208,UEFA,synthetic://sample-data
+2022-06-08,Morocco,29.1,705,554,UEFA,synthetic://sample-data
+2022-12-07,Morocco,25.8,744,116,UEFA,synthetic://sample-data
+2023-06-07,Morocco,28.91,716,676,UEFA,synthetic://sample-data
+2023-12-06,Morocco,27.35,802,748,UEFA,synthetic://sample-data
+2024-06-05,Morocco,24.19,727,352,UEFA,synthetic://sample-data
+2024-12-04,Morocco,27.8,760,303,UEFA,synthetic://sample-data
+2025-06-04,Morocco,27.04,682,713,UEFA,synthetic://sample-data
+2025-12-03,Morocco,24.55,805,452,UEFA,synthetic://sample-data
+2003-01-01,Netherlands,22.06,930,728,AFC,synthetic://sample-data
+2003-07-02,Netherlands,27.37,1014,1018,AFC,synthetic://sample-data
+2003-12-31,Netherlands,22.38,975,359,AFC,synthetic://sample-data
+2004-06-30,Netherlands,27.38,984,819,AFC,synthetic://sample-data
+2004-12-29,Netherlands,28.49,953,179,AFC,synthetic://sample-data
+2005-06-29,Netherlands,25.45,934,194,AFC,synthetic://sample-data
+2005-12-28,Netherlands,26.21,981,404,AFC,synthetic://sample-data
+2006-06-28,Netherlands,24.13,1035,271,AFC,synthetic://sample-data
+2006-12-27,Netherlands,26.15,936,222,AFC,synthetic://sample-data
+2007-06-27,Netherlands,25.05,951,537,AFC,synthetic://sample-data
+2007-12-26,Netherlands,29.44,1007,1159,AFC,synthetic://sample-data
+2008-06-25,Netherlands,25.81,935,680,AFC,synthetic://sample-data
+2008-12-24,Netherlands,24.03,952,637,AFC,synthetic://sample-data
+2009-06-24,Netherlands,25.19,910,641,AFC,synthetic://sample-data
+2009-12-23,Netherlands,25.23,970,253,AFC,synthetic://sample-data
+2010-06-23,Netherlands,21.74,967,1039,AFC,synthetic://sample-data
+2010-12-22,Netherlands,29.57,990,679,AFC,synthetic://sample-data
+2011-06-22,Netherlands,28.14,956,811,AFC,synthetic://sample-data
+2011-12-21,Netherlands,25.91,938,508,AFC,synthetic://sample-data
+2012-06-20,Netherlands,25.05,983,354,AFC,synthetic://sample-data
+2012-12-19,Netherlands,26.11,966,460,AFC,synthetic://sample-data
+2013-06-19,Netherlands,27.19,974,603,AFC,synthetic://sample-data
+2013-12-18,Netherlands,25.89,925,483,AFC,synthetic://sample-data
+2014-06-18,Netherlands,26.05,1030,1078,AFC,synthetic://sample-data
+2014-12-17,Netherlands,25.2,953,282,AFC,synthetic://sample-data
+2015-06-17,Netherlands,27.69,959,1624,AFC,synthetic://sample-data
+2015-12-16,Netherlands,26.67,982,785,AFC,synthetic://sample-data
+2016-06-15,Netherlands,26.04,1000,284,AFC,synthetic://sample-data
+2016-12-14,Netherlands,25.14,993,620,AFC,synthetic://sample-data
+2017-06-14,Netherlands,27.14,951,556,AFC,synthetic://sample-data
+2017-12-13,Netherlands,25.99,995,1410,AFC,synthetic://sample-data
+2018-06-13,Netherlands,23.85,918,446,AFC,synthetic://sample-data
+2018-12-12,Netherlands,23.83,920,619,AFC,synthetic://sample-data
+2019-06-12,Netherlands,22.01,997,243,AFC,synthetic://sample-data
+2019-12-11,Netherlands,25.28,933,200,AFC,synthetic://sample-data
+2020-06-10,Netherlands,26.69,955,642,AFC,synthetic://sample-data
+2020-12-09,Netherlands,28.48,957,1244,AFC,synthetic://sample-data
+2021-06-09,Netherlands,24.89,987,446,AFC,synthetic://sample-data
+2021-12-08,Netherlands,24.72,927,1317,AFC,synthetic://sample-data
+2022-06-08,Netherlands,25.78,968,651,AFC,synthetic://sample-data
+2022-12-07,Netherlands,26.95,942,401,AFC,synthetic://sample-data
+2023-06-07,Netherlands,29.92,973,349,AFC,synthetic://sample-data
+2023-12-06,Netherlands,25.49,945,833,AFC,synthetic://sample-data
+2024-06-05,Netherlands,26.76,922,705,AFC,synthetic://sample-data
+2024-12-04,Netherlands,26.78,937,532,AFC,synthetic://sample-data
+2025-06-04,Netherlands,28.1,930,590,AFC,synthetic://sample-data
+2025-12-03,Netherlands,27.59,1002,151,AFC,synthetic://sample-data
+2003-01-01,Nigeria,27.72,466,269,CAF,synthetic://sample-data
+2003-07-02,Nigeria,28.18,433,562,CAF,synthetic://sample-data
+2003-12-31,Nigeria,24.3,528,304,CAF,synthetic://sample-data
+2004-06-30,Nigeria,22.57,487,219,CAF,synthetic://sample-data
+2004-12-29,Nigeria,25.07,518,787,CAF,synthetic://sample-data
+2005-06-29,Nigeria,21.97,521,228,CAF,synthetic://sample-data
+2005-12-28,Nigeria,26.6,472,478,CAF,synthetic://sample-data
+2006-06-28,Nigeria,28.0,499,1991,CAF,synthetic://sample-data
+2006-12-27,Nigeria,26.71,496,1455,CAF,synthetic://sample-data
+2007-06-27,Nigeria,25.66,486,76,CAF,synthetic://sample-data
+2007-12-26,Nigeria,28.28,561,549,CAF,synthetic://sample-data
+2008-06-25,Nigeria,30.04,510,691,CAF,synthetic://sample-data
+2008-12-24,Nigeria,26.72,550,272,CAF,synthetic://sample-data
+2009-06-24,Nigeria,25.1,444,230,CAF,synthetic://sample-data
+2009-12-23,Nigeria,25.32,540,664,CAF,synthetic://sample-data
+2010-06-23,Nigeria,28.97,507,560,CAF,synthetic://sample-data
+2010-12-22,Nigeria,27.02,505,1171,CAF,synthetic://sample-data
+2011-06-22,Nigeria,21.0,510,1426,CAF,synthetic://sample-data
+2011-12-21,Nigeria,28.57,473,235,CAF,synthetic://sample-data
+2012-06-20,Nigeria,27.2,499,566,CAF,synthetic://sample-data
+2012-12-19,Nigeria,26.22,515,316,CAF,synthetic://sample-data
+2013-06-19,Nigeria,27.23,508,114,CAF,synthetic://sample-data
+2013-12-18,Nigeria,25.5,480,643,CAF,synthetic://sample-data
+2014-06-18,Nigeria,26.42,517,896,CAF,synthetic://sample-data
+2014-12-17,Nigeria,24.21,435,919,CAF,synthetic://sample-data
+2015-06-17,Nigeria,23.43,487,1686,CAF,synthetic://sample-data
+2015-12-16,Nigeria,25.62,561,628,CAF,synthetic://sample-data
+2016-06-15,Nigeria,24.25,510,938,CAF,synthetic://sample-data
+2016-12-14,Nigeria,27.49,511,158,CAF,synthetic://sample-data
+2017-06-14,Nigeria,25.56,462,550,CAF,synthetic://sample-data
+2017-12-13,Nigeria,26.19,477,902,CAF,synthetic://sample-data
+2018-06-13,Nigeria,25.86,463,1039,CAF,synthetic://sample-data
+2018-12-12,Nigeria,23.48,485,498,CAF,synthetic://sample-data
+2019-06-12,Nigeria,25.81,477,530,CAF,synthetic://sample-data
+2019-12-11,Nigeria,28.23,489,843,CAF,synthetic://sample-data
+2020-06-10,Nigeria,27.3,378,311,CAF,synthetic://sample-data
+2020-12-09,Nigeria,26.68,480,660,CAF,synthetic://sample-data
+2021-06-09,Nigeria,28.59,511,988,CAF,synthetic://sample-data
+2021-12-08,Nigeria,23.65,500,661,CAF,synthetic://sample-data
+2022-06-08,Nigeria,25.2,552,665,CAF,synthetic://sample-data
+2022-12-07,Nigeria,25.45,404,528,CAF,synthetic://sample-data
+2023-06-07,Nigeria,25.61,474,175,CAF,synthetic://sample-data
+2023-12-06,Nigeria,25.51,536,396,CAF,synthetic://sample-data
+2024-06-05,Nigeria,24.58,541,238,CAF,synthetic://sample-data
+2024-12-04,Nigeria,23.9,457,271,CAF,synthetic://sample-data
+2025-06-04,Nigeria,26.5,521,1173,CAF,synthetic://sample-data
+2025-12-03,Nigeria,24.39,550,1222,CAF,synthetic://sample-data
+2003-01-01,Norway,26.36,612,461,CONCACAF,synthetic://sample-data
+2003-07-02,Norway,26.49,648,505,CONCACAF,synthetic://sample-data
+2003-12-31,Norway,26.1,620,977,CONCACAF,synthetic://sample-data
+2004-06-30,Norway,28.85,682,1973,CONCACAF,synthetic://sample-data
+2004-12-29,Norway,26.12,566,558,CONCACAF,synthetic://sample-data
+2005-06-29,Norway,26.73,610,302,CONCACAF,synthetic://sample-data
+2005-12-28,Norway,25.94,617,831,CONCACAF,synthetic://sample-data
+2006-06-28,Norway,26.79,591,1545,CONCACAF,synthetic://sample-data
+2006-12-27,Norway,28.01,593,215,CONCACAF,synthetic://sample-data
+2007-06-27,Norway,26.84,665,719,CONCACAF,synthetic://sample-data
+2007-12-26,Norway,29.03,577,683,CONCACAF,synthetic://sample-data
+2008-06-25,Norway,27.35,617,405,CONCACAF,synthetic://sample-data
+2008-12-24,Norway,27.58,620,194,CONCACAF,synthetic://sample-data
+2009-06-24,Norway,25.05,639,341,CONCACAF,synthetic://sample-data
+2009-12-23,Norway,24.97,587,624,CONCACAF,synthetic://sample-data
+2010-06-23,Norway,28.74,619,773,CONCACAF,synthetic://sample-data
+2010-12-22,Norway,26.18,694,352,CONCACAF,synthetic://sample-data
+2011-06-22,Norway,27.58,599,405,CONCACAF,synthetic://sample-data
+2011-12-21,Norway,27.61,571,738,CONCACAF,synthetic://sample-data
+2012-06-20,Norway,24.7,645,461,CONCACAF,synthetic://sample-data
+2012-12-19,Norway,24.91,625,688,CONCACAF,synthetic://sample-data
+2013-06-19,Norway,25.53,599,789,CONCACAF,synthetic://sample-data
+2013-12-18,Norway,24.11,585,355,CONCACAF,synthetic://sample-data
+2014-06-18,Norway,26.79,667,334,CONCACAF,synthetic://sample-data
+2014-12-17,Norway,23.06,661,611,CONCACAF,synthetic://sample-data
+2015-06-17,Norway,24.69,667,1033,CONCACAF,synthetic://sample-data
+2015-12-16,Norway,22.81,589,1356,CONCACAF,synthetic://sample-data
+2016-06-15,Norway,23.73,628,727,CONCACAF,synthetic://sample-data
+2016-12-14,Norway,23.48,607,395,CONCACAF,synthetic://sample-data
+2017-06-14,Norway,27.2,706,312,CONCACAF,synthetic://sample-data
+2017-12-13,Norway,25.62,613,179,CONCACAF,synthetic://sample-data
+2018-06-13,Norway,24.21,656,517,CONCACAF,synthetic://sample-data
+2018-12-12,Norway,28.14,559,912,CONCACAF,synthetic://sample-data
+2019-06-12,Norway,26.44,630,560,CONCACAF,synthetic://sample-data
+2019-12-11,Norway,25.46,665,648,CONCACAF,synthetic://sample-data
+2020-06-10,Norway,27.22,686,1028,CONCACAF,synthetic://sample-data
+2020-12-09,Norway,27.14,601,149,CONCACAF,synthetic://sample-data
+2021-06-09,Norway,25.32,616,1150,CONCACAF,synthetic://sample-data
+2021-12-08,Norway,24.86,600,1178,CONCACAF,synthetic://sample-data
+2022-06-08,Norway,22.07,694,328,CONCACAF,synthetic://sample-data
+2022-12-07,Norway,28.99,569,813,CONCACAF,synthetic://sample-data
+2023-06-07,Norway,26.88,592,585,CONCACAF,synthetic://sample-data
+2023-12-06,Norway,25.59,604,1099,CONCACAF,synthetic://sample-data
+2024-06-05,Norway,26.74,646,383,CONCACAF,synthetic://sample-data
+2024-12-04,Norway,28.98,678,1451,CONCACAF,synthetic://sample-data
+2025-06-04,Norway,26.9,628,771,CONCACAF,synthetic://sample-data
+2025-12-03,Norway,27.84,618,193,CONCACAF,synthetic://sample-data
+2003-01-01,Panama,30.48,330,487,CONMEBOL,synthetic://sample-data
+2003-07-02,Panama,28.24,268,448,CONMEBOL,synthetic://sample-data
+2003-12-31,Panama,26.11,347,721,CONMEBOL,synthetic://sample-data
+2004-06-30,Panama,23.24,265,837,CONMEBOL,synthetic://sample-data
+2004-12-29,Panama,26.13,316,668,CONMEBOL,synthetic://sample-data
+2005-06-29,Panama,28.0,294,1511,CONMEBOL,synthetic://sample-data
+2005-12-28,Panama,26.7,277,463,CONMEBOL,synthetic://sample-data
+2006-06-28,Panama,23.35,286,610,CONMEBOL,synthetic://sample-data
+2006-12-27,Panama,23.9,299,555,CONMEBOL,synthetic://sample-data
+2007-06-27,Panama,26.41,304,308,CONMEBOL,synthetic://sample-data
+2007-12-26,Panama,26.54,286,613,CONMEBOL,synthetic://sample-data
+2008-06-25,Panama,23.44,329,317,CONMEBOL,synthetic://sample-data
+2008-12-24,Panama,25.02,335,1129,CONMEBOL,synthetic://sample-data
+2009-06-24,Panama,26.73,328,700,CONMEBOL,synthetic://sample-data
+2009-12-23,Panama,24.93,281,1097,CONMEBOL,synthetic://sample-data
+2010-06-23,Panama,24.99,309,645,CONMEBOL,synthetic://sample-data
+2010-12-22,Panama,24.67,319,516,CONMEBOL,synthetic://sample-data
+2011-06-22,Panama,29.15,294,810,CONMEBOL,synthetic://sample-data
+2011-12-21,Panama,26.65,231,662,CONMEBOL,synthetic://sample-data
+2012-06-20,Panama,23.86,301,1300,CONMEBOL,synthetic://sample-data
+2012-12-19,Panama,27.0,306,224,CONMEBOL,synthetic://sample-data
+2013-06-19,Panama,22.59,277,213,CONMEBOL,synthetic://sample-data
+2013-12-18,Panama,23.66,338,408,CONMEBOL,synthetic://sample-data
+2014-06-18,Panama,29.24,261,364,CONMEBOL,synthetic://sample-data
+2014-12-17,Panama,25.88,372,208,CONMEBOL,synthetic://sample-data
+2015-06-17,Panama,26.24,203,1238,CONMEBOL,synthetic://sample-data
+2015-12-16,Panama,25.94,321,202,CONMEBOL,synthetic://sample-data
+2016-06-15,Panama,25.01,289,300,CONMEBOL,synthetic://sample-data
+2016-12-14,Panama,27.41,333,515,CONMEBOL,synthetic://sample-data
+2017-06-14,Panama,25.73,320,419,CONMEBOL,synthetic://sample-data
+2017-12-13,Panama,25.21,210,1219,CONMEBOL,synthetic://sample-data
+2018-06-13,Panama,27.75,263,1224,CONMEBOL,synthetic://sample-data
+2018-12-12,Panama,26.11,303,872,CONMEBOL,synthetic://sample-data
+2019-06-12,Panama,27.15,344,245,CONMEBOL,synthetic://sample-data
+2019-12-11,Panama,26.55,344,1064,CONMEBOL,synthetic://sample-data
+2020-06-10,Panama,22.43,366,414,CONMEBOL,synthetic://sample-data
+2020-12-09,Panama,27.01,303,812,CONMEBOL,synthetic://sample-data
+2021-06-09,Panama,25.7,319,1153,CONMEBOL,synthetic://sample-data
+2021-12-08,Panama,27.1,309,778,CONMEBOL,synthetic://sample-data
+2022-06-08,Panama,22.92,274,479,CONMEBOL,synthetic://sample-data
+2022-12-07,Panama,23.12,254,177,CONMEBOL,synthetic://sample-data
+2023-06-07,Panama,28.81,285,802,CONMEBOL,synthetic://sample-data
+2023-12-06,Panama,26.89,290,711,CONMEBOL,synthetic://sample-data
+2024-06-05,Panama,25.38,260,593,CONMEBOL,synthetic://sample-data
+2024-12-04,Panama,21.88,357,600,CONMEBOL,synthetic://sample-data
+2025-06-04,Panama,24.23,321,259,CONMEBOL,synthetic://sample-data
+2025-12-03,Panama,23.96,363,1015,CONMEBOL,synthetic://sample-data
+2003-01-01,Peru,24.61,334,1038,UEFA,synthetic://sample-data
+2003-07-02,Peru,24.84,353,363,UEFA,synthetic://sample-data
+2003-12-31,Peru,25.17,441,602,UEFA,synthetic://sample-data
+2004-06-30,Peru,25.53,380,644,UEFA,synthetic://sample-data
+2004-12-29,Peru,21.22,392,1177,UEFA,synthetic://sample-data
+2005-06-29,Peru,26.02,333,651,UEFA,synthetic://sample-data
+2005-12-28,Peru,27.42,358,1069,UEFA,synthetic://sample-data
+2006-06-28,Peru,26.28,372,420,UEFA,synthetic://sample-data
+2006-12-27,Peru,24.5,348,438,UEFA,synthetic://sample-data
+2007-06-27,Peru,25.9,359,425,UEFA,synthetic://sample-data
+2007-12-26,Peru,26.04,354,1212,UEFA,synthetic://sample-data
+2008-06-25,Peru,27.7,368,407,UEFA,synthetic://sample-data
+2008-12-24,Peru,26.31,343,487,UEFA,synthetic://sample-data
+2009-06-24,Peru,25.16,356,494,UEFA,synthetic://sample-data
+2009-12-23,Peru,25.9,433,845,UEFA,synthetic://sample-data
+2010-06-23,Peru,24.38,420,244,UEFA,synthetic://sample-data
+2010-12-22,Peru,23.26,369,196,UEFA,synthetic://sample-data
+2011-06-22,Peru,25.37,389,629,UEFA,synthetic://sample-data
+2011-12-21,Peru,26.3,399,275,UEFA,synthetic://sample-data
+2012-06-20,Peru,23.95,366,830,UEFA,synthetic://sample-data
+2012-12-19,Peru,25.37,394,1265,UEFA,synthetic://sample-data
+2013-06-19,Peru,27.49,381,1022,UEFA,synthetic://sample-data
+2013-12-18,Peru,25.64,339,321,UEFA,synthetic://sample-data
+2014-06-18,Peru,24.32,356,1242,UEFA,synthetic://sample-data
+2014-12-17,Peru,25.38,377,125,UEFA,synthetic://sample-data
+2015-06-17,Peru,27.04,339,631,UEFA,synthetic://sample-data
+2015-12-16,Peru,24.44,364,158,UEFA,synthetic://sample-data
+2016-06-15,Peru,22.12,455,384,UEFA,synthetic://sample-data
+2016-12-14,Peru,24.55,339,1165,UEFA,synthetic://sample-data
+2017-06-14,Peru,25.68,405,765,UEFA,synthetic://sample-data
+2017-12-13,Peru,26.57,432,322,UEFA,synthetic://sample-data
+2018-06-13,Peru,24.29,352,691,UEFA,synthetic://sample-data
+2018-12-12,Peru,25.58,352,725,UEFA,synthetic://sample-data
+2019-06-12,Peru,29.21,357,332,UEFA,synthetic://sample-data
+2019-12-11,Peru,22.45,384,620,UEFA,synthetic://sample-data
+2020-06-10,Peru,25.33,318,256,UEFA,synthetic://sample-data
+2020-12-09,Peru,27.71,389,173,UEFA,synthetic://sample-data
+2021-06-09,Peru,24.62,356,547,UEFA,synthetic://sample-data
+2021-12-08,Peru,23.74,323,1607,UEFA,synthetic://sample-data
+2022-06-08,Peru,24.11,331,802,UEFA,synthetic://sample-data
+2022-12-07,Peru,27.24,342,239,UEFA,synthetic://sample-data
+2023-06-07,Peru,25.47,313,842,UEFA,synthetic://sample-data
+2023-12-06,Peru,25.02,375,311,UEFA,synthetic://sample-data
+2024-06-05,Peru,27.61,378,477,UEFA,synthetic://sample-data
+2024-12-04,Peru,26.31,366,302,UEFA,synthetic://sample-data
+2025-06-04,Peru,26.71,440,839,UEFA,synthetic://sample-data
+2025-12-03,Peru,24.03,332,116,UEFA,synthetic://sample-data
+2003-01-01,Poland,27.21,502,1609,AFC,synthetic://sample-data
+2003-07-02,Poland,26.22,501,803,AFC,synthetic://sample-data
+2003-12-31,Poland,27.11,500,815,AFC,synthetic://sample-data
+2004-06-30,Poland,27.49,435,582,AFC,synthetic://sample-data
+2004-12-29,Poland,24.28,524,424,AFC,synthetic://sample-data
+2005-06-29,Poland,23.93,504,1400,AFC,synthetic://sample-data
+2005-12-28,Poland,25.94,462,470,AFC,synthetic://sample-data
+2006-06-28,Poland,28.2,481,431,AFC,synthetic://sample-data
+2006-12-27,Poland,21.99,551,512,AFC,synthetic://sample-data
+2007-06-27,Poland,26.89,477,417,AFC,synthetic://sample-data
+2007-12-26,Poland,24.38,538,2103,AFC,synthetic://sample-data
+2008-06-25,Poland,23.22,548,362,AFC,synthetic://sample-data
+2008-12-24,Poland,27.13,498,416,AFC,synthetic://sample-data
+2009-06-24,Poland,29.03,504,273,AFC,synthetic://sample-data
+2009-12-23,Poland,23.88,560,928,AFC,synthetic://sample-data
+2010-06-23,Poland,25.11,528,888,AFC,synthetic://sample-data
+2010-12-22,Poland,27.39,508,404,AFC,synthetic://sample-data
+2011-06-22,Poland,23.28,499,958,AFC,synthetic://sample-data
+2011-12-21,Poland,23.15,550,413,AFC,synthetic://sample-data
+2012-06-20,Poland,28.27,471,714,AFC,synthetic://sample-data
+2012-12-19,Poland,27.33,505,605,AFC,synthetic://sample-data
+2013-06-19,Poland,28.15,553,912,AFC,synthetic://sample-data
+2013-12-18,Poland,29.65,493,316,AFC,synthetic://sample-data
+2014-06-18,Poland,25.5,451,118,AFC,synthetic://sample-data
+2014-12-17,Poland,26.15,464,276,AFC,synthetic://sample-data
+2015-06-17,Poland,24.09,457,439,AFC,synthetic://sample-data
+2015-12-16,Poland,27.36,440,220,AFC,synthetic://sample-data
+2016-06-15,Poland,25.98,541,1677,AFC,synthetic://sample-data
+2016-12-14,Poland,27.03,495,618,AFC,synthetic://sample-data
+2017-06-14,Poland,23.68,514,253,AFC,synthetic://sample-data
+2017-12-13,Poland,23.67,445,266,AFC,synthetic://sample-data
+2018-06-13,Poland,25.0,497,601,AFC,synthetic://sample-data
+2018-12-12,Poland,27.88,433,818,AFC,synthetic://sample-data
+2019-06-12,Poland,26.67,494,737,AFC,synthetic://sample-data
+2019-12-11,Poland,25.88,442,452,AFC,synthetic://sample-data
+2020-06-10,Poland,26.11,527,608,AFC,synthetic://sample-data
+2020-12-09,Poland,27.85,541,610,AFC,synthetic://sample-data
+2021-06-09,Poland,27.42,502,380,AFC,synthetic://sample-data
+2021-12-08,Poland,25.81,496,428,AFC,synthetic://sample-data
+2022-06-08,Poland,25.16,430,620,AFC,synthetic://sample-data
+2022-12-07,Poland,25.14,450,667,AFC,synthetic://sample-data
+2023-06-07,Poland,24.14,508,708,AFC,synthetic://sample-data
+2023-12-06,Poland,28.81,466,94,AFC,synthetic://sample-data
+2024-06-05,Poland,28.11,481,938,AFC,synthetic://sample-data
+2024-12-04,Poland,29.14,477,724,AFC,synthetic://sample-data
+2025-06-04,Poland,28.46,517,869,AFC,synthetic://sample-data
+2025-12-03,Poland,26.24,492,993,AFC,synthetic://sample-data
+2003-01-01,Portugal,25.93,1013,702,CAF,synthetic://sample-data
+2003-07-02,Portugal,24.87,1029,556,CAF,synthetic://sample-data
+2003-12-31,Portugal,24.35,1096,424,CAF,synthetic://sample-data
+2004-06-30,Portugal,28.55,1047,322,CAF,synthetic://sample-data
+2004-12-29,Portugal,25.15,1018,1020,CAF,synthetic://sample-data
+2005-06-29,Portugal,25.25,1089,230,CAF,synthetic://sample-data
+2005-12-28,Portugal,25.61,981,762,CAF,synthetic://sample-data
+2006-06-28,Portugal,25.05,998,692,CAF,synthetic://sample-data
+2006-12-27,Portugal,26.47,1051,421,CAF,synthetic://sample-data
+2007-06-27,Portugal,24.31,1082,458,CAF,synthetic://sample-data
+2007-12-26,Portugal,24.8,1017,784,CAF,synthetic://sample-data
+2008-06-25,Portugal,25.84,1038,30,CAF,synthetic://sample-data
+2008-12-24,Portugal,26.49,1073,614,CAF,synthetic://sample-data
+2009-06-24,Portugal,22.94,979,496,CAF,synthetic://sample-data
+2009-12-23,Portugal,23.15,1029,1422,CAF,synthetic://sample-data
+2010-06-23,Portugal,30.12,1102,578,CAF,synthetic://sample-data
+2010-12-22,Portugal,26.05,1005,396,CAF,synthetic://sample-data
+2011-06-22,Portugal,28.19,1053,446,CAF,synthetic://sample-data
+2011-12-21,Portugal,28.01,1001,1255,CAF,synthetic://sample-data
+2012-06-20,Portugal,26.79,1059,247,CAF,synthetic://sample-data
+2012-12-19,Portugal,26.3,1001,460,CAF,synthetic://sample-data
+2013-06-19,Portugal,26.98,1045,365,CAF,synthetic://sample-data
+2013-12-18,Portugal,23.04,1059,269,CAF,synthetic://sample-data
+2014-06-18,Portugal,26.16,1031,737,CAF,synthetic://sample-data
+2014-12-17,Portugal,26.16,1019,1008,CAF,synthetic://sample-data
+2015-06-17,Portugal,28.39,977,287,CAF,synthetic://sample-data
+2015-12-16,Portugal,26.28,1092,563,CAF,synthetic://sample-data
+2016-06-15,Portugal,27.76,1027,152,CAF,synthetic://sample-data
+2016-12-14,Portugal,25.4,1036,467,CAF,synthetic://sample-data
+2017-06-14,Portugal,25.68,1072,640,CAF,synthetic://sample-data
+2017-12-13,Portugal,23.55,1004,791,CAF,synthetic://sample-data
+2018-06-13,Portugal,25.94,1010,590,CAF,synthetic://sample-data
+2018-12-12,Portugal,22.79,1043,821,CAF,synthetic://sample-data
+2019-06-12,Portugal,24.12,1053,216,CAF,synthetic://sample-data
+2019-12-11,Portugal,24.14,1031,673,CAF,synthetic://sample-data
+2020-06-10,Portugal,23.71,1063,825,CAF,synthetic://sample-data
+2020-12-09,Portugal,24.73,996,2088,CAF,synthetic://sample-data
+2021-06-09,Portugal,26.71,1085,726,CAF,synthetic://sample-data
+2021-12-08,Portugal,25.4,1032,486,CAF,synthetic://sample-data
+2022-06-08,Portugal,25.58,1039,930,CAF,synthetic://sample-data
+2022-12-07,Portugal,24.95,992,815,CAF,synthetic://sample-data
+2023-06-07,Portugal,24.94,1017,1848,CAF,synthetic://sample-data
+2023-12-06,Portugal,26.32,1053,584,CAF,synthetic://sample-data
+2024-06-05,Portugal,25.33,1065,1668,CAF,synthetic://sample-data
+2024-12-04,Portugal,24.85,1139,858,CAF,synthetic://sample-data
+2025-06-04,Portugal,22.95,1038,314,CAF,synthetic://sample-data
+2025-12-03,Portugal,26.86,1055,208,CAF,synthetic://sample-data
+2003-01-01,Qatar,27.09,293,619,CONCACAF,synthetic://sample-data
+2003-07-02,Qatar,27.93,191,294,CONCACAF,synthetic://sample-data
+2003-12-31,Qatar,25.76,227,358,CONCACAF,synthetic://sample-data
+2004-06-30,Qatar,23.14,208,220,CONCACAF,synthetic://sample-data
+2004-12-29,Qatar,26.25,261,163,CONCACAF,synthetic://sample-data
+2005-06-29,Qatar,24.91,266,707,CONCACAF,synthetic://sample-data
+2005-12-28,Qatar,24.24,277,356,CONCACAF,synthetic://sample-data
+2006-06-28,Qatar,26.53,312,417,CONCACAF,synthetic://sample-data
+2006-12-27,Qatar,26.73,227,572,CONCACAF,synthetic://sample-data
+2007-06-27,Qatar,26.99,248,415,CONCACAF,synthetic://sample-data
+2007-12-26,Qatar,24.01,206,353,CONCACAF,synthetic://sample-data
+2008-06-25,Qatar,24.01,201,824,CONCACAF,synthetic://sample-data
+2008-12-24,Qatar,24.67,245,177,CONCACAF,synthetic://sample-data
+2009-06-24,Qatar,25.61,321,1092,CONCACAF,synthetic://sample-data
+2009-12-23,Qatar,23.39,209,359,CONCACAF,synthetic://sample-data
+2010-06-23,Qatar,26.86,287,94,CONCACAF,synthetic://sample-data
+2010-12-22,Qatar,27.79,222,734,CONCACAF,synthetic://sample-data
+2011-06-22,Qatar,23.79,213,907,CONCACAF,synthetic://sample-data
+2011-12-21,Qatar,26.01,183,219,CONCACAF,synthetic://sample-data
+2012-06-20,Qatar,25.25,242,479,CONCACAF,synthetic://sample-data
+2012-12-19,Qatar,23.05,249,1000,CONCACAF,synthetic://sample-data
+2013-06-19,Qatar,26.42,249,765,CONCACAF,synthetic://sample-data
+2013-12-18,Qatar,25.29,294,1810,CONCACAF,synthetic://sample-data
+2014-06-18,Qatar,28.48,201,720,CONCACAF,synthetic://sample-data
+2014-12-17,Qatar,27.04,281,317,CONCACAF,synthetic://sample-data
+2015-06-17,Qatar,22.85,275,30,CONCACAF,synthetic://sample-data
+2015-12-16,Qatar,24.94,219,891,CONCACAF,synthetic://sample-data
+2016-06-15,Qatar,24.04,248,1076,CONCACAF,synthetic://sample-data
+2016-12-14,Qatar,24.19,255,614,CONCACAF,synthetic://sample-data
+2017-06-14,Qatar,31.32,237,638,CONCACAF,synthetic://sample-data
+2017-12-13,Qatar,24.24,200,279,CONCACAF,synthetic://sample-data
+2018-06-13,Qatar,27.78,242,412,CONCACAF,synthetic://sample-data
+2018-12-12,Qatar,26.62,214,881,CONCACAF,synthetic://sample-data
+2019-06-12,Qatar,29.14,233,477,CONCACAF,synthetic://sample-data
+2019-12-11,Qatar,25.86,230,683,CONCACAF,synthetic://sample-data
+2020-06-10,Qatar,28.36,243,281,CONCACAF,synthetic://sample-data
+2020-12-09,Qatar,27.68,215,892,CONCACAF,synthetic://sample-data
+2021-06-09,Qatar,30.1,297,567,CONCACAF,synthetic://sample-data
+2021-12-08,Qatar,26.01,170,373,CONCACAF,synthetic://sample-data
+2022-06-08,Qatar,27.03,204,412,CONCACAF,synthetic://sample-data
+2022-12-07,Qatar,27.42,235,1078,CONCACAF,synthetic://sample-data
+2023-06-07,Qatar,24.56,234,1362,CONCACAF,synthetic://sample-data
+2023-12-06,Qatar,26.65,306,485,CONCACAF,synthetic://sample-data
+2024-06-05,Qatar,29.27,276,894,CONCACAF,synthetic://sample-data
+2024-12-04,Qatar,25.27,203,199,CONCACAF,synthetic://sample-data
+2025-06-04,Qatar,29.04,189,365,CONCACAF,synthetic://sample-data
+2025-12-03,Qatar,26.11,194,217,CONCACAF,synthetic://sample-data
+2003-01-01,Saudi Arabia,28.18,323,681,CONMEBOL,synthetic://sample-data
+2003-07-02,Saudi Arabia,26.26,344,373,CONMEBOL,synthetic://sample-data
+2003-12-31,Saudi Arabia,24.91,357,325,CONMEBOL,synthetic://sample-data
+2004-06-30,Saudi Arabia,25.24,346,718,CONMEBOL,synthetic://sample-data
+2004-12-29,Saudi Arabia,27.35,364,156,CONMEBOL,synthetic://sample-data
+2005-06-29,Saudi Arabia,24.8,385,1056,CONMEBOL,synthetic://sample-data
+2005-12-28,Saudi Arabia,26.91,370,393,CONMEBOL,synthetic://sample-data
+2006-06-28,Saudi Arabia,26.3,326,467,CONMEBOL,synthetic://sample-data
+2006-12-27,Saudi Arabia,28.18,398,228,CONMEBOL,synthetic://sample-data
+2007-06-27,Saudi Arabia,24.76,372,702,CONMEBOL,synthetic://sample-data
+2007-12-26,Saudi Arabia,26.0,336,140,CONMEBOL,synthetic://sample-data
+2008-06-25,Saudi Arabia,23.42,340,1095,CONMEBOL,synthetic://sample-data
+2008-12-24,Saudi Arabia,25.67,405,1209,CONMEBOL,synthetic://sample-data
+2009-06-24,Saudi Arabia,24.82,441,509,CONMEBOL,synthetic://sample-data
+2009-12-23,Saudi Arabia,26.72,389,745,CONMEBOL,synthetic://sample-data
+2010-06-23,Saudi Arabia,25.71,348,1390,CONMEBOL,synthetic://sample-data
+2010-12-22,Saudi Arabia,23.67,335,326,CONMEBOL,synthetic://sample-data
+2011-06-22,Saudi Arabia,24.33,389,716,CONMEBOL,synthetic://sample-data
+2011-12-21,Saudi Arabia,27.16,369,405,CONMEBOL,synthetic://sample-data
+2012-06-20,Saudi Arabia,27.03,384,455,CONMEBOL,synthetic://sample-data
+2012-12-19,Saudi Arabia,24.57,297,916,CONMEBOL,synthetic://sample-data
+2013-06-19,Saudi Arabia,24.94,346,422,CONMEBOL,synthetic://sample-data
+2013-12-18,Saudi Arabia,26.02,310,859,CONMEBOL,synthetic://sample-data
+2014-06-18,Saudi Arabia,28.85,309,659,CONMEBOL,synthetic://sample-data
+2014-12-17,Saudi Arabia,24.43,328,372,CONMEBOL,synthetic://sample-data
+2015-06-17,Saudi Arabia,27.87,345,416,CONMEBOL,synthetic://sample-data
+2015-12-16,Saudi Arabia,27.7,394,402,CONMEBOL,synthetic://sample-data
+2016-06-15,Saudi Arabia,27.03,347,805,CONMEBOL,synthetic://sample-data
+2016-12-14,Saudi Arabia,25.02,356,476,CONMEBOL,synthetic://sample-data
+2017-06-14,Saudi Arabia,24.32,308,309,CONMEBOL,synthetic://sample-data
+2017-12-13,Saudi Arabia,26.11,357,645,CONMEBOL,synthetic://sample-data
+2018-06-13,Saudi Arabia,25.34,363,785,CONMEBOL,synthetic://sample-data
+2018-12-12,Saudi Arabia,24.76,345,92,CONMEBOL,synthetic://sample-data
+2019-06-12,Saudi Arabia,25.32,336,434,CONMEBOL,synthetic://sample-data
+2019-12-11,Saudi Arabia,23.85,334,701,CONMEBOL,synthetic://sample-data
+2020-06-10,Saudi Arabia,25.85,361,2030,CONMEBOL,synthetic://sample-data
+2020-12-09,Saudi Arabia,24.29,335,916,CONMEBOL,synthetic://sample-data
+2021-06-09,Saudi Arabia,24.77,393,690,CONMEBOL,synthetic://sample-data
+2021-12-08,Saudi Arabia,25.57,359,1013,CONMEBOL,synthetic://sample-data
+2022-06-08,Saudi Arabia,28.76,369,298,CONMEBOL,synthetic://sample-data
+2022-12-07,Saudi Arabia,27.9,333,942,CONMEBOL,synthetic://sample-data
+2023-06-07,Saudi Arabia,22.19,315,293,CONMEBOL,synthetic://sample-data
+2023-12-06,Saudi Arabia,29.22,294,1523,CONMEBOL,synthetic://sample-data
+2024-06-05,Saudi Arabia,23.39,432,522,CONMEBOL,synthetic://sample-data
+2024-12-04,Saudi Arabia,29.86,412,49,CONMEBOL,synthetic://sample-data
+2025-06-04,Saudi Arabia,27.02,316,496,CONMEBOL,synthetic://sample-data
+2025-12-03,Saudi Arabia,25.37,383,233,CONMEBOL,synthetic://sample-data
+2003-01-01,Scotland,27.23,450,458,UEFA,synthetic://sample-data
+2003-07-02,Scotland,29.14,491,958,UEFA,synthetic://sample-data
+2003-12-31,Scotland,29.94,417,291,UEFA,synthetic://sample-data
+2004-06-30,Scotland,26.63,468,942,UEFA,synthetic://sample-data
+2004-12-29,Scotland,23.88,357,275,UEFA,synthetic://sample-data
+2005-06-29,Scotland,23.62,446,827,UEFA,synthetic://sample-data
+2005-12-28,Scotland,24.45,412,1044,UEFA,synthetic://sample-data
+2006-06-28,Scotland,26.45,454,370,UEFA,synthetic://sample-data
+2006-12-27,Scotland,24.79,461,754,UEFA,synthetic://sample-data
+2007-06-27,Scotland,28.48,472,667,UEFA,synthetic://sample-data
+2007-12-26,Scotland,28.24,431,711,UEFA,synthetic://sample-data
+2008-06-25,Scotland,24.15,526,135,UEFA,synthetic://sample-data
+2008-12-24,Scotland,21.89,438,239,UEFA,synthetic://sample-data
+2009-06-24,Scotland,26.88,489,651,UEFA,synthetic://sample-data
+2009-12-23,Scotland,26.11,482,408,UEFA,synthetic://sample-data
+2010-06-23,Scotland,25.34,441,1359,UEFA,synthetic://sample-data
+2010-12-22,Scotland,24.85,387,316,UEFA,synthetic://sample-data
+2011-06-22,Scotland,22.73,524,569,UEFA,synthetic://sample-data
+2011-12-21,Scotland,28.36,411,848,UEFA,synthetic://sample-data
+2012-06-20,Scotland,29.85,425,333,UEFA,synthetic://sample-data
+2012-12-19,Scotland,27.54,515,837,UEFA,synthetic://sample-data
+2013-06-19,Scotland,27.71,494,559,UEFA,synthetic://sample-data
+2013-12-18,Scotland,25.89,494,949,UEFA,synthetic://sample-data
+2014-06-18,Scotland,24.85,463,497,UEFA,synthetic://sample-data
+2014-12-17,Scotland,29.57,479,367,UEFA,synthetic://sample-data
+2015-06-17,Scotland,28.69,533,1251,UEFA,synthetic://sample-data
+2015-12-16,Scotland,26.99,466,898,UEFA,synthetic://sample-data
+2016-06-15,Scotland,26.81,520,362,UEFA,synthetic://sample-data
+2016-12-14,Scotland,24.73,427,580,UEFA,synthetic://sample-data
+2017-06-14,Scotland,27.4,531,838,UEFA,synthetic://sample-data
+2017-12-13,Scotland,24.97,463,548,UEFA,synthetic://sample-data
+2018-06-13,Scotland,24.76,491,336,UEFA,synthetic://sample-data
+2018-12-12,Scotland,25.21,478,161,UEFA,synthetic://sample-data
+2019-06-12,Scotland,26.53,456,459,UEFA,synthetic://sample-data
+2019-12-11,Scotland,21.95,505,302,UEFA,synthetic://sample-data
+2020-06-10,Scotland,26.41,475,286,UEFA,synthetic://sample-data
+2020-12-09,Scotland,25.84,492,1254,UEFA,synthetic://sample-data
+2021-06-09,Scotland,23.84,494,601,UEFA,synthetic://sample-data
+2021-12-08,Scotland,25.36,525,984,UEFA,synthetic://sample-data
+2022-06-08,Scotland,28.33,495,176,UEFA,synthetic://sample-data
+2022-12-07,Scotland,28.76,511,741,UEFA,synthetic://sample-data
+2023-06-07,Scotland,27.7,439,159,UEFA,synthetic://sample-data
+2023-12-06,Scotland,25.72,493,556,UEFA,synthetic://sample-data
+2024-06-05,Scotland,24.46,489,52,UEFA,synthetic://sample-data
+2024-12-04,Scotland,23.2,520,625,UEFA,synthetic://sample-data
+2025-06-04,Scotland,27.29,477,842,UEFA,synthetic://sample-data
+2025-12-03,Scotland,26.83,453,653,UEFA,synthetic://sample-data
+2003-01-01,Senegal,28.71,637,510,AFC,synthetic://sample-data
+2003-07-02,Senegal,27.03,566,228,AFC,synthetic://sample-data
+2003-12-31,Senegal,23.34,556,426,AFC,synthetic://sample-data
+2004-06-30,Senegal,25.91,539,75,AFC,synthetic://sample-data
+2004-12-29,Senegal,26.0,599,645,AFC,synthetic://sample-data
+2005-06-29,Senegal,27.63,582,448,AFC,synthetic://sample-data
+2005-12-28,Senegal,25.23,631,613,AFC,synthetic://sample-data
+2006-06-28,Senegal,24.36,636,474,AFC,synthetic://sample-data
+2006-12-27,Senegal,28.35,580,320,AFC,synthetic://sample-data
+2007-06-27,Senegal,26.66,653,535,AFC,synthetic://sample-data
+2007-12-26,Senegal,24.59,619,237,AFC,synthetic://sample-data
+2008-06-25,Senegal,27.32,586,779,AFC,synthetic://sample-data
+2008-12-24,Senegal,26.09,592,1202,AFC,synthetic://sample-data
+2009-06-24,Senegal,24.62,581,688,AFC,synthetic://sample-data
+2009-12-23,Senegal,27.71,640,261,AFC,synthetic://sample-data
+2010-06-23,Senegal,26.09,597,622,AFC,synthetic://sample-data
+2010-12-22,Senegal,28.22,592,378,AFC,synthetic://sample-data
+2011-06-22,Senegal,26.14,638,751,AFC,synthetic://sample-data
+2011-12-21,Senegal,24.47,536,769,AFC,synthetic://sample-data
+2012-06-20,Senegal,26.05,549,291,AFC,synthetic://sample-data
+2012-12-19,Senegal,25.0,560,1040,AFC,synthetic://sample-data
+2013-06-19,Senegal,25.81,559,66,AFC,synthetic://sample-data
+2013-12-18,Senegal,24.12,535,596,AFC,synthetic://sample-data
+2014-06-18,Senegal,25.65,756,198,AFC,synthetic://sample-data
+2014-12-17,Senegal,26.85,618,308,AFC,synthetic://sample-data
+2015-06-17,Senegal,27.47,597,412,AFC,synthetic://sample-data
+2015-12-16,Senegal,21.0,495,1128,AFC,synthetic://sample-data
+2016-06-15,Senegal,25.13,533,349,AFC,synthetic://sample-data
+2016-12-14,Senegal,24.81,605,673,AFC,synthetic://sample-data
+2017-06-14,Senegal,26.44,588,394,AFC,synthetic://sample-data
+2017-12-13,Senegal,27.38,537,1204,AFC,synthetic://sample-data
+2018-06-13,Senegal,25.49,612,1363,AFC,synthetic://sample-data
+2018-12-12,Senegal,26.24,563,635,AFC,synthetic://sample-data
+2019-06-12,Senegal,28.93,574,242,AFC,synthetic://sample-data
+2019-12-11,Senegal,24.64,531,378,AFC,synthetic://sample-data
+2020-06-10,Senegal,26.13,495,849,AFC,synthetic://sample-data
+2020-12-09,Senegal,23.0,475,943,AFC,synthetic://sample-data
+2021-06-09,Senegal,28.9,625,912,AFC,synthetic://sample-data
+2021-12-08,Senegal,27.54,568,893,AFC,synthetic://sample-data
+2022-06-08,Senegal,26.05,566,116,AFC,synthetic://sample-data
+2022-12-07,Senegal,25.55,610,740,AFC,synthetic://sample-data
+2023-06-07,Senegal,23.51,615,533,AFC,synthetic://sample-data
+2023-12-06,Senegal,26.58,541,386,AFC,synthetic://sample-data
+2024-06-05,Senegal,26.88,534,857,AFC,synthetic://sample-data
+2024-12-04,Senegal,25.48,610,868,AFC,synthetic://sample-data
+2025-06-04,Senegal,27.61,549,742,AFC,synthetic://sample-data
+2025-12-03,Senegal,26.95,553,1323,AFC,synthetic://sample-data
+2003-01-01,Serbia,26.54,557,990,CAF,synthetic://sample-data
+2003-07-02,Serbia,24.11,587,435,CAF,synthetic://sample-data
+2003-12-31,Serbia,26.06,588,563,CAF,synthetic://sample-data
+2004-06-30,Serbia,25.63,534,1434,CAF,synthetic://sample-data
+2004-12-29,Serbia,28.55,570,480,CAF,synthetic://sample-data
+2005-06-29,Serbia,27.73,609,598,CAF,synthetic://sample-data
+2005-12-28,Serbia,24.62,529,327,CAF,synthetic://sample-data
+2006-06-28,Serbia,24.32,528,1429,CAF,synthetic://sample-data
+2006-12-27,Serbia,29.27,554,663,CAF,synthetic://sample-data
+2007-06-27,Serbia,26.13,542,1124,CAF,synthetic://sample-data
+2007-12-26,Serbia,25.44,492,282,CAF,synthetic://sample-data
+2008-06-25,Serbia,24.85,531,341,CAF,synthetic://sample-data
+2008-12-24,Serbia,27.6,553,164,CAF,synthetic://sample-data
+2009-06-24,Serbia,23.48,531,991,CAF,synthetic://sample-data
+2009-12-23,Serbia,27.48,541,569,CAF,synthetic://sample-data
+2010-06-23,Serbia,26.63,591,260,CAF,synthetic://sample-data
+2010-12-22,Serbia,25.84,567,302,CAF,synthetic://sample-data
+2011-06-22,Serbia,23.96,564,398,CAF,synthetic://sample-data
+2011-12-21,Serbia,25.39,562,1229,CAF,synthetic://sample-data
+2012-06-20,Serbia,25.38,515,482,CAF,synthetic://sample-data
+2012-12-19,Serbia,30.47,572,602,CAF,synthetic://sample-data
+2013-06-19,Serbia,25.39,532,599,CAF,synthetic://sample-data
+2013-12-18,Serbia,24.45,497,915,CAF,synthetic://sample-data
+2014-06-18,Serbia,25.64,522,737,CAF,synthetic://sample-data
+2014-12-17,Serbia,26.48,542,974,CAF,synthetic://sample-data
+2015-06-17,Serbia,27.95,567,1246,CAF,synthetic://sample-data
+2015-12-16,Serbia,26.55,540,505,CAF,synthetic://sample-data
+2016-06-15,Serbia,26.77,547,493,CAF,synthetic://sample-data
+2016-12-14,Serbia,25.07,467,750,CAF,synthetic://sample-data
+2017-06-14,Serbia,27.91,446,1726,CAF,synthetic://sample-data
+2017-12-13,Serbia,26.37,536,602,CAF,synthetic://sample-data
+2018-06-13,Serbia,25.87,486,1009,CAF,synthetic://sample-data
+2018-12-12,Serbia,27.4,517,1305,CAF,synthetic://sample-data
+2019-06-12,Serbia,24.54,536,857,CAF,synthetic://sample-data
+2019-12-11,Serbia,27.65,568,591,CAF,synthetic://sample-data
+2020-06-10,Serbia,27.54,547,627,CAF,synthetic://sample-data
+2020-12-09,Serbia,22.17,550,553,CAF,synthetic://sample-data
+2021-06-09,Serbia,26.26,547,1432,CAF,synthetic://sample-data
+2021-12-08,Serbia,28.61,549,508,CAF,synthetic://sample-data
+2022-06-08,Serbia,23.26,560,461,CAF,synthetic://sample-data
+2022-12-07,Serbia,27.08,455,586,CAF,synthetic://sample-data
+2023-06-07,Serbia,25.39,493,196,CAF,synthetic://sample-data
+2023-12-06,Serbia,25.67,557,316,CAF,synthetic://sample-data
+2024-06-05,Serbia,27.74,569,1081,CAF,synthetic://sample-data
+2024-12-04,Serbia,25.69,568,1115,CAF,synthetic://sample-data
+2025-06-04,Serbia,24.41,548,663,CAF,synthetic://sample-data
+2025-12-03,Serbia,27.11,469,524,CAF,synthetic://sample-data
+2003-01-01,South Korea,24.64,483,550,CONCACAF,synthetic://sample-data
+2003-07-02,South Korea,27.37,446,817,CONCACAF,synthetic://sample-data
+2003-12-31,South Korea,25.69,486,994,CONCACAF,synthetic://sample-data
+2004-06-30,South Korea,26.27,514,659,CONCACAF,synthetic://sample-data
+2004-12-29,South Korea,27.34,520,1492,CONCACAF,synthetic://sample-data
+2005-06-29,South Korea,28.73,513,678,CONCACAF,synthetic://sample-data
+2005-12-28,South Korea,26.36,591,512,CONCACAF,synthetic://sample-data
+2006-06-28,South Korea,28.31,554,188,CONCACAF,synthetic://sample-data
+2006-12-27,South Korea,26.62,469,531,CONCACAF,synthetic://sample-data
+2007-06-27,South Korea,27.99,547,565,CONCACAF,synthetic://sample-data
+2007-12-26,South Korea,23.98,498,375,CONCACAF,synthetic://sample-data
+2008-06-25,South Korea,27.39,445,311,CONCACAF,synthetic://sample-data
+2008-12-24,South Korea,23.88,539,505,CONCACAF,synthetic://sample-data
+2009-06-24,South Korea,27.39,518,707,CONCACAF,synthetic://sample-data
+2009-12-23,South Korea,24.4,556,1284,CONCACAF,synthetic://sample-data
+2010-06-23,South Korea,26.69,531,854,CONCACAF,synthetic://sample-data
+2010-12-22,South Korea,25.12,555,1812,CONCACAF,synthetic://sample-data
+2011-06-22,South Korea,26.11,532,811,CONCACAF,synthetic://sample-data
+2011-12-21,South Korea,24.98,475,651,CONCACAF,synthetic://sample-data
+2012-06-20,South Korea,22.85,503,284,CONCACAF,synthetic://sample-data
+2012-12-19,South Korea,27.47,545,161,CONCACAF,synthetic://sample-data
+2013-06-19,South Korea,25.88,536,910,CONCACAF,synthetic://sample-data
+2013-12-18,South Korea,28.59,508,773,CONCACAF,synthetic://sample-data
+2014-06-18,South Korea,30.43,491,1321,CONCACAF,synthetic://sample-data
+2014-12-17,South Korea,26.33,518,572,CONCACAF,synthetic://sample-data
+2015-06-17,South Korea,22.22,571,308,CONCACAF,synthetic://sample-data
+2015-12-16,South Korea,21.75,483,619,CONCACAF,synthetic://sample-data
+2016-06-15,South Korea,24.73,558,940,CONCACAF,synthetic://sample-data
+2016-12-14,South Korea,28.28,575,810,CONCACAF,synthetic://sample-data
+2017-06-14,South Korea,25.32,532,427,CONCACAF,synthetic://sample-data
+2017-12-13,South Korea,26.77,531,567,CONCACAF,synthetic://sample-data
+2018-06-13,South Korea,26.41,475,665,CONCACAF,synthetic://sample-data
+2018-12-12,South Korea,28.5,562,856,CONCACAF,synthetic://sample-data
+2019-06-12,South Korea,27.46,499,302,CONCACAF,synthetic://sample-data
+2019-12-11,South Korea,29.63,518,379,CONCACAF,synthetic://sample-data
+2020-06-10,South Korea,27.31,523,1307,CONCACAF,synthetic://sample-data
+2020-12-09,South Korea,23.54,523,593,CONCACAF,synthetic://sample-data
+2021-06-09,South Korea,28.81,503,394,CONCACAF,synthetic://sample-data
+2021-12-08,South Korea,24.05,554,384,CONCACAF,synthetic://sample-data
+2022-06-08,South Korea,28.99,504,1049,CONCACAF,synthetic://sample-data
+2022-12-07,South Korea,29.13,461,554,CONCACAF,synthetic://sample-data
+2023-06-07,South Korea,24.1,503,171,CONCACAF,synthetic://sample-data
+2023-12-06,South Korea,25.44,496,434,CONCACAF,synthetic://sample-data
+2024-06-05,South Korea,26.72,539,411,CONCACAF,synthetic://sample-data
+2024-12-04,South Korea,27.65,487,1222,CONCACAF,synthetic://sample-data
+2025-06-04,South Korea,24.93,488,273,CONCACAF,synthetic://sample-data
+2025-12-03,South Korea,25.94,522,330,CONCACAF,synthetic://sample-data
+2003-01-01,Spain,27.6,1136,1515,CONMEBOL,synthetic://sample-data
+2003-07-02,Spain,24.42,1065,502,CONMEBOL,synthetic://sample-data
+2003-12-31,Spain,24.67,1031,247,CONMEBOL,synthetic://sample-data
+2004-06-30,Spain,26.3,1112,833,CONMEBOL,synthetic://sample-data
+2004-12-29,Spain,27.25,1026,503,CONMEBOL,synthetic://sample-data
+2005-06-29,Spain,23.33,1099,1549,CONMEBOL,synthetic://sample-data
+2005-12-28,Spain,24.86,1064,883,CONMEBOL,synthetic://sample-data
+2006-06-28,Spain,28.82,1078,205,CONMEBOL,synthetic://sample-data
+2006-12-27,Spain,23.86,1139,310,CONMEBOL,synthetic://sample-data
+2007-06-27,Spain,28.47,1121,1791,CONMEBOL,synthetic://sample-data
+2007-12-26,Spain,24.75,1078,361,CONMEBOL,synthetic://sample-data
+2008-06-25,Spain,25.99,1106,298,CONMEBOL,synthetic://sample-data
+2008-12-24,Spain,26.42,1019,1044,CONMEBOL,synthetic://sample-data
+2009-06-24,Spain,23.02,1117,807,CONMEBOL,synthetic://sample-data
+2009-12-23,Spain,25.25,1123,748,CONMEBOL,synthetic://sample-data
+2010-06-23,Spain,24.66,1082,518,CONMEBOL,synthetic://sample-data
+2010-12-22,Spain,25.41,1033,803,CONMEBOL,synthetic://sample-data
+2011-06-22,Spain,24.86,1096,118,CONMEBOL,synthetic://sample-data
+2011-12-21,Spain,23.4,1082,909,CONMEBOL,synthetic://sample-data
+2012-06-20,Spain,26.28,1054,515,CONMEBOL,synthetic://sample-data
+2012-12-19,Spain,25.3,1072,227,CONMEBOL,synthetic://sample-data
+2013-06-19,Spain,27.28,1105,847,CONMEBOL,synthetic://sample-data
+2013-12-18,Spain,27.72,1076,361,CONMEBOL,synthetic://sample-data
+2014-06-18,Spain,25.82,1061,836,CONMEBOL,synthetic://sample-data
+2014-12-17,Spain,26.45,1070,256,CONMEBOL,synthetic://sample-data
+2015-06-17,Spain,26.05,1167,473,CONMEBOL,synthetic://sample-data
+2015-12-16,Spain,26.65,1102,837,CONMEBOL,synthetic://sample-data
+2016-06-15,Spain,29.25,1074,400,CONMEBOL,synthetic://sample-data
+2016-12-14,Spain,26.15,1050,75,CONMEBOL,synthetic://sample-data
+2017-06-14,Spain,21.82,1052,314,CONMEBOL,synthetic://sample-data
+2017-12-13,Spain,23.61,1085,176,CONMEBOL,synthetic://sample-data
+2018-06-13,Spain,24.99,1116,402,CONMEBOL,synthetic://sample-data
+2018-12-12,Spain,24.72,1048,369,CONMEBOL,synthetic://sample-data
+2019-06-12,Spain,26.0,1079,544,CONMEBOL,synthetic://sample-data
+2019-12-11,Spain,23.6,1079,750,CONMEBOL,synthetic://sample-data
+2020-06-10,Spain,25.02,1046,688,CONMEBOL,synthetic://sample-data
+2020-12-09,Spain,21.27,1118,596,CONMEBOL,synthetic://sample-data
+2021-06-09,Spain,26.67,1053,965,CONMEBOL,synthetic://sample-data
+2021-12-08,Spain,26.18,1070,604,CONMEBOL,synthetic://sample-data
+2022-06-08,Spain,24.82,1111,310,CONMEBOL,synthetic://sample-data
+2022-12-07,Spain,26.63,1101,284,CONMEBOL,synthetic://sample-data
+2023-06-07,Spain,28.04,1061,663,CONMEBOL,synthetic://sample-data
+2023-12-06,Spain,27.29,1122,651,CONMEBOL,synthetic://sample-data
+2024-06-05,Spain,26.16,1088,779,CONMEBOL,synthetic://sample-data
+2024-12-04,Spain,25.14,1112,863,CONMEBOL,synthetic://sample-data
+2025-06-04,Spain,23.92,1096,358,CONMEBOL,synthetic://sample-data
+2025-12-03,Spain,26.52,1126,566,CONMEBOL,synthetic://sample-data
+2003-01-01,Sweden,21.8,600,775,UEFA,synthetic://sample-data
+2003-07-02,Sweden,29.07,559,476,UEFA,synthetic://sample-data
+2003-12-31,Sweden,26.86,581,402,UEFA,synthetic://sample-data
+2004-06-30,Sweden,24.75,569,1081,UEFA,synthetic://sample-data
+2004-12-29,Sweden,29.56,641,854,UEFA,synthetic://sample-data
+2005-06-29,Sweden,27.3,577,361,UEFA,synthetic://sample-data
+2005-12-28,Sweden,21.07,590,256,UEFA,synthetic://sample-data
+2006-06-28,Sweden,27.11,574,195,UEFA,synthetic://sample-data
+2006-12-27,Sweden,21.0,581,553,UEFA,synthetic://sample-data
+2007-06-27,Sweden,26.0,582,1209,UEFA,synthetic://sample-data
+2007-12-26,Sweden,24.05,613,530,UEFA,synthetic://sample-data
+2008-06-25,Sweden,25.93,576,1601,UEFA,synthetic://sample-data
+2008-12-24,Sweden,29.19,592,994,UEFA,synthetic://sample-data
+2009-06-24,Sweden,24.75,564,1104,UEFA,synthetic://sample-data
+2009-12-23,Sweden,26.58,583,322,UEFA,synthetic://sample-data
+2010-06-23,Sweden,26.73,553,125,UEFA,synthetic://sample-data
+2010-12-22,Sweden,23.26,557,379,UEFA,synthetic://sample-data
+2011-06-22,Sweden,25.89,575,128,UEFA,synthetic://sample-data
+2011-12-21,Sweden,27.34,582,470,UEFA,synthetic://sample-data
+2012-06-20,Sweden,25.99,629,135,UEFA,synthetic://sample-data
+2012-12-19,Sweden,25.73,657,898,UEFA,synthetic://sample-data
+2013-06-19,Sweden,23.16,553,570,UEFA,synthetic://sample-data
+2013-12-18,Sweden,27.92,626,862,UEFA,synthetic://sample-data
+2014-06-18,Sweden,24.15,518,310,UEFA,synthetic://sample-data
+2014-12-17,Sweden,24.3,594,345,UEFA,synthetic://sample-data
+2015-06-17,Sweden,28.19,556,263,UEFA,synthetic://sample-data
+2015-12-16,Sweden,27.94,542,1498,UEFA,synthetic://sample-data
+2016-06-15,Sweden,28.25,555,1284,UEFA,synthetic://sample-data
+2016-12-14,Sweden,25.57,574,1274,UEFA,synthetic://sample-data
+2017-06-14,Sweden,26.98,663,928,UEFA,synthetic://sample-data
+2017-12-13,Sweden,25.05,552,987,UEFA,synthetic://sample-data
+2018-06-13,Sweden,23.68,548,673,UEFA,synthetic://sample-data
+2018-12-12,Sweden,22.95,525,682,UEFA,synthetic://sample-data
+2019-06-12,Sweden,26.06,520,209,UEFA,synthetic://sample-data
+2019-12-11,Sweden,24.59,607,986,UEFA,synthetic://sample-data
+2020-06-10,Sweden,28.41,611,359,UEFA,synthetic://sample-data
+2020-12-09,Sweden,25.38,618,344,UEFA,synthetic://sample-data
+2021-06-09,Sweden,23.92,647,496,UEFA,synthetic://sample-data
+2021-12-08,Sweden,28.07,614,315,UEFA,synthetic://sample-data
+2022-06-08,Sweden,27.43,608,414,UEFA,synthetic://sample-data
+2022-12-07,Sweden,27.82,562,1254,UEFA,synthetic://sample-data
+2023-06-07,Sweden,25.79,627,1639,UEFA,synthetic://sample-data
+2023-12-06,Sweden,28.81,568,131,UEFA,synthetic://sample-data
+2024-06-05,Sweden,26.61,538,722,UEFA,synthetic://sample-data
+2024-12-04,Sweden,29.01,613,629,UEFA,synthetic://sample-data
+2025-06-04,Sweden,23.66,595,518,UEFA,synthetic://sample-data
+2025-12-03,Sweden,26.06,583,684,UEFA,synthetic://sample-data
+2003-01-01,Switzerland,24.92,725,1275,AFC,synthetic://sample-data
+2003-07-02,Switzerland,27.35,645,830,AFC,synthetic://sample-data
+2003-12-31,Switzerland,25.79,630,440,AFC,synthetic://sample-data
+2004-06-30,Switzerland,26.31,715,909,AFC,synthetic://sample-data
+2004-12-29,Switzerland,23.47,780,532,AFC,synthetic://sample-data
+2005-06-29,Switzerland,26.0,708,422,AFC,synthetic://sample-data
+2005-12-28,Switzerland,25.24,709,686,AFC,synthetic://sample-data
+2006-06-28,Switzerland,24.21,679,740,AFC,synthetic://sample-data
+2006-12-27,Switzerland,26.49,706,238,AFC,synthetic://sample-data
+2007-06-27,Switzerland,26.22,653,237,AFC,synthetic://sample-data
+2007-12-26,Switzerland,28.19,690,209,AFC,synthetic://sample-data
+2008-06-25,Switzerland,25.9,690,821,AFC,synthetic://sample-data
+2008-12-24,Switzerland,25.85,731,407,AFC,synthetic://sample-data
+2009-06-24,Switzerland,26.8,705,899,AFC,synthetic://sample-data
+2009-12-23,Switzerland,23.93,647,690,AFC,synthetic://sample-data
+2010-06-23,Switzerland,25.47,670,1054,AFC,synthetic://sample-data
+2010-12-22,Switzerland,23.03,624,1018,AFC,synthetic://sample-data
+2011-06-22,Switzerland,29.45,661,528,AFC,synthetic://sample-data
+2011-12-21,Switzerland,23.62,719,383,AFC,synthetic://sample-data
+2012-06-20,Switzerland,21.85,689,688,AFC,synthetic://sample-data
+2012-12-19,Switzerland,25.76,706,1413,AFC,synthetic://sample-data
+2013-06-19,Switzerland,25.88,746,797,AFC,synthetic://sample-data
+2013-12-18,Switzerland,26.79,717,1107,AFC,synthetic://sample-data
+2014-06-18,Switzerland,23.51,708,728,AFC,synthetic://sample-data
+2014-12-17,Switzerland,25.96,685,361,AFC,synthetic://sample-data
+2015-06-17,Switzerland,24.05,718,862,AFC,synthetic://sample-data
+2015-12-16,Switzerland,25.42,715,660,AFC,synthetic://sample-data
+2016-06-15,Switzerland,24.64,693,609,AFC,synthetic://sample-data
+2016-12-14,Switzerland,27.73,722,650,AFC,synthetic://sample-data
+2017-06-14,Switzerland,25.49,663,834,AFC,synthetic://sample-data
+2017-12-13,Switzerland,27.86,693,350,AFC,synthetic://sample-data
+2018-06-13,Switzerland,23.67,672,322,AFC,synthetic://sample-data
+2018-12-12,Switzerland,26.29,763,421,AFC,synthetic://sample-data
+2019-06-12,Switzerland,24.12,697,817,AFC,synthetic://sample-data
+2019-12-11,Switzerland,25.39,749,422,AFC,synthetic://sample-data
+2020-06-10,Switzerland,23.84,691,213,AFC,synthetic://sample-data
+2020-12-09,Switzerland,24.04,684,130,AFC,synthetic://sample-data
+2021-06-09,Switzerland,25.69,632,651,AFC,synthetic://sample-data
+2021-12-08,Switzerland,27.93,733,182,AFC,synthetic://sample-data
+2022-06-08,Switzerland,28.33,720,89,AFC,synthetic://sample-data
+2022-12-07,Switzerland,28.03,696,899,AFC,synthetic://sample-data
+2023-06-07,Switzerland,25.8,806,664,AFC,synthetic://sample-data
+2023-12-06,Switzerland,25.34,705,1032,AFC,synthetic://sample-data
+2024-06-05,Switzerland,26.98,655,1419,AFC,synthetic://sample-data
+2024-12-04,Switzerland,25.37,641,1620,AFC,synthetic://sample-data
+2025-06-04,Switzerland,27.42,645,92,AFC,synthetic://sample-data
+2025-12-03,Switzerland,27.68,698,737,AFC,synthetic://sample-data
+2003-01-01,Tunisia,28.02,392,365,CAF,synthetic://sample-data
+2003-07-02,Tunisia,27.54,402,828,CAF,synthetic://sample-data
+2003-12-31,Tunisia,31.15,404,1200,CAF,synthetic://sample-data
+2004-06-30,Tunisia,27.21,388,354,CAF,synthetic://sample-data
+2004-12-29,Tunisia,27.9,416,1675,CAF,synthetic://sample-data
+2005-06-29,Tunisia,25.89,354,432,CAF,synthetic://sample-data
+2005-12-28,Tunisia,29.35,326,961,CAF,synthetic://sample-data
+2006-06-28,Tunisia,26.25,427,287,CAF,synthetic://sample-data
+2006-12-27,Tunisia,26.12,370,381,CAF,synthetic://sample-data
+2007-06-27,Tunisia,25.36,335,445,CAF,synthetic://sample-data
+2007-12-26,Tunisia,25.81,353,378,CAF,synthetic://sample-data
+2008-06-25,Tunisia,25.46,412,956,CAF,synthetic://sample-data
+2008-12-24,Tunisia,26.19,346,369,CAF,synthetic://sample-data
+2009-06-24,Tunisia,27.49,407,763,CAF,synthetic://sample-data
+2009-12-23,Tunisia,28.73,365,274,CAF,synthetic://sample-data
+2010-06-23,Tunisia,27.43,413,464,CAF,synthetic://sample-data
+2010-12-22,Tunisia,25.96,429,404,CAF,synthetic://sample-data
+2011-06-22,Tunisia,27.65,367,323,CAF,synthetic://sample-data
+2011-12-21,Tunisia,26.88,340,296,CAF,synthetic://sample-data
+2012-06-20,Tunisia,22.89,304,2192,CAF,synthetic://sample-data
+2012-12-19,Tunisia,27.19,422,472,CAF,synthetic://sample-data
+2013-06-19,Tunisia,25.33,381,583,CAF,synthetic://sample-data
+2013-12-18,Tunisia,25.26,372,712,CAF,synthetic://sample-data
+2014-06-18,Tunisia,30.43,372,714,CAF,synthetic://sample-data
+2014-12-17,Tunisia,23.89,353,1088,CAF,synthetic://sample-data
+2015-06-17,Tunisia,27.72,306,1913,CAF,synthetic://sample-data
+2015-12-16,Tunisia,24.33,390,322,CAF,synthetic://sample-data
+2016-06-15,Tunisia,23.58,415,370,CAF,synthetic://sample-data
+2016-12-14,Tunisia,26.44,320,692,CAF,synthetic://sample-data
+2017-06-14,Tunisia,26.86,356,1069,CAF,synthetic://sample-data
+2017-12-13,Tunisia,27.94,333,796,CAF,synthetic://sample-data
+2018-06-13,Tunisia,26.66,401,1087,CAF,synthetic://sample-data
+2018-12-12,Tunisia,28.42,363,167,CAF,synthetic://sample-data
+2019-06-12,Tunisia,25.13,363,931,CAF,synthetic://sample-data
+2019-12-11,Tunisia,26.52,401,159,CAF,synthetic://sample-data
+2020-06-10,Tunisia,24.55,359,387,CAF,synthetic://sample-data
+2020-12-09,Tunisia,23.69,430,375,CAF,synthetic://sample-data
+2021-06-09,Tunisia,21.84,397,394,CAF,synthetic://sample-data
+2021-12-08,Tunisia,22.3,376,1025,CAF,synthetic://sample-data
+2022-06-08,Tunisia,25.7,413,807,CAF,synthetic://sample-data
+2022-12-07,Tunisia,28.04,401,1386,CAF,synthetic://sample-data
+2023-06-07,Tunisia,26.86,378,911,CAF,synthetic://sample-data
+2023-12-06,Tunisia,25.71,400,993,CAF,synthetic://sample-data
+2024-06-05,Tunisia,27.3,330,330,CAF,synthetic://sample-data
+2024-12-04,Tunisia,24.25,365,492,CAF,synthetic://sample-data
+2025-06-04,Tunisia,25.84,366,950,CAF,synthetic://sample-data
+2025-12-03,Tunisia,25.71,313,878,CAF,synthetic://sample-data
+2003-01-01,Turkey,23.47,530,744,CONCACAF,synthetic://sample-data
+2003-07-02,Turkey,25.35,571,794,CONCACAF,synthetic://sample-data
+2003-12-31,Turkey,27.04,523,894,CONCACAF,synthetic://sample-data
+2004-06-30,Turkey,27.23,592,759,CONCACAF,synthetic://sample-data
+2004-12-29,Turkey,21.0,574,249,CONCACAF,synthetic://sample-data
+2005-06-29,Turkey,23.9,555,401,CONCACAF,synthetic://sample-data
+2005-12-28,Turkey,24.26,515,419,CONCACAF,synthetic://sample-data
+2006-06-28,Turkey,23.35,600,910,CONCACAF,synthetic://sample-data
+2006-12-27,Turkey,25.79,547,744,CONCACAF,synthetic://sample-data
+2007-06-27,Turkey,25.36,606,635,CONCACAF,synthetic://sample-data
+2007-12-26,Turkey,21.44,496,731,CONCACAF,synthetic://sample-data
+2008-06-25,Turkey,23.44,546,1038,CONCACAF,synthetic://sample-data
+2008-12-24,Turkey,23.35,554,342,CONCACAF,synthetic://sample-data
+2009-06-24,Turkey,27.88,523,560,CONCACAF,synthetic://sample-data
+2009-12-23,Turkey,26.08,529,437,CONCACAF,synthetic://sample-data
+2010-06-23,Turkey,28.8,542,1065,CONCACAF,synthetic://sample-data
+2010-12-22,Turkey,24.18,579,246,CONCACAF,synthetic://sample-data
+2011-06-22,Turkey,26.24,525,1307,CONCACAF,synthetic://sample-data
+2011-12-21,Turkey,24.75,582,427,CONCACAF,synthetic://sample-data
+2012-06-20,Turkey,23.31,508,895,CONCACAF,synthetic://sample-data
+2012-12-19,Turkey,23.82,620,775,CONCACAF,synthetic://sample-data
+2013-06-19,Turkey,28.88,520,433,CONCACAF,synthetic://sample-data
+2013-12-18,Turkey,25.71,546,646,CONCACAF,synthetic://sample-data
+2014-06-18,Turkey,26.84,570,1173,CONCACAF,synthetic://sample-data
+2014-12-17,Turkey,23.4,517,809,CONCACAF,synthetic://sample-data
+2015-06-17,Turkey,26.66,490,753,CONCACAF,synthetic://sample-data
+2015-12-16,Turkey,27.51,533,217,CONCACAF,synthetic://sample-data
+2016-06-15,Turkey,24.51,548,1067,CONCACAF,synthetic://sample-data
+2016-12-14,Turkey,25.22,502,652,CONCACAF,synthetic://sample-data
+2017-06-14,Turkey,27.49,580,508,CONCACAF,synthetic://sample-data
+2017-12-13,Turkey,23.93,519,427,CONCACAF,synthetic://sample-data
+2018-06-13,Turkey,27.72,511,337,CONCACAF,synthetic://sample-data
+2018-12-12,Turkey,29.11,575,242,CONCACAF,synthetic://sample-data
+2019-06-12,Turkey,25.25,576,815,CONCACAF,synthetic://sample-data
+2019-12-11,Turkey,23.4,517,390,CONCACAF,synthetic://sample-data
+2020-06-10,Turkey,25.91,456,1286,CONCACAF,synthetic://sample-data
+2020-12-09,Turkey,25.52,540,972,CONCACAF,synthetic://sample-data
+2021-06-09,Turkey,28.63,567,496,CONCACAF,synthetic://sample-data
+2021-12-08,Turkey,29.22,556,222,CONCACAF,synthetic://sample-data
+2022-06-08,Turkey,25.75,560,461,CONCACAF,synthetic://sample-data
+2022-12-07,Turkey,24.84,576,1128,CONCACAF,synthetic://sample-data
+2023-06-07,Turkey,28.84,506,914,CONCACAF,synthetic://sample-data
+2023-12-06,Turkey,24.9,541,156,CONCACAF,synthetic://sample-data
+2024-06-05,Turkey,26.77,566,913,CONCACAF,synthetic://sample-data
+2024-12-04,Turkey,28.42,539,917,CONCACAF,synthetic://sample-data
+2025-06-04,Turkey,26.51,560,781,CONCACAF,synthetic://sample-data
+2025-12-03,Turkey,23.81,611,970,CONCACAF,synthetic://sample-data
+2003-01-01,USA,28.81,606,834,CONMEBOL,synthetic://sample-data
+2003-07-02,USA,26.12,567,275,CONMEBOL,synthetic://sample-data
+2003-12-31,USA,22.58,503,306,CONMEBOL,synthetic://sample-data
+2004-06-30,USA,23.21,527,599,CONMEBOL,synthetic://sample-data
+2004-12-29,USA,27.42,582,345,CONMEBOL,synthetic://sample-data
+2005-06-29,USA,27.5,524,427,CONMEBOL,synthetic://sample-data
+2005-12-28,USA,29.15,534,424,CONMEBOL,synthetic://sample-data
+2006-06-28,USA,26.3,539,236,CONMEBOL,synthetic://sample-data
+2006-12-27,USA,25.97,538,310,CONMEBOL,synthetic://sample-data
+2007-06-27,USA,25.66,501,1016,CONMEBOL,synthetic://sample-data
+2007-12-26,USA,27.84,567,1459,CONMEBOL,synthetic://sample-data
+2008-06-25,USA,26.27,605,1937,CONMEBOL,synthetic://sample-data
+2008-12-24,USA,28.41,507,642,CONMEBOL,synthetic://sample-data
+2009-06-24,USA,26.18,484,284,CONMEBOL,synthetic://sample-data
+2009-12-23,USA,23.47,550,872,CONMEBOL,synthetic://sample-data
+2010-06-23,USA,29.84,550,796,CONMEBOL,synthetic://sample-data
+2010-12-22,USA,27.08,511,765,CONMEBOL,synthetic://sample-data
+2011-06-22,USA,27.26,530,172,CONMEBOL,synthetic://sample-data
+2011-12-21,USA,25.26,580,115,CONMEBOL,synthetic://sample-data
+2012-06-20,USA,25.13,471,215,CONMEBOL,synthetic://sample-data
+2012-12-19,USA,27.52,581,666,CONMEBOL,synthetic://sample-data
+2013-06-19,USA,27.39,575,265,CONMEBOL,synthetic://sample-data
+2013-12-18,USA,21.87,538,463,CONMEBOL,synthetic://sample-data
+2014-06-18,USA,24.46,607,479,CONMEBOL,synthetic://sample-data
+2014-12-17,USA,24.7,589,532,CONMEBOL,synthetic://sample-data
+2015-06-17,USA,24.8,545,215,CONMEBOL,synthetic://sample-data
+2015-12-16,USA,24.22,569,803,CONMEBOL,synthetic://sample-data
+2016-06-15,USA,25.18,574,2025,CONMEBOL,synthetic://sample-data
+2016-12-14,USA,27.11,495,372,CONMEBOL,synthetic://sample-data
+2017-06-14,USA,27.13,562,917,CONMEBOL,synthetic://sample-data
+2017-12-13,USA,25.85,494,1150,CONMEBOL,synthetic://sample-data
+2018-06-13,USA,27.29,552,1376,CONMEBOL,synthetic://sample-data
+2018-12-12,USA,27.05,549,99,CONMEBOL,synthetic://sample-data
+2019-06-12,USA,27.45,544,367,CONMEBOL,synthetic://sample-data
+2019-12-11,USA,26.91,541,719,CONMEBOL,synthetic://sample-data
+2020-06-10,USA,23.44,562,611,CONMEBOL,synthetic://sample-data
+2020-12-09,USA,26.24,577,709,CONMEBOL,synthetic://sample-data
+2021-06-09,USA,26.57,532,372,CONMEBOL,synthetic://sample-data
+2021-12-08,USA,26.5,564,755,CONMEBOL,synthetic://sample-data
+2022-06-08,USA,26.33,566,1061,CONMEBOL,synthetic://sample-data
+2022-12-07,USA,25.07,542,432,CONMEBOL,synthetic://sample-data
+2023-06-07,USA,26.42,572,219,CONMEBOL,synthetic://sample-data
+2023-12-06,USA,27.25,564,338,CONMEBOL,synthetic://sample-data
+2024-06-05,USA,27.8,602,870,CONMEBOL,synthetic://sample-data
+2024-12-04,USA,23.44,490,197,CONMEBOL,synthetic://sample-data
+2025-06-04,USA,28.82,563,510,CONMEBOL,synthetic://sample-data
+2025-12-03,USA,28.36,535,732,CONMEBOL,synthetic://sample-data
+2003-01-01,Ukraine,26.79,598,118,UEFA,synthetic://sample-data
+2003-07-02,Ukraine,25.45,503,40,UEFA,synthetic://sample-data
+2003-12-31,Ukraine,28.15,564,686,UEFA,synthetic://sample-data
+2004-06-30,Ukraine,25.84,599,324,UEFA,synthetic://sample-data
+2004-12-29,Ukraine,24.41,600,478,UEFA,synthetic://sample-data
+2005-06-29,Ukraine,27.88,563,602,UEFA,synthetic://sample-data
+2005-12-28,Ukraine,28.69,508,454,UEFA,synthetic://sample-data
+2006-06-28,Ukraine,24.59,584,243,UEFA,synthetic://sample-data
+2006-12-27,Ukraine,27.99,490,264,UEFA,synthetic://sample-data
+2007-06-27,Ukraine,26.46,522,107,UEFA,synthetic://sample-data
+2007-12-26,Ukraine,26.7,517,637,UEFA,synthetic://sample-data
+2008-06-25,Ukraine,24.65,573,796,UEFA,synthetic://sample-data
+2008-12-24,Ukraine,26.48,556,772,UEFA,synthetic://sample-data
+2009-06-24,Ukraine,25.74,501,1126,UEFA,synthetic://sample-data
+2009-12-23,Ukraine,24.49,526,388,UEFA,synthetic://sample-data
+2010-06-23,Ukraine,29.53,523,1551,UEFA,synthetic://sample-data
+2010-12-22,Ukraine,26.2,551,939,UEFA,synthetic://sample-data
+2011-06-22,Ukraine,25.73,554,742,UEFA,synthetic://sample-data
+2011-12-21,Ukraine,24.23,526,1994,UEFA,synthetic://sample-data
+2012-06-20,Ukraine,23.95,564,891,UEFA,synthetic://sample-data
+2012-12-19,Ukraine,26.72,587,451,UEFA,synthetic://sample-data
+2013-06-19,Ukraine,26.47,519,159,UEFA,synthetic://sample-data
+2013-12-18,Ukraine,30.43,564,948,UEFA,synthetic://sample-data
+2014-06-18,Ukraine,27.39,543,944,UEFA,synthetic://sample-data
+2014-12-17,Ukraine,28.69,557,403,UEFA,synthetic://sample-data
+2015-06-17,Ukraine,24.52,616,958,UEFA,synthetic://sample-data
+2015-12-16,Ukraine,25.3,517,628,UEFA,synthetic://sample-data
+2016-06-15,Ukraine,25.3,547,122,UEFA,synthetic://sample-data
+2016-12-14,Ukraine,25.38,573,203,UEFA,synthetic://sample-data
+2017-06-14,Ukraine,25.54,548,1040,UEFA,synthetic://sample-data
+2017-12-13,Ukraine,26.34,558,1070,UEFA,synthetic://sample-data
+2018-06-13,Ukraine,24.72,556,760,UEFA,synthetic://sample-data
+2018-12-12,Ukraine,26.27,518,295,UEFA,synthetic://sample-data
+2019-06-12,Ukraine,25.54,555,646,UEFA,synthetic://sample-data
+2019-12-11,Ukraine,26.06,583,1940,UEFA,synthetic://sample-data
+2020-06-10,Ukraine,26.84,537,671,UEFA,synthetic://sample-data
+2020-12-09,Ukraine,24.62,577,478,UEFA,synthetic://sample-data
+2021-06-09,Ukraine,28.03,532,1135,UEFA,synthetic://sample-data
+2021-12-08,Ukraine,26.61,572,950,UEFA,synthetic://sample-data
+2022-06-08,Ukraine,25.86,603,300,UEFA,synthetic://sample-data
+2022-12-07,Ukraine,26.7,571,632,UEFA,synthetic://sample-data
+2023-06-07,Ukraine,27.58,569,584,UEFA,synthetic://sample-data
+2023-12-06,Ukraine,24.45,499,603,UEFA,synthetic://sample-data
+2024-06-05,Ukraine,25.06,566,451,UEFA,synthetic://sample-data
+2024-12-04,Ukraine,25.28,566,564,UEFA,synthetic://sample-data
+2025-06-04,Ukraine,25.41,592,343,UEFA,synthetic://sample-data
+2025-12-03,Ukraine,27.23,526,622,UEFA,synthetic://sample-data
+2003-01-01,Uruguay,23.67,790,902,AFC,synthetic://sample-data
+2003-07-02,Uruguay,29.55,762,122,AFC,synthetic://sample-data
+2003-12-31,Uruguay,27.61,772,294,AFC,synthetic://sample-data
+2004-06-30,Uruguay,27.39,871,80,AFC,synthetic://sample-data
+2004-12-29,Uruguay,26.1,784,1330,AFC,synthetic://sample-data
+2005-06-29,Uruguay,26.83,848,242,AFC,synthetic://sample-data
+2005-12-28,Uruguay,26.83,853,499,AFC,synthetic://sample-data
+2006-06-28,Uruguay,25.34,826,840,AFC,synthetic://sample-data
+2006-12-27,Uruguay,26.27,847,298,AFC,synthetic://sample-data
+2007-06-27,Uruguay,27.94,867,577,AFC,synthetic://sample-data
+2007-12-26,Uruguay,22.62,809,756,AFC,synthetic://sample-data
+2008-06-25,Uruguay,25.06,820,390,AFC,synthetic://sample-data
+2008-12-24,Uruguay,22.91,749,170,AFC,synthetic://sample-data
+2009-06-24,Uruguay,28.12,833,1008,AFC,synthetic://sample-data
+2009-12-23,Uruguay,27.76,716,1385,AFC,synthetic://sample-data
+2010-06-23,Uruguay,26.44,858,704,AFC,synthetic://sample-data
+2010-12-22,Uruguay,26.81,823,645,AFC,synthetic://sample-data
+2011-06-22,Uruguay,27.37,782,834,AFC,synthetic://sample-data
+2011-12-21,Uruguay,25.77,781,1002,AFC,synthetic://sample-data
+2012-06-20,Uruguay,27.53,799,530,AFC,synthetic://sample-data
+2012-12-19,Uruguay,24.8,814,898,AFC,synthetic://sample-data
+2013-06-19,Uruguay,25.71,822,319,AFC,synthetic://sample-data
+2013-12-18,Uruguay,25.36,854,498,AFC,synthetic://sample-data
+2014-06-18,Uruguay,25.28,760,852,AFC,synthetic://sample-data
+2014-12-17,Uruguay,28.89,852,776,AFC,synthetic://sample-data
+2015-06-17,Uruguay,25.16,886,128,AFC,synthetic://sample-data
+2015-12-16,Uruguay,28.13,855,719,AFC,synthetic://sample-data
+2016-06-15,Uruguay,25.89,819,818,AFC,synthetic://sample-data
+2016-12-14,Uruguay,27.72,876,694,AFC,synthetic://sample-data
+2017-06-14,Uruguay,23.4,823,639,AFC,synthetic://sample-data
+2017-12-13,Uruguay,32.3,804,927,AFC,synthetic://sample-data
+2018-06-13,Uruguay,27.83,776,741,AFC,synthetic://sample-data
+2018-12-12,Uruguay,27.69,824,535,AFC,synthetic://sample-data
+2019-06-12,Uruguay,25.35,800,486,AFC,synthetic://sample-data
+2019-12-11,Uruguay,24.8,808,627,AFC,synthetic://sample-data
+2020-06-10,Uruguay,29.12,788,397,AFC,synthetic://sample-data
+2020-12-09,Uruguay,28.22,836,490,AFC,synthetic://sample-data
+2021-06-09,Uruguay,26.6,793,841,AFC,synthetic://sample-data
+2021-12-08,Uruguay,27.61,822,379,AFC,synthetic://sample-data
+2022-06-08,Uruguay,26.14,805,385,AFC,synthetic://sample-data
+2022-12-07,Uruguay,24.69,772,539,AFC,synthetic://sample-data
+2023-06-07,Uruguay,25.23,748,371,AFC,synthetic://sample-data
+2023-12-06,Uruguay,24.89,844,405,AFC,synthetic://sample-data
+2024-06-05,Uruguay,25.3,835,179,AFC,synthetic://sample-data
+2024-12-04,Uruguay,25.31,897,918,AFC,synthetic://sample-data
+2025-06-04,Uruguay,26.4,814,944,AFC,synthetic://sample-data
+2025-12-03,Uruguay,24.58,753,730,AFC,synthetic://sample-data
+2003-01-01,Uruguay B,26.86,379,354,CAF,synthetic://sample-data
+2003-07-02,Uruguay B,25.57,379,118,CAF,synthetic://sample-data
+2003-12-31,Uruguay B,23.75,310,510,CAF,synthetic://sample-data
+2004-06-30,Uruguay B,25.05,375,1430,CAF,synthetic://sample-data
+2004-12-29,Uruguay B,25.08,320,178,CAF,synthetic://sample-data
+2005-06-29,Uruguay B,25.22,420,376,CAF,synthetic://sample-data
+2005-12-28,Uruguay B,28.71,323,1191,CAF,synthetic://sample-data
+2006-06-28,Uruguay B,25.4,372,710,CAF,synthetic://sample-data
+2006-12-27,Uruguay B,27.35,384,810,CAF,synthetic://sample-data
+2007-06-27,Uruguay B,25.97,367,245,CAF,synthetic://sample-data
+2007-12-26,Uruguay B,30.03,344,435,CAF,synthetic://sample-data
+2008-06-25,Uruguay B,26.21,389,870,CAF,synthetic://sample-data
+2008-12-24,Uruguay B,25.06,383,616,CAF,synthetic://sample-data
+2009-06-24,Uruguay B,26.23,335,961,CAF,synthetic://sample-data
+2009-12-23,Uruguay B,26.4,437,495,CAF,synthetic://sample-data
+2010-06-23,Uruguay B,26.7,339,437,CAF,synthetic://sample-data
+2010-12-22,Uruguay B,26.66,431,49,CAF,synthetic://sample-data
+2011-06-22,Uruguay B,29.29,316,488,CAF,synthetic://sample-data
+2011-12-21,Uruguay B,26.71,340,747,CAF,synthetic://sample-data
+2012-06-20,Uruguay B,27.16,366,578,CAF,synthetic://sample-data
+2012-12-19,Uruguay B,30.65,405,377,CAF,synthetic://sample-data
+2013-06-19,Uruguay B,22.76,387,327,CAF,synthetic://sample-data
+2013-12-18,Uruguay B,24.46,392,486,CAF,synthetic://sample-data
+2014-06-18,Uruguay B,25.15,323,1231,CAF,synthetic://sample-data
+2014-12-17,Uruguay B,29.66,345,360,CAF,synthetic://sample-data
+2015-06-17,Uruguay B,24.56,385,367,CAF,synthetic://sample-data
+2015-12-16,Uruguay B,27.2,380,335,CAF,synthetic://sample-data
+2016-06-15,Uruguay B,27.43,386,651,CAF,synthetic://sample-data
+2016-12-14,Uruguay B,27.08,317,888,CAF,synthetic://sample-data
+2017-06-14,Uruguay B,27.84,362,222,CAF,synthetic://sample-data
+2017-12-13,Uruguay B,28.01,403,1075,CAF,synthetic://sample-data
+2018-06-13,Uruguay B,25.05,315,731,CAF,synthetic://sample-data
+2018-12-12,Uruguay B,27.97,402,787,CAF,synthetic://sample-data
+2019-06-12,Uruguay B,23.72,378,162,CAF,synthetic://sample-data
+2019-12-11,Uruguay B,26.94,350,799,CAF,synthetic://sample-data
+2020-06-10,Uruguay B,28.06,387,799,CAF,synthetic://sample-data
+2020-12-09,Uruguay B,26.7,412,170,CAF,synthetic://sample-data
+2021-06-09,Uruguay B,26.46,316,468,CAF,synthetic://sample-data
+2021-12-08,Uruguay B,25.67,381,583,CAF,synthetic://sample-data
+2022-06-08,Uruguay B,27.35,318,200,CAF,synthetic://sample-data
+2022-12-07,Uruguay B,24.09,387,427,CAF,synthetic://sample-data
+2023-06-07,Uruguay B,24.66,351,148,CAF,synthetic://sample-data
+2023-12-06,Uruguay B,25.52,330,469,CAF,synthetic://sample-data
+2024-06-05,Uruguay B,26.39,387,195,CAF,synthetic://sample-data
+2024-12-04,Uruguay B,25.32,348,398,CAF,synthetic://sample-data
+2025-06-04,Uruguay B,27.46,355,1098,CAF,synthetic://sample-data
+2025-12-03,Uruguay B,28.72,324,513,CAF,synthetic://sample-data
+2003-01-01,Wales,27.19,460,1399,CONCACAF,synthetic://sample-data
+2003-07-02,Wales,26.73,445,391,CONCACAF,synthetic://sample-data
+2003-12-31,Wales,26.11,434,578,CONCACAF,synthetic://sample-data
+2004-06-30,Wales,25.05,420,164,CONCACAF,synthetic://sample-data
+2004-12-29,Wales,25.64,406,158,CONCACAF,synthetic://sample-data
+2005-06-29,Wales,24.49,441,398,CONCACAF,synthetic://sample-data
+2005-12-28,Wales,25.11,459,131,CONCACAF,synthetic://sample-data
+2006-06-28,Wales,26.57,386,263,CONCACAF,synthetic://sample-data
+2006-12-27,Wales,25.35,420,465,CONCACAF,synthetic://sample-data
+2007-06-27,Wales,25.92,435,311,CONCACAF,synthetic://sample-data
+2007-12-26,Wales,26.6,416,714,CONCACAF,synthetic://sample-data
+2008-06-25,Wales,25.08,408,452,CONCACAF,synthetic://sample-data
+2008-12-24,Wales,25.45,437,1268,CONCACAF,synthetic://sample-data
+2009-06-24,Wales,27.72,434,767,CONCACAF,synthetic://sample-data
+2009-12-23,Wales,27.75,457,480,CONCACAF,synthetic://sample-data
+2010-06-23,Wales,25.11,442,1545,CONCACAF,synthetic://sample-data
+2010-12-22,Wales,30.1,401,788,CONCACAF,synthetic://sample-data
+2011-06-22,Wales,23.94,409,703,CONCACAF,synthetic://sample-data
+2011-12-21,Wales,26.6,450,941,CONCACAF,synthetic://sample-data
+2012-06-20,Wales,26.33,449,558,CONCACAF,synthetic://sample-data
+2012-12-19,Wales,27.93,420,1681,CONCACAF,synthetic://sample-data
+2013-06-19,Wales,24.82,444,514,CONCACAF,synthetic://sample-data
+2013-12-18,Wales,26.41,424,745,CONCACAF,synthetic://sample-data
+2014-06-18,Wales,25.23,466,287,CONCACAF,synthetic://sample-data
+2014-12-17,Wales,26.32,375,406,CONCACAF,synthetic://sample-data
+2015-06-17,Wales,25.58,422,366,CONCACAF,synthetic://sample-data
+2015-12-16,Wales,27.13,463,844,CONCACAF,synthetic://sample-data
+2016-06-15,Wales,25.86,486,523,CONCACAF,synthetic://sample-data
+2016-12-14,Wales,28.74,459,655,CONCACAF,synthetic://sample-data
+2017-06-14,Wales,26.78,420,664,CONCACAF,synthetic://sample-data
+2017-12-13,Wales,24.42,438,108,CONCACAF,synthetic://sample-data
+2018-06-13,Wales,21.91,431,1015,CONCACAF,synthetic://sample-data
+2018-12-12,Wales,27.1,469,702,CONCACAF,synthetic://sample-data
+2019-06-12,Wales,24.99,449,860,CONCACAF,synthetic://sample-data
+2019-12-11,Wales,25.2,429,662,CONCACAF,synthetic://sample-data
+2020-06-10,Wales,23.02,454,178,CONCACAF,synthetic://sample-data
+2020-12-09,Wales,26.02,444,576,CONCACAF,synthetic://sample-data
+2021-06-09,Wales,27.72,446,727,CONCACAF,synthetic://sample-data
+2021-12-08,Wales,25.71,439,213,CONCACAF,synthetic://sample-data
+2022-06-08,Wales,24.12,419,479,CONCACAF,synthetic://sample-data
+2022-12-07,Wales,27.15,390,128,CONCACAF,synthetic://sample-data
+2023-06-07,Wales,27.6,391,402,CONCACAF,synthetic://sample-data
+2023-12-06,Wales,21.86,449,310,CONCACAF,synthetic://sample-data
+2024-06-05,Wales,22.14,450,821,CONCACAF,synthetic://sample-data
+2024-12-04,Wales,24.31,463,553,CONCACAF,synthetic://sample-data
+2025-06-04,Wales,23.85,425,477,CONCACAF,synthetic://sample-data
+2025-12-03,Wales,27.26,438,690,CONCACAF,synthetic://sample-data

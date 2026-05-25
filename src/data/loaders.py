@@ -66,6 +66,42 @@ def load_team_context() -> pd.DataFrame:
     return pd.read_csv(path, parse_dates=["date"])
 
 
+def load_player_status() -> pd.DataFrame:
+    """Load optional player availability/status snapshots."""
+    spec = templates.optional_spec("player_status.csv")
+    path = templates.expected_path(spec)
+    if not path.exists():
+        return templates.make_template(spec)
+    return pd.read_csv(path, parse_dates=["as_of_date", "expected_return"])
+
+
+def load_player_form() -> pd.DataFrame:
+    """Load optional player form/performance snapshots."""
+    spec = templates.optional_spec("player_form.csv")
+    path = templates.expected_path(spec)
+    if not path.exists():
+        return templates.make_template(spec)
+    return pd.read_csv(path, parse_dates=["date"])
+
+
+def load_team_status() -> pd.DataFrame:
+    """Load optional team-level experience and stability snapshots."""
+    spec = templates.optional_spec("team_status.csv")
+    path = templates.expected_path(spec)
+    if not path.exists():
+        return templates.make_template(spec)
+    return pd.read_csv(path, parse_dates=["as_of_date"])
+
+
+def load_match_context() -> pd.DataFrame:
+    """Load optional fixture weather, venue, and travel context."""
+    spec = templates.optional_spec("match_context.csv")
+    path = templates.expected_path(spec)
+    if not path.exists():
+        return templates.make_template(spec)
+    return pd.read_csv(path, parse_dates=["date"])
+
+
 def load_betting_odds() -> pd.DataFrame:
     """Load optional manually collected betting odds, or an empty schema."""
     spec = templates.optional_spec("betting_odds.csv")
