@@ -16,6 +16,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.pipeline import Pipeline
 
 from .. import config
@@ -56,6 +57,43 @@ def predict_proba_dicts(model, feature_row):
     classes = model_classes(model)
     dicts = [proba_row_to_wdl(row, classes) for row in proba]
     return dicts[0] if single else dicts
+
+
+def calibrate_classifier(model, features: pd.DataFrame,
+                         method: str = "sigmoid", cv: int = 3):
+    """Fit a probability-calibrated wrapper around a classifier.
+
+    ``method`` can be ``sigmoid`` or ``isotonic``. If a data slice is too small
+    to support cross-validated calibration, the original fitted model is
+    returned unchanged.
+    """
+    if method == "none":
+        return model
+    if method not in {"sigmoid", "isotonic"}:
+        raise ValueError("calibration method must be one of: none, sigmoid, isotonic")
+
+    X = bf.features_to_matrix(features)
+    y = features["result"].astype(int)
+    min_class_count = int(y.value_counts().min())
+    actual_cv = min(int(cv), min_class_count)
+    if actual_cv < 2:
+        print("[calibration] Not enough samples per class; using uncalibrated model.")
+        return model
+
+    try:
+        calibrated = CalibratedClassifierCV(
+            estimator=model,
+            method=method,
+            cv=actual_cv,
+        )
+    except TypeError:  # scikit-learn < 1.2 used base_estimator
+        calibrated = CalibratedClassifierCV(
+            base_estimator=model,
+            method=method,
+            cv=actual_cv,
+        )
+    calibrated.fit(X, y)
+    return calibrated
 
 
 def save_pickle(obj, path: str | Path) -> Path:

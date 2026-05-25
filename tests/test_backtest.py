@@ -3,6 +3,7 @@ import pytest
 
 from src.evaluation import backtest as bt
 from src.features import build_features as bf
+from src.models import baseline_logistic as logit
 from src.models import common
 
 
@@ -60,6 +61,19 @@ def test_selection_roundtrip(tmp_path, monkeypatch):
     # No selection saved yet -> empty dict.
     monkeypatch.setattr(config, "MODELS_DIR", tmp_path / "empty")
     assert common.load_selection() == {}
+
+
+def test_calibrated_classifier_predicts_probabilities(features):
+    base = logit.train_model(features)
+    model = common.calibrate_classifier(
+        base,
+        features,
+        method="sigmoid",
+        cv=2,
+    )
+    row = features.iloc[0].to_dict()
+    probs = common.predict_proba_dicts(model, row)
+    assert abs(sum(probs.values()) - 1.0) < 1e-6
 
 
 def test_tune_and_select_picks_lowest_log_loss(features, monkeypatch):

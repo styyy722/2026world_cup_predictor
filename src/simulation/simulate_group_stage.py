@@ -37,7 +37,13 @@ def simulate_group(group: str, fixtures: pd.DataFrame,
         stats.setdefault(a, _new_stat())
         stats.setdefault(b, _new_stat())
 
-        probs = predictor.proba(a, b, neutral=bool(m.neutral))
+        probs = predictor.proba(
+            a,
+            b,
+            neutral=bool(m.neutral),
+            match_id=getattr(m, "match_id", None),
+            match_date=getattr(m, "date", None),
+        )
         ga, gb, outcome = sm.simulate_scoreline(probs, rng)
 
         stats[a]["gf"] += ga; stats[a]["ga"] += gb

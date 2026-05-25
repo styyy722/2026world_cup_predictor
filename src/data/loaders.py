@@ -1,8 +1,8 @@
-"""Load raw CSV inputs, generating templates if files are missing.
+"""Load raw CSV inputs from ``data/raw/``.
 
-Every loader is defensive: if a required file is absent we create a template
-(via templates.write_all_templates) and print a helpful message rather than
-crashing. This keeps the MVP runnable out of the box.
+Every loader is defensive: if a required file is absent we create an empty
+schema template and print source-specific download/collection instructions.
+The first version is intentionally CSV-first and does not require paid APIs.
 """
 from __future__ import annotations
 
@@ -12,18 +12,15 @@ from .. import config
 from . import templates
 
 
+def validate_raw_data_files() -> bool:
+    """Check required raw CSV files and create empty templates if needed."""
+    return templates.validate_raw_data_files()
+
+
 def _ensure_inputs_exist() -> None:
-    """Create template CSVs for any missing raw input files."""
-    required = [
-        config.RESULTS_FILE,
-        config.FIFA_RANKINGS_FILE,
-        config.ELO_FILE,
-        config.FIXTURES_FILE,
-        config.GROUPS_FILE,
-    ]
-    if any(not p.exists() for p in required):
-        print("[loaders] One or more raw data files missing - generating templates.")
-        templates.write_all_templates()
+    """Create empty template CSVs for any missing raw input files."""
+    if templates.missing_specs():
+        templates.validate_raw_data_files()
 
 
 def load_results() -> pd.DataFrame:
@@ -58,6 +55,24 @@ def load_groups() -> pd.DataFrame:
     """Load the 2026 group assignments."""
     _ensure_inputs_exist()
     return pd.read_csv(config.GROUPS_FILE)
+
+
+def load_team_context() -> pd.DataFrame:
+    """Load optional team context features, or an empty schema if absent."""
+    spec = templates.optional_spec("team_context.csv")
+    path = templates.expected_path(spec)
+    if not path.exists():
+        return templates.make_template(spec)
+    return pd.read_csv(path, parse_dates=["date"])
+
+
+def load_betting_odds() -> pd.DataFrame:
+    """Load optional manually collected betting odds, or an empty schema."""
+    spec = templates.optional_spec("betting_odds.csv")
+    path = templates.expected_path(spec)
+    if not path.exists():
+        return templates.make_template(spec)
+    return pd.read_csv(path, parse_dates=["date"])
 
 
 def latest_ratings() -> pd.DataFrame:

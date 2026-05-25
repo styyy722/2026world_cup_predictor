@@ -27,7 +27,7 @@ top 2 of each group plus the **8 best third-placed teams** advancing to a
 
 ```
 .                      # repository root — all project files live here
-  data/raw/            # input CSVs (auto-generated templates if missing)
+  data/raw/            # manually supplied input CSVs; templates are created if missing
   data/processed/      # reserved for cached/processed data
   src/
     config.py          # paths + 2026 tournament constants
@@ -42,6 +42,7 @@ top 2 of each group plus the **8 best third-placed teams** advancing to a
   tests/               # pytest suite
   notebooks/           # exploratory analysis (yours to add)
   main.py              # CLI pipeline entry point
+  dashboard.py         # Streamlit dashboard for output CSVs
   requirements.txt
 ```
 
@@ -49,21 +50,30 @@ top 2 of each group plus the **8 best third-placed teams** advancing to a
 
 ## Data files required
 
-Place these in `data/raw/`. **If any are missing, the pipeline auto-creates
-self-consistent example templates** (a synthetic but plausible 48-team field)
-and prints a message, so it runs out of the box. Replace them with real data.
+The data pipeline is CSV-first. Place these files in `data/raw/`; no paid API
+is required for the first version. If a file is missing, run
+`python main.py --mode validate-data` and the project will create an empty CSV
+template with the expected columns, then print clear instructions for where to
+download or manually collect the data.
 
-| File | Schema |
-|------|--------|
-| `international_results.csv` | `date, home_team, away_team, home_score, away_score, tournament, neutral, country` |
-| `fifa_rankings.csv` | `date, team, fifa_rank, fifa_points` |
-| `elo_ratings.csv` | `date, team, elo_rating` |
-| `world_cup_2026_fixtures.csv` | `match_id, stage, group, date, team_a, team_b, venue, neutral` |
-| `world_cup_2026_groups.csv` | `group, team` |
+| File | Expected columns | Intended source |
+|------|------------------|-----------------|
+| `international_results.csv` | `date, home_team, away_team, home_score, away_score, tournament, neutral, country` | Kaggle [International Football Results](https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017) |
+| `fifa_rankings.csv` | `date, team, fifa_rank, fifa_points` | FIFA's [men's ranking page](https://inside.fifa.com/fifa-world-ranking/men?lv=true) for the latest snapshot, plus public historical rankings from Kaggle/GitHub |
+| `elo_ratings.csv` | `date, team, elo_rating` | [World Football Elo Ratings](https://www.eloratings.net/) and/or a public Kaggle historical international football Elo dataset |
+| `world_cup_2026_fixtures.csv` | `match_id, stage, group, date, team_a, team_b, venue, neutral` | FIFA's official [World Cup 2026 schedule](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums) |
+| `world_cup_2026_groups.csv` | `group, team` | FIFA's official [World Cup 2026 final draw results](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-draw-results) |
 
-Good public sources: international results datasets on Kaggle, the
-[World Football Elo Ratings](https://eloratings.net), and FIFA's official
-ranking exports.
+API integrations should stay optional for a later version. The first version
+should work from audited CSV files that can be committed, reviewed, and updated
+manually.
+
+Optional enhancement files can also be placed in `data/raw/`:
+
+| File | Expected columns | Used for |
+|------|------------------|----------|
+| `team_context.csv` | `date, team, injured_players, suspended_players, squad_market_value_eur, xg_for_10, xg_against_10` | richer availability, market-value, and xG features |
+| `betting_odds.csv` | `match_id, date, team_a, team_b, team_a_decimal_odds, draw_decimal_odds, team_b_decimal_odds, bookmaker` | optional bookmaker-implied probability blending |
 
 ---
 
@@ -83,8 +93,12 @@ The `--model` flag selects which match model drives the simulation. The
 default is **`xgboost`** (primary); `logistic` and `elo` are baselines.
 
 ```bash
+# Validate raw-data files and create empty templates for any missing files
+python main.py --mode validate-data
+
 # Train the primary model (XGBoost) + the logistic baseline, and save both
 python main.py --mode train                 # defaults to --model xgboost
+python main.py --mode train --calibration sigmoid
 
 # Train with a different tree backend
 python main.py --mode train --model lightgbm
@@ -97,9 +111,11 @@ python main.py --mode full --model best --n_simulations 10000
 
 # Simulate the tournament and export tables + charts (quick mode)
 python main.py --mode simulate --n_simulations 10000 --model xgboost
+python main.py --mode simulate --model xgboost --odds_weight 0.20
 
 # Full pipeline: load -> features -> train -> predict -> simulate -> export
 python main.py --mode full --n_simulations 10000 --model xgboost
+python main.py --mode full --model xgboost --calibration isotonic --odds_weight 0.10
 
 # Use a baseline instead of the tree model
 python main.py --mode simulate --model logistic
@@ -125,6 +141,12 @@ Run the tests with:
 
 ```bash
 pytest
+```
+
+Open the dashboard after simulation outputs exist:
+
+```bash
+streamlit run dashboard.py
 ```
 
 ---
@@ -160,9 +182,16 @@ them identically.
 All models are trained on engineered match features (target `result`:
 0 loss / 1 draw / 2 win from team A's perspective): Elo, FIFA rank/points and
 their differences, rolling 10-match form (win rate, goals for/against, goal
-difference), and neutral / World Cup / major-tournament flags. Feature building
-lives in `src/features/build_features.py` and avoids look-ahead leakage by only
-using each team's matches *before* kickoff.
+difference), rest-day gaps, optional absences, optional squad market values,
+optional xG form, and neutral / World Cup / major-tournament flags. Feature
+building lives in `src/features/build_features.py` and avoids look-ahead
+leakage by only using each team's matches *before* kickoff.
+
+If `--calibration sigmoid` or `--calibration isotonic` is supplied during
+`train` or `full`, the saved classifier is wrapped with scikit-learn probability
+calibration before simulation. If `--odds_weight` is greater than zero and
+`data/raw/betting_odds.csv` exists, model probabilities are blended with
+normalised bookmaker-implied probabilities at that weight.
 
 ---
 
@@ -177,10 +206,12 @@ using each team's matches *before* kickoff.
   random draw-of-lots** tie-break.
 * **Qualification** — the top 2 of each of the 12 groups (24 teams) plus the
   **8 best third-placed teams** form the 32-team field.
-* **Knockout** — qualifiers are seeded into a balanced bracket by Elo (1-v-32,
-  2-v-31, …) and played as single elimination through R32 → R16 → QF → SF →
-  Final. A regular-time draw is resolved by a **penalty-style** coin flip
-  weighted toward the stronger team but damped toward 50/50.
+* **Knockout** — qualifiers are placed into FIFA's published 2026 Round-of-32
+  bracket slots, including the winner-v-third-place slot constraints
+  (`1E v 3A/B/C/D/F`, etc.), then played as single elimination through R32 →
+  R16 → QF → SF → Final. A regular-time draw is resolved by a
+  **penalty-style** coin flip weighted toward the stronger team but damped
+  toward 50/50.
 
 Running thousands of tournaments and aggregating yields each team's stage and
 title probabilities.
@@ -210,6 +241,10 @@ In `outputs/charts/`:
 * `stage_progression_probabilities.png`
 * `quarter_final_bracket.png` — poster-style projected knockout bracket built
   from the stage probabilities (most likely QF teams, finalists, and champion)
+
+The Streamlit dashboard in `dashboard.py` reads these same output CSVs and gives
+quick tabs for the title race, group outlook, match probabilities, and backtest
+summary.
 
 ---
 
@@ -241,35 +276,27 @@ records it in `models_store/selected_model.json`. Use `--model best` afterwards
 to drive `train` / `simulate` / `full` with the winner. The per-booster grids
 live in `_PARAM_GRIDS` and are easy to widen.
 
-> Note: the bundled **template** data is synthetic, so absolute numbers are
-> illustrative. Supply real historical data for meaningful evaluation.
+> Note: missing raw inputs now create empty templates only. Supply real
+> historical data for meaningful model training and evaluation.
 
 ---
 
-## How to improve the model later
+## Extension points
 
-The code is structured so you can extend it without rewrites:
-
-* **Richer features** — add columns in `src/features/build_features.py`
-  (player availability/injuries, squad market value, xG, rest days, travel).
-* **Betting odds** — blend bookmaker-implied probabilities into the predictor.
-* **Tune / extend models** — the tree backends in `src/models/tree_model.py`
-  accept hyperparameter overrides; you could add early stopping, calibrated
-  probabilities, or a bivariate-Poisson goals model behind the same
-  `MatchPredictor` interface.
-* **Official knockout seeding** — replace the Elo-seeded bracket in
-  `simulate_knockout_stage.py` with FIFA's third-place placement table.
-* **Calibration** — add probability calibration (e.g. isotonic) before
-  simulating.
-* **Dashboard** — a Streamlit app can consume the CSVs in `outputs/tables/`
-  (intentionally not built in this first version).
+The main README improvements have been implemented as optional extension
+points: richer team context features, betting-odds blending, calibrated
+probabilities, FIFA-style knockout slots, and a Streamlit output dashboard. The
+next natural upgrades are travel-distance features from venue coordinates,
+model-specific early stopping with validation folds, and a goals-model backend
+behind the same `MatchPredictor` interface.
 
 ---
 
 ## Assumptions
 
-* Template/example data is synthetic and **not** an official draw or real
-  ratings — replace it with real data for credible forecasts.
+* Empty templates are placeholders only; replace them with real data for
+  credible forecasts.
 * World Cup group matches are treated as neutral-venue games.
-* Knockout bracket seeding is by Elo rather than the official placement rules.
+* Third-place teams are assigned to FIFA-compatible R32 slots using deterministic
+  backtracking across the published eligible-group constraints.
 * Draw resolution in knockouts is a strength-weighted shootout approximation.

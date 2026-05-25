@@ -31,6 +31,10 @@ NUMERIC_FEATURES = [
     "team_a_recent_goals_for_10", "team_b_recent_goals_for_10",
     "team_a_recent_goals_against_10", "team_b_recent_goals_against_10",
     "recent_goal_diff_a", "recent_goal_diff_b", "recent_goal_diff_diff",
+    "team_a_rest_days", "team_b_rest_days", "rest_days_diff",
+    "team_a_absences", "team_b_absences", "absence_diff",
+    "team_a_market_value", "team_b_market_value", "market_value_diff",
+    "team_a_xg_diff_10", "team_b_xg_diff_10", "xg_diff_delta",
     "neutral", "is_world_cup", "is_major_tournament",
 ]
 
@@ -82,22 +86,33 @@ class _FormTracker:
         self._gf: dict[str, deque] = defaultdict(lambda: deque(maxlen=window))
         self._ga: dict[str, deque] = defaultdict(lambda: deque(maxlen=window))
         self._pts: dict[str, deque] = defaultdict(lambda: deque(maxlen=window))
+        self._last_date: dict[str, pd.Timestamp] = {}
 
-    def features(self, team: str) -> dict[str, float]:
+    def features(self, team: str, date: pd.Timestamp | None = None) -> dict[str, float]:
         gf = self._gf[team]
         ga = self._ga[team]
         pts = self._pts[team]
         n = len(pts)
+        rest_days = 7.0
+        if date is not None and team in self._last_date:
+            rest_days = float(np.clip((date - self._last_date[team]).days, 0, 30))
         if n == 0:
             # Neutral priors for teams with no history yet.
-            return {"win_rate": 0.33, "gf": 1.2, "ga": 1.2, "gd": 0.0}
+            return {
+                "win_rate": 0.33,
+                "gf": 1.2,
+                "ga": 1.2,
+                "gd": 0.0,
+                "rest_days": rest_days,
+            }
         win_rate = sum(1 for p in pts if p == 3) / n
         gf_mean = float(np.mean(gf))
         ga_mean = float(np.mean(ga))
         return {"win_rate": win_rate, "gf": gf_mean, "ga": ga_mean,
-                "gd": gf_mean - ga_mean}
+                "gd": gf_mean - ga_mean, "rest_days": rest_days}
 
-    def update(self, team: str, goals_for: int, goals_against: int) -> None:
+    def update(self, team: str, goals_for: int, goals_against: int,
+               date: pd.Timestamp | None = None) -> None:
         self._gf[team].append(goals_for)
         self._ga[team].append(goals_against)
         if goals_for > goals_against:
@@ -106,6 +121,8 @@ class _FormTracker:
             self._pts[team].append(1)
         else:
             self._pts[team].append(0)
+        if date is not None:
+            self._last_date[team] = date
 
 
 # ---------------------------------------------------------------------------
@@ -118,6 +135,14 @@ def _ratings_lookup() -> tuple[pd.DataFrame, pd.DataFrame]:
         ["date", "team", "fifa_rank", "fifa_points"]
     ]
     return elo, fifa
+
+
+def _team_context_lookup() -> pd.DataFrame:
+    """Return optional team context snapshots sorted for as-of lookups."""
+    context = loaders.load_team_context()
+    if context.empty:
+        return context
+    return context.sort_values("date")
 
 
 def _asof_for_team(team: str, date: pd.Timestamp, sorted_df: pd.DataFrame,
@@ -140,6 +165,46 @@ def _asof_for_team(team: str, date: pd.Timestamp, sorted_df: pd.DataFrame,
     return out
 
 
+def _context_for_team(team: str, date: pd.Timestamp | None,
+                      context_df: pd.DataFrame,
+                      form: dict[str, float]) -> dict[str, float]:
+    """Return optional context features, with neutral defaults when absent."""
+    def num(value, default: float = 0.0) -> float:
+        return default if pd.isna(value) else float(value)
+
+    defaults = {
+        "absences": 0.0,
+        "market_value": 0.0,
+        "xg_diff_10": form["gd"],
+    }
+    if context_df.empty:
+        return defaults
+
+    sub = context_df[context_df["team"] == team]
+    if sub.empty:
+        return defaults
+    if date is None:
+        row = sub.iloc[-1]
+    else:
+        prior = sub[sub["date"] <= date]
+        row = prior.iloc[-1] if not prior.empty else sub.iloc[0]
+
+    injured = num(row.get("injured_players", 0.0))
+    suspended = num(row.get("suspended_players", 0.0))
+    market_value = num(row.get("squad_market_value_eur", 0.0))
+    xg_for = row.get("xg_for_10", np.nan)
+    xg_against = row.get("xg_against_10", np.nan)
+    if pd.isna(xg_for) or pd.isna(xg_against):
+        xg_diff = form["gd"]
+    else:
+        xg_diff = float(xg_for) - float(xg_against)
+    return {
+        "absences": injured + suspended,
+        "market_value": market_value,
+        "xg_diff_10": xg_diff,
+    }
+
+
 def build_training_features(results: pd.DataFrame | None = None) -> pd.DataFrame:
     """Build the supervised training table from historical results.
 
@@ -151,6 +216,7 @@ def build_training_features(results: pd.DataFrame | None = None) -> pd.DataFrame
     results = results.sort_values("date").reset_index(drop=True)
 
     elo_df, fifa_df = _ratings_lookup()
+    context_df = _team_context_lookup()
     default_elo = config.DEFAULT_ELO
     default_rank = float(fifa_df["fifa_rank"].max()) if not fifa_df.empty else 200.0
     default_pts = float(fifa_df["fifa_points"].min()) if not fifa_df.empty else 0.0
@@ -168,15 +234,17 @@ def build_training_features(results: pd.DataFrame | None = None) -> pd.DataFrame
         fb = _asof_for_team(b, date, fifa_df, ["fifa_rank", "fifa_points"],
                             {"fifa_rank": default_rank, "fifa_points": default_pts})
 
-        form_a = tracker.features(a)
-        form_b = tracker.features(b)
+        form_a = tracker.features(a, date)
+        form_b = tracker.features(b, date)
+        context_a = _context_for_team(a, date, context_df, form_a)
+        context_b = _context_for_team(b, date, context_df, form_b)
 
         rows.append(_assemble_row(
             a, b,
             ea["elo_rating"], eb["elo_rating"],
             fa["fifa_rank"], fb["fifa_rank"],
             fa["fifa_points"], fb["fifa_points"],
-            form_a, form_b,
+            form_a, form_b, context_a, context_b,
             neutral=int(bool(r.neutral)),
             is_wc=_is_world_cup(r.tournament),
             is_major=_is_major(r.tournament),
@@ -184,16 +252,26 @@ def build_training_features(results: pd.DataFrame | None = None) -> pd.DataFrame
         ))
 
         # Update form state after recording features.
-        tracker.update(a, r.home_score, r.away_score)
-        tracker.update(b, r.away_score, r.home_score)
+        tracker.update(a, r.home_score, r.away_score, date)
+        tracker.update(b, r.away_score, r.home_score, date)
 
     return pd.DataFrame(rows)
 
 
 def _assemble_row(team_a, team_b, elo_a, elo_b, rank_a, rank_b,
-                  pts_a, pts_b, form_a, form_b, neutral, is_wc, is_major,
-                  result=None) -> dict:
+                  pts_a, pts_b, form_a, form_b, context_a=None, context_b=None,
+                  neutral=1, is_wc=1, is_major=1, result=None) -> dict:
     """Build one feature dict shared by training and prediction paths."""
+    context_a = context_a or {
+        "absences": 0.0,
+        "market_value": 0.0,
+        "xg_diff_10": form_a["gd"],
+    }
+    context_b = context_b or {
+        "absences": 0.0,
+        "market_value": 0.0,
+        "xg_diff_10": form_b["gd"],
+    }
     row = {
         "team_a": team_a, "team_b": team_b,
         "elo_a": elo_a, "elo_b": elo_b, "elo_diff": elo_a - elo_b,
@@ -211,6 +289,18 @@ def _assemble_row(team_a, team_b, elo_a, elo_b, rank_a, rank_b,
         "recent_goal_diff_a": form_a["gd"],
         "recent_goal_diff_b": form_b["gd"],
         "recent_goal_diff_diff": form_a["gd"] - form_b["gd"],
+        "team_a_rest_days": form_a["rest_days"],
+        "team_b_rest_days": form_b["rest_days"],
+        "rest_days_diff": form_a["rest_days"] - form_b["rest_days"],
+        "team_a_absences": context_a["absences"],
+        "team_b_absences": context_b["absences"],
+        "absence_diff": context_b["absences"] - context_a["absences"],
+        "team_a_market_value": context_a["market_value"],
+        "team_b_market_value": context_b["market_value"],
+        "market_value_diff": context_a["market_value"] - context_b["market_value"],
+        "team_a_xg_diff_10": context_a["xg_diff_10"],
+        "team_b_xg_diff_10": context_b["xg_diff_10"],
+        "xg_diff_delta": context_a["xg_diff_10"] - context_b["xg_diff_10"],
         "neutral": int(neutral),
         "is_world_cup": int(is_wc),
         "is_major_tournament": int(is_major),
@@ -231,14 +321,16 @@ def current_form_table(results: pd.DataFrame | None = None) -> dict[str, dict]:
     results = results.sort_values("date").reset_index(drop=True)
     tracker = _FormTracker()
     for r in results.itertuples(index=False):
-        tracker.update(r.home_team, r.home_score, r.away_score)
-        tracker.update(r.away_team, r.away_score, r.home_score)
+        tracker.update(r.home_team, r.home_score, r.away_score, r.date)
+        tracker.update(r.away_team, r.away_score, r.home_score, r.date)
     teams = set(results["home_team"]) | set(results["away_team"])
     return {t: tracker.features(t) for t in teams}
 
 
 def build_fixture_features(team_a: str, team_b: str, neutral: bool,
                            ratings: pd.DataFrame, form: dict[str, dict],
+                           context: pd.DataFrame | None = None,
+                           match_date: pd.Timestamp | str | None = None,
                            is_world_cup: int = 1,
                            is_major_tournament: int = 1) -> dict:
     """Build a single feature row for a 2026 matchup.
@@ -258,13 +350,23 @@ def build_fixture_features(team_a: str, team_b: str, neutral: bool,
 
     elo_a, rank_a, pts_a = get(team_a)
     elo_b, rank_b, pts_b = get(team_b)
-    neutral_prior = {"win_rate": 0.33, "gf": 1.2, "ga": 1.2, "gd": 0.0}
+    neutral_prior = {
+        "win_rate": 0.33,
+        "gf": 1.2,
+        "ga": 1.2,
+        "gd": 0.0,
+        "rest_days": 7.0,
+    }
     form_a = form.get(team_a, neutral_prior)
     form_b = form.get(team_b, neutral_prior)
+    context_df = context if context is not None else _team_context_lookup()
+    date = pd.Timestamp(match_date) if match_date is not None else None
+    context_a = _context_for_team(team_a, date, context_df, form_a)
+    context_b = _context_for_team(team_b, date, context_df, form_b)
 
     return _assemble_row(
         team_a, team_b, elo_a, elo_b, rank_a, rank_b, pts_a, pts_b,
-        form_a, form_b, neutral=int(neutral),
+        form_a, form_b, context_a, context_b, neutral=int(neutral),
         is_wc=is_world_cup, is_major=is_major_tournament,
     )
 

@@ -52,7 +52,7 @@ def run_simulations(predictor, groups: pd.DataFrame, fixtures: pd.DataFrame,
 
         # Knockout field = 1st + 2nd of each group + best-8 thirds.
         qualified = gres["winners"] + gres["runners_up"] + gres["qualified_thirds"]
-        bracket = ko.build_r32_bracket(qualified, predictor)
+        bracket = ko.build_r32_bracket(qualified, predictor, group_results=gres)
         kres = ko.simulate_knockout(bracket, predictor, rng)
 
         # Cumulative stage-reach tallies.
@@ -104,7 +104,13 @@ def fixture_match_probabilities(predictor, fixtures: pd.DataFrame) -> pd.DataFra
     """
     rows = []
     for m in fixtures.itertuples(index=False):
-        pa, pd_, pb = predictor.proba(m.team_a, m.team_b, neutral=bool(m.neutral))
+        pa, pd_, pb = predictor.proba(
+            m.team_a,
+            m.team_b,
+            neutral=bool(m.neutral),
+            match_id=m.match_id,
+            match_date=m.date,
+        )
         rows.append({
             "match_id": m.match_id,
             "stage": m.stage,

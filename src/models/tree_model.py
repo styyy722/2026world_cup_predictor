@@ -93,13 +93,18 @@ def _build_estimator(backend: str, n_classes: int = 3, **overrides):
 
 
 def available_backends() -> list[str]:
-    """Return the subset of backends that can actually be imported."""
+    """Return the subset of backends that can actually be imported.
+
+    Some optional boosters can be installed but unusable because of transitive
+    dependency conflicts. Treat those the same as absent during discovery so
+    tests and model selection can continue with the working backends.
+    """
     found = []
     for b in SUPPORTED_BACKENDS:
         try:
             _build_estimator(b)
             found.append(b)
-        except ImportError:
+        except Exception:
             continue
     return found
 
