@@ -104,9 +104,16 @@ python main.py --mode simulate --model elo
 # Final, higher-precision run
 python main.py --mode simulate --n_simulations 100000 --model xgboost
 
-# Backtest: compares the chosen tree model against the logistic baseline
+# Tune hyperparameters via walk-forward CV, save the best, and retrain
+python main.py --mode tune --model xgboost
+
+# Backtest: per-World-Cup + walk-forward CV over ALL history (vs baseline)
 python main.py --mode backtest --model xgboost
 ```
+
+`tune` saves the best hyperparameters to `models_store/<model>_best_params.json`;
+`train` and `full` then load and apply them automatically (the run logs
+"tuned params" when they do).
 
 Run the tests with:
 
@@ -178,7 +185,10 @@ In `outputs/tables/`:
 * **`match_probabilities.csv`** — model WDL probabilities for each group fixture.
 * **`simulation_summary.csv`** — per simulation: champion, runner-up,
   semi-finalists.
-* **`backtest_summary.csv`** — accuracy / log loss / Brier per backtested year.
+* **`backtest_summary.csv`** — accuracy / log loss / Brier per scope
+  (`wc:<year>` World Cups and `walk_forward` over all history) and model.
+* **`tuning_results_<model>.csv`** — every hyperparameter configuration tried
+  during `--mode tune`, with its walk-forward score (written by tuning runs).
 
 In `outputs/charts/`:
 
@@ -192,13 +202,29 @@ In `outputs/charts/`:
 
 ## Evaluation / backtesting
 
-`src/evaluation/backtest.py` trains only on matches *before* a target World Cup
-and tests on that tournament's matches (2014, 2018, 2022), reporting accuracy,
-multiclass log loss, multiclass Brier score, and a calibration table for each
-model. By default it compares the chosen tree model against the logistic
-baseline so you can see the lift. This time-respecting split avoids leakage.
+`src/evaluation/backtest.py` provides two time-respecting backtests:
 
-> Note: the bundled **template** data is synthetic, so backtest numbers are
+1. **Per-World-Cup** — train on everything before a target World Cup, test on
+   that tournament's matches (2014 / 2018 / 2022). Realistic but a small test
+   set.
+2. **Walk-forward CV** — expanding-window time-series cross-validation
+   (`TimeSeriesSplit`) over the **entire** match history, so every period after
+   the first fold is scored out-of-sample. This is the metric used for tuning
+   and the most reliable comparison between models.
+
+Both report accuracy, multiclass log loss, multiclass Brier score, and a
+calibration table, and compare the chosen tree model against the logistic
+baseline.
+
+### Tuning
+
+`--mode tune` grid-searches hyperparameters using the **walk-forward log loss**
+(a proper scoring rule) as the objective, prints every configuration's score,
+saves the best params, and retrains. On the bundled synthetic data this already
+cuts the default XGBoost's overfitting (walk-forward log loss ≈ 1.14 → 0.99,
+accuracy ≈ 0.50 → 0.55); the grids live in `_PARAM_GRIDS` and are easy to widen.
+
+> Note: the bundled **template** data is synthetic, so absolute numbers are
 > illustrative. Supply real historical data for meaningful evaluation.
 
 ---

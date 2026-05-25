@@ -1,6 +1,8 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-models_store/
+# Ignore pickled models but keep small tuned-hyperparameter JSON files tracked.
+models_store/*
+!models_store/*_best_params.json
 .DS_Store
 .ipynb_checkpoints/
