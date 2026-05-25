@@ -89,7 +89,7 @@ def make_fifa_rankings_template(as_of: str = "2026-05-01") -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def make_results_template(n_matches: int = 1500) -> pd.DataFrame:
+def make_results_template(n_matches: int = 2200) -> pd.DataFrame:
     """Synthetic international match history.
 
     Goals are drawn from Poisson distributions whose means depend on the Elo
@@ -105,8 +105,9 @@ def make_results_template(n_matches: int = 1500) -> pd.DataFrame:
     # Weight friendlies more heavily, as in real history.
     t_weights = np.array([0.45, 0.08, 0.07, 0.07, 0.23, 0.10])
 
-    # Spread matches over ~16 years so backtests have pre-2014/2018/2022 data.
-    dates = pd.date_range("2010-01-01", "2026-04-01", periods=n_matches)
+    # Spread matches over ~23 years so backtests have training data before
+    # every World Cup from 2006 onward (2006/2010/2014/2018/2022).
+    dates = pd.date_range("2003-01-01", "2026-04-01", periods=n_matches)
 
     rows = []
     for i in range(n_matches):

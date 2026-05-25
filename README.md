@@ -218,8 +218,8 @@ In `outputs/charts/`:
 `src/evaluation/backtest.py` provides two time-respecting backtests:
 
 1. **Per-World-Cup** — train on everything before a target World Cup, test on
-   that tournament's matches (2014 / 2018 / 2022). Realistic but a small test
-   set.
+   that tournament's matches (default 2006 / 2010 / 2014 / 2018 / 2022; override
+   with `--backtest_years`). Realistic but a small test set.
 2. **Walk-forward CV** — expanding-window time-series cross-validation
    (`TimeSeriesSplit`) over the **entire** match history, so every period after
    the first fold is scored out-of-sample. This is the metric used for tuning
