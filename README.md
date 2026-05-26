@@ -119,6 +119,7 @@ python main.py --mode full --model best --n_simulations 10000
 
 # Simulate the tournament and export tables + charts (quick mode)
 python main.py --mode simulate --n_simulations 10000 --model xgboost
+python main.py --mode simulate --model xgboost --simulation_seed 2027
 python main.py --mode simulate --model xgboost --odds_weight 0.20 \
   --odds_method shin --odds_blend logarithmic
 

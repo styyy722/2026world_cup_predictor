@@ -153,7 +153,8 @@ def run_train(model_kind: str = DEFAULT_MODEL,
 def run_simulate(n_simulations: int, model_kind: str,
                  odds_weight: float = 0.0,
                  odds_method: str = "shin",
-                 odds_blend: str = "logarithmic") -> None:
+                 odds_blend: str = "logarithmic",
+                 simulation_seed: int = 2026) -> None:
     """Simulate the tournament and export all tables/charts."""
     from src.visualisation import charts
 
@@ -172,8 +173,14 @@ def run_simulate(n_simulations: int, model_kind: str,
     match_probs.to_csv(config.TABLES_DIR / "match_probabilities.csv", index=False)
 
     print(f"[simulate] Running {n_simulations:,} tournament simulations "
-          f"({model_kind} model)...")
-    res = sim.run_simulations(predictor, groups, fixtures, n_simulations)
+          f"({model_kind} model, seed={simulation_seed})...")
+    res = sim.run_simulations(
+        predictor,
+        groups,
+        fixtures,
+        n_simulations,
+        seed=simulation_seed,
+    )
 
     res["team_stage"].to_csv(
         config.TABLES_DIR / "team_stage_probabilities.csv", index=False)
@@ -318,6 +325,12 @@ def main() -> None:
     )
     parser.add_argument("--n_simulations", type=int, default=config.QUICK_SIMULATIONS)
     parser.add_argument(
+        "--simulation_seed",
+        type=int,
+        default=2026,
+        help="Random seed for tournament Monte Carlo simulations.",
+    )
+    parser.add_argument(
         "--calibration",
         choices=["none", "sigmoid", "isotonic"],
         default="none",
@@ -368,6 +381,7 @@ def main() -> None:
             odds_weight=args.odds_weight,
             odds_method=args.odds_method,
             odds_blend=args.odds_blend,
+            simulation_seed=args.simulation_seed,
         )
     elif args.mode == "backtest":
         run_backtest(args.model, years=args.backtest_years)
@@ -383,6 +397,7 @@ def main() -> None:
             odds_weight=args.odds_weight,
             odds_method=args.odds_method,
             odds_blend=args.odds_blend,
+            simulation_seed=args.simulation_seed,
         )
 
 
