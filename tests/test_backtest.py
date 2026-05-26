@@ -12,9 +12,9 @@ def features():
     return bf.build_training_features()
 
 
-def test_walk_forward_uses_all_history(features):
+def test_walk_forward_uses_training_window(features):
     res = bt.walk_forward_backtest(features, model_kind="logistic", n_splits=5)
-    # With 5 expanding folds the test set covers the large majority of matches.
+    # With 5 expanding folds the test set covers most of the filtered matches.
     assert res["n_test_total"] > 0.5 * len(features)
     assert 0.0 <= res["accuracy"] <= 1.0
     assert res["log_loss"] > 0.0

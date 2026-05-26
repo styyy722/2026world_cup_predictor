@@ -36,6 +36,22 @@ DEFAULT_MODEL = "xgboost"
 _TREE_BACKENDS = ("xgboost", "lightgbm", "catboost")
 
 
+def _training_features() -> pd.DataFrame:
+    """Build filtered training features and print the active data scope."""
+    results = loaders.load_results()
+    scope = bf.training_window_summary(results)
+    cutoff = scope["cutoff_date"]
+    latest = scope["latest_date"]
+    if cutoff is not None and latest is not None:
+        print(
+            "[train] Scope: "
+            f"{scope['kept_matches']}/{scope['total_matches']} matches kept; "
+            f"non-World-Cup matches from {cutoff.date()} to {latest.date()}, "
+            f"World Cup proper limited to {scope['last_world_cup_year']}."
+        )
+    return bf.build_training_features(results)
+
+
 def _resolve_model(model_kind: str) -> str:
     """Resolve 'best' to the model chosen by `--mode select`."""
     if model_kind != "best":
@@ -92,7 +108,7 @@ def run_train(model_kind: str = DEFAULT_MODEL,
     """
     model_kind = _resolve_model(model_kind)
     print("[train] Building training features from historical results...")
-    features = bf.build_training_features()
+    features = _training_features()
     print(f"[train] {len(features)} historical matches in training set.")
 
     # Baseline (applies tuned params if a tuning run saved them).
@@ -186,7 +202,7 @@ def run_tune(model_kind: str = DEFAULT_MODEL) -> None:
         print("[tune] Elo has no trainable parameters; nothing to tune.")
         return
 
-    features = bf.build_training_features()
+    features = _training_features()
     res = bt.tune_model(model_kind, features=features)
 
     params_path = common.save_best_params(model_kind, res["best_params"])
@@ -220,7 +236,7 @@ def run_select() -> None:
     table, and retrains the winner so simulate/full can use `--model best`.
     """
     config.ensure_dirs()
-    features = bf.build_training_features()
+    features = _training_features()
     res = bt.tune_and_select(features=features)
 
     # Persist every backend's tuned params (so any can be used later).

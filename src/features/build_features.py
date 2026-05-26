@@ -74,6 +74,10 @@ def _is_world_cup(tournament: str) -> int:
     return int(any(k in t for k in _WORLD_CUP_KEYS))
 
 
+def _is_world_cup_match(tournament: str) -> bool:
+    return bool(_is_world_cup(tournament))
+
+
 def _is_major(tournament: str) -> int:
     t = str(tournament).lower()
     if "qualif" in t:
@@ -88,6 +92,50 @@ def _result_from_scores(home_score: int, away_score: int) -> int:
     if home_score == away_score:
         return 1
     return 0
+
+
+def filter_training_results(
+    results: pd.DataFrame,
+    lookback_years: int = config.TRAINING_LOOKBACK_YEARS,
+    last_world_cup_year: int = config.LAST_WORLD_CUP_YEAR,
+) -> pd.DataFrame:
+    """Return the modelling subset: recent history plus the last World Cup.
+
+    Non-World-Cup matches are kept only when they fall inside the most recent
+    ``lookback_years`` of the available results. FIFA World Cup proper matches
+    are limited to ``last_world_cup_year`` so older tournament editions do not
+    teach the model from long-retired squads.
+    """
+    if results.empty:
+        return results.copy()
+    df = results.sort_values("date").reset_index(drop=True).copy()
+    cutoff = df["date"].max() - pd.DateOffset(years=lookback_years)
+    is_wc = df["tournament"].apply(_is_world_cup_match)
+    recent_non_wc = (df["date"] >= cutoff) & ~is_wc
+    last_wc = is_wc & (df["date"].dt.year == last_world_cup_year)
+    return df.loc[recent_non_wc | last_wc].reset_index(drop=True)
+
+
+def training_window_summary(results: pd.DataFrame) -> dict[str, object]:
+    """Summarise the configured training-result subset for logs/docs."""
+    if results.empty:
+        return {
+            "total_matches": 0,
+            "kept_matches": 0,
+            "cutoff_date": None,
+            "latest_date": None,
+            "last_world_cup_year": config.LAST_WORLD_CUP_YEAR,
+        }
+    latest = results["date"].max()
+    cutoff = latest - pd.DateOffset(years=config.TRAINING_LOOKBACK_YEARS)
+    kept = filter_training_results(results)
+    return {
+        "total_matches": int(len(results)),
+        "kept_matches": int(len(kept)),
+        "cutoff_date": cutoff,
+        "latest_date": latest,
+        "last_world_cup_year": config.LAST_WORLD_CUP_YEAR,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -429,7 +477,11 @@ def _match_context_features(match_id: int | str | None,
     }
 
 
-def build_training_features(results: pd.DataFrame | None = None) -> pd.DataFrame:
+def build_training_features(
+    results: pd.DataFrame | None = None,
+    *,
+    apply_training_window: bool = True,
+) -> pd.DataFrame:
     """Build the supervised training table from historical results.
 
     team_a is the home team and team_b the away team. The ``result`` target is
@@ -438,6 +490,8 @@ def build_training_features(results: pd.DataFrame | None = None) -> pd.DataFrame
     if results is None:
         results = loaders.load_results()
     results = results.sort_values("date").reset_index(drop=True)
+    if apply_training_window:
+        results = filter_training_results(results)
 
     elo_df, fifa_df = _ratings_lookup()
     context_df = _team_context_lookup()
@@ -612,7 +666,11 @@ def _assemble_row(team_a, team_b, elo_a, elo_b, rank_a, rank_b,
     return row
 
 
-def current_form_table(results: pd.DataFrame | None = None) -> dict[str, dict]:
+def current_form_table(
+    results: pd.DataFrame | None = None,
+    *,
+    apply_training_window: bool = True,
+) -> dict[str, dict]:
     """Return the latest rolling-form features per team (end of history).
 
     Used to build features for 2026 fixtures, which have no match history of
@@ -621,6 +679,8 @@ def current_form_table(results: pd.DataFrame | None = None) -> dict[str, dict]:
     if results is None:
         results = loaders.load_results()
     results = results.sort_values("date").reset_index(drop=True)
+    if apply_training_window:
+        results = filter_training_results(results)
     tracker = _FormTracker()
     for r in results.itertuples(index=False):
         tracker.update(r.home_team, r.home_score, r.away_score, r.date)

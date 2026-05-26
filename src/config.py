@@ -52,6 +52,12 @@ KNOCKOUT_STAGES = ["R32", "R16", "QF", "SF", "F"]
 # Default Elo for a team with no rating available.
 DEFAULT_ELO = 1500.0
 
+# Training scope. The default model intentionally avoids stale international
+# history because squads and player availability change substantially cycle to
+# cycle.
+TRAINING_LOOKBACK_YEARS = 4
+LAST_WORLD_CUP_YEAR = 2022
+
 # Default simulation counts.
 QUICK_SIMULATIONS = 10_000
 FINAL_SIMULATIONS = 100_000

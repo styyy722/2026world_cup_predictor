@@ -6,8 +6,8 @@ Two complementary backtests:
   test on that tournament's matches (2014/2018/2022). A realistic but small
   test set.
 * :func:`walk_forward_backtest` - expanding-window time-series cross-validation
-  over the *entire* match history, so every period after the first fold is used
-  as out-of-sample test data. This is the metric we tune against.
+  over the configured training window, so recent periods after the first fold
+  are used as out-of-sample test data. This is the metric we tune against.
 
 :func:`tune_model` searches a hyperparameter grid using the walk-forward log
 loss (a proper scoring rule) as the objective and returns the best settings,
@@ -363,12 +363,14 @@ def run_backtests(years: tuple[int, ...] = (2006, 2010, 2014, 2018, 2022),
     """Backtest each model kind and summarise.
 
     Runs the per-World-Cup backtests and, when ``walk_forward`` is set, the
-    expanding-window CV over all history. Returns a combined summary DataFrame
-    (``scope`` column distinguishes ``wc:<year>`` rows from ``walk_forward``).
+    expanding-window CV over the configured training window. Returns a combined
+    summary DataFrame (``scope`` column distinguishes ``wc:<year>`` rows from
+    ``walk_forward``).
     """
     from ..data import loaders
-    results = loaders.load_results()
-    features = bf.build_training_features(results)
+    raw_results = loaders.load_results()
+    results = bf.filter_training_results(raw_results)
+    features = bf.build_training_features(results, apply_training_window=False)
 
     rows = []
     for model_kind in model_kinds:

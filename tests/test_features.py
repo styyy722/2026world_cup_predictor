@@ -18,6 +18,46 @@ def test_new_dynamics_columns_present_in_matrix():
     assert not X.isna().any().any()
 
 
+def test_training_filter_uses_recent_matches_and_last_world_cup_only():
+    rows = pd.DataFrame({
+        "date": pd.to_datetime([
+            "2018-06-15",
+            "2021-10-01",
+            "2022-11-22",
+            "2023-07-01",
+            "2024-03-01",
+            "2026-04-01",
+        ]),
+        "home_team": ["A", "C", "E", "G", "I", "K"],
+        "away_team": ["B", "D", "F", "H", "J", "L"],
+        "home_score": [1, 1, 2, 0, 3, 1],
+        "away_score": [0, 1, 1, 1, 2, 0],
+        "tournament": [
+            "FIFA World Cup",
+            "Friendly",
+            "FIFA World Cup",
+            "FIFA World Cup",
+            "Friendly",
+            "World Cup qualification",
+        ],
+        "neutral": [True, False, True, True, False, False],
+        "country": ["X"] * 6,
+    })
+
+    filtered = bf.filter_training_results(rows, lookback_years=4, last_world_cup_year=2022)
+
+    assert filtered["date"].dt.strftime("%Y-%m-%d").tolist() == [
+        "2022-11-22",
+        "2024-03-01",
+        "2026-04-01",
+    ]
+    assert set(filtered["tournament"]) == {
+        "FIFA World Cup",
+        "Friendly",
+        "World Cup qualification",
+    }
+
+
 def test_streak_tracks_consecutive_results():
     t = bf._FormTracker()
     # Three wins -> streak +3; a loss flips to -1; a draw resets to 0.

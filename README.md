@@ -190,6 +190,12 @@ them identically.
 All models are trained on engineered match features (target `result`:
 0 loss / 1 draw / 2 win from team A's perspective):
 
+By default, supervised training now uses a recency-controlled evidence set:
+non-World-Cup matches from the most recent four years of available results, plus
+only the 2022 FIFA World Cup proper as tournament evidence. Older World Cups and
+older friendlies/qualifiers are excluded because squads, starters, and player
+availability drift materially across cycles.
+
 * **Strength:** Elo, FIFA rank/points and their differences.
 * **Form (rolling 10 matches):** win rate, goals for/against, goal difference.
 * **Team dynamics:** recent-form *momentum* (last-5 win rate minus the 10-match
@@ -250,7 +256,8 @@ In `outputs/tables/`:
 * **`simulation_summary.csv`** — per simulation: champion, runner-up,
   semi-finalists.
 * **`backtest_summary.csv`** — accuracy / log loss / Brier per scope
-  (`wc:<year>` World Cups and `walk_forward` over all history) and model.
+  (`wc:<year>` World Cups and `walk_forward` over the configured training
+  window) and model.
 * **`tuning_results_<model>.csv`** — every hyperparameter configuration tried
   during `--mode tune` / `--mode select`, with its walk-forward score.
 * **`model_selection.csv`** — tuned walk-forward log loss / accuracy for each
@@ -276,11 +283,13 @@ summary.
 
 1. **Per-World-Cup** — train on everything before a target World Cup, test on
    that tournament's matches (default 2006 / 2010 / 2014 / 2018 / 2022; override
-   with `--backtest_years`). Realistic but a small test set.
+   with `--backtest_years`). When the default four-year training window is
+   active, older tournaments may be skipped because they fall outside the
+   modelling evidence set.
 2. **Walk-forward CV** — expanding-window time-series cross-validation
-   (`TimeSeriesSplit`) over the **entire** match history, so every period after
-   the first fold is scored out-of-sample. This is the metric used for tuning
-   and the most reliable comparison between models.
+   (`TimeSeriesSplit`) over the configured training window, so recent periods
+   after the first fold are scored out-of-sample. This is the metric used for
+   tuning and the most reliable comparison between models.
 
 Both report accuracy, multiclass log loss, multiclass Brier score, and a
 calibration table, and compare the chosen tree model against the logistic
