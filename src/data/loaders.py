@@ -108,7 +108,11 @@ def load_betting_odds() -> pd.DataFrame:
     path = templates.expected_path(spec)
     if not path.exists():
         return templates.make_template(spec)
-    return pd.read_csv(path, parse_dates=["date"])
+    df = pd.read_csv(path)
+    for col in ("date", "snapshot_time"):
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors="coerce")
+    return df
 
 
 def latest_ratings() -> pd.DataFrame:

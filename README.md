@@ -77,7 +77,7 @@ Optional enhancement files can also be placed in `data/raw/`:
 | `player_form.csv` | `date, season, team, player, club, competition, minutes, starts, goals, assists, xg, xa, cards, source_url` | player match fitness, attacking output, discipline |
 | `team_status.csv` | `as_of_date, team, average_age, total_caps, coach_tenure_days, fifa_confederation, source_url` | squad experience and coaching stability |
 | `match_context.csv` | `match_id, date, team_a, team_b, venue, city, temperature_c, humidity_pct, wind_kmh, altitude_m, team_a_travel_km, team_b_travel_km, source_url` | fixture weather, altitude, and travel load |
-| `betting_odds.csv` | `match_id, date, team_a, team_b, team_a_decimal_odds, draw_decimal_odds, team_b_decimal_odds, bookmaker` | optional bookmaker-implied probability blending |
+| `betting_odds.csv` | `match_id, date, snapshot_time, team_a, team_b, team_a_decimal_odds, draw_decimal_odds, team_b_decimal_odds, bookmaker, is_closing, source_url` | optional market-implied probability blending |
 
 ---
 
@@ -119,11 +119,13 @@ python main.py --mode full --model best --n_simulations 10000
 
 # Simulate the tournament and export tables + charts (quick mode)
 python main.py --mode simulate --n_simulations 10000 --model xgboost
-python main.py --mode simulate --model xgboost --odds_weight 0.20
+python main.py --mode simulate --model xgboost --odds_weight 0.20 \
+  --odds_method shin --odds_blend logarithmic
 
 # Full pipeline: load -> features -> train -> predict -> simulate -> export
 python main.py --mode full --n_simulations 10000 --model xgboost
-python main.py --mode full --model xgboost --calibration isotonic --odds_weight 0.10
+python main.py --mode full --model xgboost --calibration isotonic \
+  --odds_weight 0.10 --odds_method shin
 
 # Use a baseline instead of the tree model
 python main.py --mode simulate --model logistic
@@ -218,8 +220,12 @@ files are absent, the pipeline falls back to neutral values.
 If `--calibration sigmoid` or `--calibration isotonic` is supplied during
 `train` or `full`, the saved classifier is wrapped with scikit-learn probability
 calibration before simulation. If `--odds_weight` is greater than zero and
-`data/raw/betting_odds.csv` exists, model probabilities are blended with
-normalised bookmaker-implied probabilities at that weight.
+`data/raw/betting_odds.csv` exists, odds are converted into no-vig market
+probabilities before blending. The default market strategy uses Shin's
+favourite-longshot adjustment (`--odds_method shin`), takes the latest/closing
+snapshot per bookmaker, aggregates books with a median consensus, and blends
+with the model via a logarithmic probability pool (`--odds_blend logarithmic`).
+Use `--odds_method basic` for simple proportional overround removal.
 
 ---
 

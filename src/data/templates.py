@@ -260,21 +260,27 @@ OPTIONAL_RAW_DATA_SPECS: tuple[RawDataSpec, ...] = (
         columns=(
             "match_id",
             "date",
+            "snapshot_time",
             "team_a",
             "team_b",
             "team_a_decimal_odds",
             "draw_decimal_odds",
             "team_b_decimal_odds",
             "bookmaker",
+            "is_closing",
+            "source_url",
         ),
         source=(
-            "Optional manually collected bookmaker decimal odds. Paid odds APIs "
-            "are not required."
+            "Optional manually collected bookmaker or exchange decimal odds. "
+            "Paid odds APIs are not required."
         ),
         instructions=(
             "Use decimal odds and keep team_a/team_b aligned to the fixture file.",
-            "The predictor normalises implied probabilities before blending.",
-            "Leave the file absent unless you choose to blend odds later.",
+            "Prefer high-liquidity closing odds, or the latest available snapshot.",
+            "Keep one row per bookmaker/snapshot so the predictor can build a "
+            "median no-vig consensus.",
+            "The predictor removes overround with Shin or basic normalisation "
+            "before blending.",
         ),
     ),
 )

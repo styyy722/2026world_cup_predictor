@@ -65,13 +65,21 @@ def _resolve_model(model_kind: str) -> str:
     return sel["model"]
 
 
-def _build_predictor(model_kind: str, odds_weight: float = 0.0) -> MatchPredictor:
+def _build_predictor(model_kind: str, odds_weight: float = 0.0,
+                     odds_method: str = "shin",
+                     odds_blend: str = "logarithmic") -> MatchPredictor:
     """Construct the requested predictor with latest ratings and form."""
     model_kind = _resolve_model(model_kind)
     ratings = loaders.latest_ratings()
     odds = loaders.load_betting_odds()
     if model_kind == "elo":
-        return MatchPredictor.from_elo(ratings, odds=odds, odds_weight=odds_weight)
+        return MatchPredictor.from_elo(
+            ratings,
+            odds=odds,
+            odds_weight=odds_weight,
+            odds_method=odds_method,
+            odds_blend=odds_blend,
+        )
 
     form = bf.current_form_table()
     context = loaders.load_team_context()
@@ -96,6 +104,8 @@ def _build_predictor(model_kind: str, odds_weight: float = 0.0) -> MatchPredicto
         optional_context=optional_context,
         odds=odds,
         odds_weight=odds_weight,
+        odds_method=odds_method,
+        odds_blend=odds_blend,
     )
 
 
@@ -141,14 +151,21 @@ def run_train(model_kind: str = DEFAULT_MODEL,
 
 
 def run_simulate(n_simulations: int, model_kind: str,
-                 odds_weight: float = 0.0) -> None:
+                 odds_weight: float = 0.0,
+                 odds_method: str = "shin",
+                 odds_blend: str = "logarithmic") -> None:
     """Simulate the tournament and export all tables/charts."""
     from src.visualisation import charts
 
     config.ensure_dirs()
     groups = loaders.load_groups()
     fixtures = loaders.load_fixtures()
-    predictor = _build_predictor(model_kind, odds_weight=odds_weight)
+    predictor = _build_predictor(
+        model_kind,
+        odds_weight=odds_weight,
+        odds_method=odds_method,
+        odds_blend=odds_blend,
+    )
 
     print(f"[simulate] Predicting {len(fixtures)} group fixtures...")
     match_probs = sim.fixture_match_probabilities(predictor, fixtures)
@@ -313,6 +330,18 @@ def main() -> None:
         help="Blend weight for optional data/raw/betting_odds.csv implied "
              "probabilities during simulation (0 disables odds blending).",
     )
+    parser.add_argument(
+        "--odds_method",
+        choices=["shin", "basic"],
+        default="shin",
+        help="How to remove bookmaker margin from decimal odds.",
+    )
+    parser.add_argument(
+        "--odds_blend",
+        choices=["logarithmic", "linear"],
+        default="logarithmic",
+        help="How to blend model probabilities with no-vig market probabilities.",
+    )
     parser.add_argument("--backtest_years", type=int, nargs="+", default=None,
                         help="World Cup years to backtest (default "
                              "2006 2010 2014 2018 2022).")
@@ -333,7 +362,13 @@ def main() -> None:
     elif args.mode == "train":
         run_train(args.model, calibration=args.calibration)
     elif args.mode == "simulate":
-        run_simulate(args.n_simulations, args.model, odds_weight=args.odds_weight)
+        run_simulate(
+            args.n_simulations,
+            args.model,
+            odds_weight=args.odds_weight,
+            odds_method=args.odds_method,
+            odds_blend=args.odds_blend,
+        )
     elif args.mode == "backtest":
         run_backtest(args.model, years=args.backtest_years)
     elif args.mode == "tune":
@@ -342,7 +377,13 @@ def main() -> None:
         run_select()
     elif args.mode == "full":
         run_train(args.model, calibration=args.calibration)
-        run_simulate(args.n_simulations, args.model, odds_weight=args.odds_weight)
+        run_simulate(
+            args.n_simulations,
+            args.model,
+            odds_weight=args.odds_weight,
+            odds_method=args.odds_method,
+            odds_blend=args.odds_blend,
+        )
 
 
 if __name__ == "__main__":
